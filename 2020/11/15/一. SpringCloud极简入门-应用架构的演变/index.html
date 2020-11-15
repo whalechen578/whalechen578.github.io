@@ -1,0 +1,515 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="俏如来" href="https://whalechen578.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="俏如来" href="https://whalechen578.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="俏如来" href="https://whalechen578.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="SpringCloud,SpringCloudAlibaba" />
+
+
+<link rel="canonical" href="https://whalechen578.github.io/2020/11/15/%E4%B8%80.%20SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98/">
+
+
+
+  <title>
+一. SpringCloud极简入门-应用架构的演变 |
+墨家巨子 = 俏如来</title>
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">一. SpringCloud极简入门-应用架构的演变
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-11-15 11:09:29">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-11-15T11:09:29+08:00">2020-11-15</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">墨家巨子</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="https://whale-blog.oss-cn-beijing.aliyuncs.com/springcloud2.jpg">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://whalechen578.github.io/2020/11/15/%E4%B8%80.%20SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="whale-chen">
+    <meta itemprop="description" content=", SpringCloud,SpringCloudAlibaba,Redis,ES">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="俏如来">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
+<h1 id="一-应用架构的演变"><a href="#一-应用架构的演变" class="headerlink" title="一.应用架构的演变"></a>一.应用架构的演变</h1><p>随着互联的发展,使用互联网的人群越来越多,软件应用的体量越来越庞大和复杂，传统的单体应用可能不足以支撑大数据量以及高并发场景,应用的架构也随之进行演变，从最开始的单体应用架构到分布式(SOA)架构再到今天比较火的微服务架构，以及服务网格架构。</p>
+<p> ![mark](一. SpringCloud极简入门-应用架构的演变.assets/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyMy85Q09Pdmg4VzZsYWoucG5n.png)</p>
+<h2 id="1-单体架构"><a href="#1-单体架构" class="headerlink" title="1. 单体架构"></a><strong>1.</strong> <strong>单体架构</strong></h2><h3 id="1-1-什么是单体架构"><a href="#1-1-什么是单体架构" class="headerlink" title="1.1. 什么是单体架构"></a><strong>1.1.</strong> <strong>什么是单体架构</strong></h3><p>简单来说我们以前传统的应用的就是单体架构,即所有的模块，组件等都在一个应用中应用最终打成一个(war,jar)包使用一个容器(Tomcat)进行部署，通常一个应用享用一个数据库。在单体应用中我们通常把应用分为三个组成部分：持久层，业务层，表现层，这样的应用结构在项目初期业务较少的情况下没有任何问题，但是随着业务需求不断的增加要求单体应用中的业务逻辑，业务组件等日益扩张，应用将会变得越来越臃肿,往后的开发和维护就会变得特别麻烦，再加上越来越大访的问量，并发越来越高，面对海量的用户无论从应用性能还是从数据库方面都有吃不消的时候。所以单体应用在数据量，并发量到一定程度的时候一定会遇到瓶颈。如下图：</p>
+<p> ![mark](一. SpringCloud极简入门-应用架构的演变.assets/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC9PTzgwNkNJMUFndmEucG5n.png)</p>
+<h3 id="1-2-单体架构的优缺点"><a href="#1-2-单体架构的优缺点" class="headerlink" title="1.2. 单体架构的优缺点"></a><strong>1.2.</strong> <strong>单体架构的优缺点</strong></h3><p>当然单体应用在项目初期也有很多优势，主要有如下表现</p>
+<ul>
+<li>易于开发 ：架构简单，技术成本低</li>
+<li>易于测试 ：所有功能在一个项目，方便测试</li>
+<li>易于部署 ：一个Tomcat就可以实现部署，简单方便</li>
+</ul>
+<p>随着项目规模日益变大，我们可以采用集群的手段来出来解决高并发，但包含了所有组成部分的单体应用终归是有许多不足，主要缺点如下</p>
+<ul>
+<li><p>代码臃肿不方便开发维护(代码可读性差)</p>
+</li>
+<li><p>代码编译系统启动变慢</p>
+</li>
+<li><p>系统扩展性能变差(牵一发而动全身)</p>
+</li>
+<li><p>无法针对某一个业务做扩展(集群)</p>
+</li>
+<li><p>对大数据量,高并发量的处理不占优势</p>
+</li>
+<li><p>技术选型单一</p>
+</li>
+<li><p>模块/业务耦合度高</p>
+</li>
+</ul>
+<h3 id="1-2-单体应用与集群"><a href="#1-2-单体应用与集群" class="headerlink" title="1.2.单体应用与集群"></a>1.2.单体应用与集群</h3><p><strong>什么是集群</strong></p>
+<p>在单体架构中，为了提升应用的并发作业能力和防止应用的单节点故障(一个Tomcat挂了，应用就挂了)我们通常会对应用做集群，这里的集群指的是把应用进行复制多个相同的应用一起工作来提高作业能力，多个应用做的是相同的事情。就如同我们生活中的场景”收银”,一个收银台不足以支撑超市大量客户的结账流程，所以需要多个收银台同时工作，多个收银台都是做的相同的收银工作，这就是集群，如下图：</p>
+<p> ![mark](一. SpringCloud极简入门-应用架构的演变.assets/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC9oQ0VDcmtNc0U4WGkucG5n.png)</p>
+<p>总结一下：集群就是多个应用分散在不同的服务器，每个应用跑的是同一套代码做的是相同的工作，以提高系统的整体性能，简单理解”多个人在一起做相同的事情，每个人做的事情都是完整的，有点1+1=2的感觉”。</p>
+<p><strong>什么是负载均衡</strong></p>
+<p>当应用做了集群之后作业能力得到提升，能够处理更高的并发请求，同时产生了一个新的问题，就是客户端的请求应该如何相对平局的分发到集群中的多个应用呢？这就需要负载均衡器了。</p>
+<p>为了方便理解我们来再看我们的收银台案例：假如收银台排队的客户比较多，收银台可能也比较多，后面继续加入排队的客户可能无法选择人数最少的那个收银台进行排队，为了解决这一情况我们增加一个大显示屏来显示每个收银台的排队结账人数，那么结账客户可以就可以根据屏幕显示的人数来选择人数最少的收银台队列，如下图：</p>
+<p>![mark](一. SpringCloud极简入门-应用架构的演变.assets/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC9UaGhjSGttOW03QzEucG5n.png)</p>
+<p>在我们的应用程序中也是这样，当我们的应用做了集群，那么就会存在多个应用节点，多个应用将会暴露多个访问地址(ip:port)，那客户端是不知道该访问哪个应用节点的，这个时候我们就需要有一个请求分发的功能的组件(负载均衡器)将客户端的请求相对平均的分发多个应用节点上，这就是负载均衡，这个做请求分发的组件就是负载均衡器，如下图：</p>
+<p>  ![mark](一. SpringCloud极简入门-应用架构的演变.assets/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC8zdmhtTGxJRkhhS2QucG5n.png)</p>
+<p>这里的Nginx就是一个负载均衡器，它可以按照某种算法(轮询,ip_hash等等)将请求路由到不同的后端服务器上，同类型的负载均衡器还有如“HAproxy”，“LVS”等，这里不展开讨论。</p>
+<p><strong>负债均衡算法</strong>(Nginx)</p>
+<ul>
+<li>轮询(round robin) : 依次将请求分配到各个后台服务器中，默认的负载均衡方式</li>
+<li>权重(weight) ： 根据权重值将请求分配到后台服务器中，权重值越大，分配比例越高</li>
+<li>IP_HASH：按照ip地址进行hash运算，同一ip的请求会被分配到相同的机器上</li>
+<li>url_hash ： 根据请求的url的hash值将请求分到不同的机器中。</li>
+<li>fair：根据服务器响应时间来分发请求，时间越短分发的请求越多</li>
+</ul>
+<p><strong>小结</strong></p>
+<p>总之,当我们的单体应用没办法支撑较高的并发请求时，我们可以对应用做集群，同时加入负载均衡器来提升应用的作业能力，甚至我们也可以在数据库层也做集群(如主从复制)，这样的架构有一定的并发处理能力，也能满足一定的复杂业务需求，但是就应用本身而言任然是单体结构，仍然有其不足之处，如：</p>
+<ul>
+<li>项目本身任然是单体，代码依然臃肿</li>
+<li>面对海量数据数据库会成为性能瓶颈(需要分库分表)</li>
+<li>持续交互能力差，代码臃肿，业务复杂，开发维护时间长，新人入手成本高。</li>
+</ul>
+<p>所以当单体应用不能满足复杂的业务和海量数据的系统时，我们需要考虑其他的架构方式。</p>
+<h2 id="2-分布式架构与SOA"><a href="#2-分布式架构与SOA" class="headerlink" title="2. 分布式架构与SOA"></a><strong>2.</strong> <strong>分布式架构与SOA</strong></h2><h3 id="2-1-分布式架构"><a href="#2-1-分布式架构" class="headerlink" title="2.1.分布式架构"></a>2.1.分布式架构</h3><p>我们知道，单体应用包含了整个项目的所有代码和服务逻辑，也就是说一个Tomcat需要把整个系统跑起来，那么Tomcat总有处理不过来的时候，我们是否可以为Tomcat减轻一些压力呢？当然可以。我们拿生活中的案例”厨师炒菜”，来说，当饭店规模小的时候我们一个厨师就可以完成所有厨房的工作如”洗菜”,”切菜”，“炒菜”三件事情，当饭店规模增加，一个厨师就忙不过来，这个时候可能要再招聘两个厨师，然后进行分工，厨师A负责洗菜，厨师B负责切菜，厨师C负责炒菜，这样一来每个厨师的压力减轻，并且每个厨师就只需要专注一件事情即可。</p>
+<p>将上面的案例映射到我们的应用程序中也是一样的道理，当一个Tomcat负担不起系统中的所有业务的时候，我们可以按照业务把应用进行拆分成多个小的应用，每个小应用都用一个Tomcat去运行，每个小应用都是单体架构，每个应用只需要关系自己的业务即可，应用之间通过API相互调用，如图：</p>
+<p> ![mark](一. SpringCloud极简入门-应用架构的演变.assets/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC9STk5BdndzZURMbUQucG5n.png)</p>
+<p>当然如果某个子系统压力依然很大，可以单独对该子系统再做集群，所以分布式和集群并不冲突。</p>
+<p>总结一下什么是分布式 ：分布式就是将应用按照业务进行拆分成多个子应用，多个子应用部署在不同的服务器中，多个子应用组成一个完整的系统，所有的子系统一起工作相互通信相互协调才能完成最终的业务流程，缺一不可，简单理解：”多个人在一起做不同的事情，多人和在一起才是一件完整的事情，有点0.5+0.5=1的感觉”。</p>
+<h3 id="2-2-面向服务的架构SOA"><a href="#2-2-面向服务的架构SOA" class="headerlink" title="2.2.面向服务的架构SOA"></a>2.2.面向服务的架构SOA</h3><p>SOA是面向服务的架构,它的思想是每个子应用可以通过网络通信协议向其他子应用提供服务或者消费服务，SOA也是分布式架构，我们可以简单的理解为SOA把分布式架构划分成表示层和服务层，服务层中包含了业务逻辑和相关流程，只需要对外暴露服务即可，表现层负责处理和页面的交互。这样的划分好处在于系统之间调用的方便性，如用户子系统只需要调用订单子系统的服务层即可完成应用之间的通信。这样的结构划分提高了应用的重用性，业务逻辑也变得可组合。如图：</p>
+<p>![mark](一. SpringCloud极简入门-应用架构的演变.assets/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC9JbU9FTjZYRGlCNDYucG5n.png)</p>
+<p>SOA架构中有重要的两个角色，服务消费者(Consumer)和服务提供者(Provider)即服务调用者和服务被调用者，这样的架构优点有：</p>
+<ul>
+<li>模块拆分，使用API通信，降低模块之间的耦合度</li>
+<li>项目拆分多个子应用，每个子应用业务简单，代码简单，方便维护开发。</li>
+<li>不同技术人员可以负责不同的子应用</li>
+<li>提高服务之间的重用性，业务逻辑可组合。</li>
+</ul>
+<p>其缺点在于：</p>
+<ul>
+<li>服务之间的API接口开发增加了工作量，</li>
+<li>SOA服务之间的网络通信调用对性能有一定的影响(尽管很小)</li>
+<li>相对于单体应用来说，技术,人力成本较高。</li>
+<li>部署和运维相对麻烦</li>
+</ul>
+<h2 id="3-微服务架构"><a href="#3-微服务架构" class="headerlink" title="3. 微服务架构"></a><strong>3.</strong> <strong>微服务架构</strong></h2><h3 id="3-1-什么是微服务"><a href="#3-1-什么是微服务" class="headerlink" title="3.1. 什么是微服务"></a><strong>3.1.</strong> <strong>什么是微服务</strong></h3><p>微服务架构可以认识是在SOA架构上的一种发展，最早由“Martin Fowler”提出：</p>
+<blockquote>
+<p>就目前而言，对于微服务业界并没有一个统一的、标准的定义（While there is no precise definition of this architectural style ) 。但通常而言，微服务架构是一种架构模式或者说是一种架构风格，它提倡将单一应用程序划分成一组小的服务，每个服务运行独立的自己的进程中，服务之间互相协调、互相配合，为用户提供最终价值。服务之间采用轻量级的通信机制互相沟通（通常是基于 HTTP 的 RESTful API ) 。每个服务都围绕着具体业务进行构建，并且能够被独立地部署到生产环境、类生产环境等。</p>
+<p>另外，应尽量避免统一的、集中式的服务管理机制，对具体的一个服务而言，应根据业务上下文，选择合适的语言、工具对其进行构建，可以有一个非常轻量级的集中式管理来协调这些服务。可以使用不同的语言来编写服务，也可以使用不同的数据存储。</p>
+</blockquote>
+<p>我们从这段描述中可以看出，微服务架构和SOA架构很像，总体来说，微服务就是把单一应用进行细粒度的拆分成多个小(微)的服务相，每个服务独立运行，每个服务只需要专注一个业务即可，并且每个服务都可以有自己的数据库(分库)，服务之间互协调配合完成整个系统的业务，我们用一个图来理解微服务架构：</p>
+<p>![mark](一. SpringCloud极简入门-应用架构的演变.assets/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyMy9xU2hSYTRRT0pMdzUucG5n.png)</p>
+<p>我们总结一下微服务有如下的特点 ：</p>
+<ul>
+<li>由多个服务组成完整的系统</li>
+<li>每个服务都是独立的，有自己的进程</li>
+<li>服务之间使用HTTP协议通信</li>
+<li>不同的服务可以使用不同的编程语言</li>
+<li>不同的服务的数据库可以多样化选择</li>
+<li>微服务是一个分布式系统</li>
+</ul>
+<h3 id="3-2-微服务的优缺点"><a href="#3-2-微服务的优缺点" class="headerlink" title="3.2. 微服务的优缺点"></a><strong>3.2.</strong> <strong>微服务的优缺点</strong></h3><p>在项目规模较大的时候，相对于单体应用来说，微服务具备很多优势，主要体现在如下方面：</p>
+<ul>
+<li>单个服务业务简单，代码简单方便开发维护</li>
+<li>服务之间无耦合，服务之间升级维护互不影响</li>
+<li>轻量级HTTP通信机制，使得的不同的服务可以采用不同的编程语言</li>
+<li>微服务有极强的扩展能力,业务量大的服务可以再次拆分服务，也可以进行集群部署，剔除服务也很方便</li>
+<li>更大的系统负载能力和容错能力(集群)</li>
+<li>对于开发人员来说,通常只需要关注单一服务,新员工上手也比较快</li>
+<li>微服务架构对现在流行的敏捷开发支持优化</li>
+</ul>
+<p>凡是都有双面性，微服务展示出了他都优势之处，同时也有其不足的地方，主要体现如下方面：</p>
+<ul>
+<li><p>分布式事务 ：服务通信机制增加了事务的复杂性，架构师要选择合适的分布式方案(CAP理论)</p>
+</li>
+<li><p>部署麻烦 ：微服务众多，部署麻烦，需要借助容器技术和自动化部署工具，这又增加了开发人员的学习成本。</p>
+</li>
+<li><p>技术成本高  ：微服务架构本身比较复杂,技术成本高，开发人员需要花更多的时间学习相关技术。</p>
+</li>
+<li><p>服务通信对性能的损耗  ： 微服务架构一定要考虑服务通信延迟对服务调用性能的损耗问题，开发人员需要选择合适的通信方式解决这一问题。</p>
+</li>
+</ul>
+<h3 id="3-3-如何选型"><a href="#3-3-如何选型" class="headerlink" title="3.3.如何选型"></a>3.3.如何选型</h3><p>虽然微服务有诸多好处，但是不是任何系统都适合用微服务架构来开发，在项目规模不大的情况下单体应用性能表现良好，当项目规模较大，用户体量，并发较大的时候，微服务总体性能占优势，所以我们应该根据项目类型以及项目规模来决定应用架构的选型，如大型电商，物流，售票等系统我们可以选择使用微服务架构，对于中小型的企业级应用我们依然可以选择单体架构。下面是项目规模和性能的走式图：</p>
+<p> ![mark](一. SpringCloud极简入门-应用架构的演变.assets/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC9NVmh0UTBoUjl2Z2cucG5n.png)</p>
+
+      <div class="tags">
+          <a href="/tags/SpringCloud-SpringCloudAlibaba/" rel="tag"><i class="ic i-tag"></i> SpringCloud,SpringCloudAlibaba</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2020-11-15 12:50:57" itemprop="dateModified" datetime="2020-11-15T12:50:57+08:00">2020-11-15</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="whale-chen 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="whale-chen 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="whale-chen 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>whale-chen <i class="ic i-at"><em>@</em></i>俏如来
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://whalechen578.github.io/2020/11/15/%E4%B8%80.%20SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98/" title="一. SpringCloud极简入门-应用架构的演变">https://whalechen578.github.io/2020/11/15/一. SpringCloud极简入门-应用架构的演变/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/11/15/SpringCloud%E5%85%A5%E9%97%A8%E5%88%B0%E8%B6%85%E7%A5%9E/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;whale-blog.oss-cn-beijing.aliyuncs.com&#x2F;springcloud.jpg?Expires&#x3D;1605418426&amp;OSSAccessKeyId&#x3D;TMP.3KidWMS2RVeYHA1W4g7LNHv8LY9ihwBbJD1z4ReLaoR4L88ZE1mMWMFoBbSSA9Xd4fWpbgxduu13vm4xQTkj7cbH5WSq7Z&amp;Signature&#x3D;KlvJ%2BgfEHHD0UbZvYQmxmZu4w2Y%3D&amp;versionId&#x3D;CAEQDxiBgIDtxNqorhciIDI1NTk3YWZmNDg2NTQ5OTdhMzdmYjg1MGNlYzBjNDY1&amp;response-content-type&#x3D;application%2Foctet-stream" title="SpringCloud入门到超神系列文章目录">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>SpringCloud入门到超神系列文章目录</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98"><span class="toc-number">1.</span> <span class="toc-text">一.应用架构的演变</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8D%95%E4%BD%93%E6%9E%B6%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">1. 单体架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8D%95%E4%BD%93%E6%9E%B6%E6%9E%84"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1. 什么是单体架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%8D%95%E4%BD%93%E6%9E%B6%E6%9E%84%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2. 单体架构的优缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%8D%95%E4%BD%93%E5%BA%94%E7%94%A8%E4%B8%8E%E9%9B%86%E7%BE%A4"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.2.单体应用与集群</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%86%E5%B8%83%E5%BC%8F%E6%9E%B6%E6%9E%84%E4%B8%8ESOA"><span class="toc-number">1.2.</span> <span class="toc-text">2. 分布式架构与SOA</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%88%86%E5%B8%83%E5%BC%8F%E6%9E%B6%E6%9E%84"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1.分布式架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84SOA"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2.面向服务的架构SOA</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84"><span class="toc-number">1.3.</span> <span class="toc-text">3. 微服务架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%BE%AE%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1. 什么是微服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2. 微服务的优缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3.如何选型</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="whale-chen"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">whale-chen</p>
+  <div class="description" itemprop="description">SpringCloud,SpringCloudAlibaba,Redis,ES</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">3</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">2</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/15/SpringCloud%E5%85%A5%E9%97%A8%E5%88%B0%E8%B6%85%E7%A5%9E/" title="SpringCloud入门到超神系列文章目录">SpringCloud入门到超神系列文章目录</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/15/%E4%B8%80.%20SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98/" title="一. SpringCloud极简入门-应用架构的演变">一. SpringCloud极简入门-应用架构的演变</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/15/%E4%BA%8C.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-SpringCloud%E7%AE%80%E4%BB%8B/" title="二.SpringCloud极简入门-SpringCloud简介">二.SpringCloud极简入门-SpringCloud简介</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2020</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">whale-chen @ 墨家巨子</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/11/15/一. SpringCloud极简入门-应用架构的演变/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

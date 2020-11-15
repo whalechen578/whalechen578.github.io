@@ -1,0 +1,456 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="俏如来" href="https://whalechen578.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="俏如来" href="https://whalechen578.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="俏如来" href="https://whalechen578.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="SpringCloud" />
+
+
+<link rel="canonical" href="https://whalechen578.github.io/2020/11/15/%E4%BA%8C.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-SpringCloud%E7%AE%80%E4%BB%8B/">
+
+
+
+  <title>
+二.SpringCloud极简入门-SpringCloud简介 |
+墨家巨子 = 俏如来</title>
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">二.SpringCloud极简入门-SpringCloud简介
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-11-15 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-11-15T00:00:00+08:00">2020-11-15</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">墨家巨子</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="https://whale-blog.oss-cn-beijing.aliyuncs.com/springcloud3.jpg">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://whalechen578.github.io/2020/11/15/%E4%BA%8C.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-SpringCloud%E7%AE%80%E4%BB%8B/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="whale-chen">
+    <meta itemprop="description" content=", SpringCloud,SpringCloudAlibaba,Redis,ES">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="俏如来">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
+<h2 id="二-SpringCloud与微服务"><a href="#二-SpringCloud与微服务" class="headerlink" title="二. SpringCloud与微服务"></a><strong>二.</strong> <strong>SpringCloud与微服务</strong></h2><h3 id="1-什么是SpringCloud"><a href="#1-什么是SpringCloud" class="headerlink" title="1. 什么是SpringCloud"></a><strong>1.</strong> <strong>什么是SpringCloud</strong></h3><h4 id="1-1-SpringCloud基本概念"><a href="#1-1-SpringCloud基本概念" class="headerlink" title="1.1.SpringCloud基本概念"></a>1.1.SpringCloud基本概念</h4><p>Spring cloud是一个基于Spring Boot实现的服务治理工具包，用于微服务架构中管理和协调服务的。Spring Cloud是一系列框架的有序集合。它利用Spring Boot的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控等，都可以用Spring Boot的开发风格做到一键启动和部署。通过Spring Boot风格进行再封装屏蔽掉了复杂的配置和实现原理，最终给开发者留出了一套简单易懂、易部署和易维护的分布式系统开发工具包。有了SpringCloud之后，让微服务架构的落地变得更简单。</p>
+<h4 id="1-2-SpringCloud常用组件"><a href="#1-2-SpringCloud常用组件" class="headerlink" title="1.2. SpringCloud常用组件"></a><strong>1.2.</strong> <strong>SpringCloud常用组件</strong></h4><p>当我们的项目采用微服务架构之后就会引发一些列的难题需要去解决，如众多微服务的通信地址应该如何管理，微服务之间应该使用何种方式发起调用，微服务故障该如何处理，众多微服务的配置文件如何集中管理等等，SpringCloud为这一系列的难题提供了相应的组件来解决，下面我们简单来理解一下SpringCloud最核心的几大组件如如下：<br><img data-src="https://img-blog.csdnimg.cn/20200329232256382.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h5 id="Netflix-Eureka"><a href="#Netflix-Eureka" class="headerlink" title="Netflix Eureka"></a><strong>Netflix Eureka</strong></h5><p>当我们的微服务过多的时候，管理服务的通信地址是一个非常麻烦的事情，Eureka就是用来管理微服务的通信地址清单的，有了Eureka之后我们通过服务的名字就能实现服务的调用。</p>
+<h5 id="Netflix-Ribbon-Feign-客户端负载均衡"><a href="#Netflix-Ribbon-Feign-客户端负载均衡" class="headerlink" title="Netflix Ribbon\Feign : 客户端负载均衡"></a><strong>Netflix Ribbon\Feign : 客户端负载均衡</strong></h5><p>Ribbon和Feign都是客户端负载均衡器，它的作用是在服务发生调用的时候帮我们将请求按照某种规则分发到多个目标服务器上，简单理解就是用来解决微服务之间的通信问题。</p>
+<h5 id="Netflix-Hystrix-：断路器"><a href="#Netflix-Hystrix-：断路器" class="headerlink" title="Netflix Hystrix ：断路器"></a><strong>Netflix Hystrix ：断路器</strong></h5><p>微服务的调用是非常复杂的，有的时候一个请求需要很多的微服务共同完成，那么一旦某个服务发生故障，导致整个调用链上的微服务全都出现异常，甚至导致整个微服务架构瘫痪。Hystrix就是用来解决微服务故障，保护微服务安全的组件。</p>
+<h5 id="Netflix-Zuul-：-服务网关"><a href="#Netflix-Zuul-：-服务网关" class="headerlink" title="Netflix Zuul ： 服务网关"></a><strong>Netflix Zuul ： 服务网关</strong></h5><p>zuul作为服务网关，我们可以把它看作是微服务的大门，所有的请求都需要经过zuul之后才能到达目标服务，根据这一特性，我们可以把微服务公共的是事情交给zuul统一处理，如：用户鉴权，请求监控等。</p>
+<h5 id="Spring-Cloud-Config-：分布式配置"><a href="#Spring-Cloud-Config-：分布式配置" class="headerlink" title="Spring Cloud Config ：分布式配置"></a><strong>Spring Cloud Config ：分布式配置</strong></h5><p>微服务架构中的服务实例非常的多，服务的配置文件分散在每个服务中，每次修改服务的配置文件和重新服务实例都是一个很麻烦的工作，Spring Cloud Config作为分布式配置管理中心就是用来统一的管理服务的配置文件。</p>
+<h5 id="Spring-Cloud-Bus-消息总线"><a href="#Spring-Cloud-Bus-消息总线" class="headerlink" title="Spring Cloud Bus : 消息总线"></a><strong>Spring Cloud Bus : 消息总线</strong></h5><p>消息总线是在微服务中给各个微服务广播消息的一个组件，我们使用消息总线构建一个消息中心，其他微服务来接入到消息中心，当消息总线发起消息，接入的微服务都可以收到消息从而进行消费。</p>
+<h5 id="Spring-Cloud-sleuth-微服务链路追踪"><a href="#Spring-Cloud-sleuth-微服务链路追踪" class="headerlink" title="Spring Cloud sleuth :微服务链路追踪"></a><strong>Spring Cloud sleuth :微服务链路追踪</strong></h5><p>当我们的应用采用微服务架构之后，后台可能有几十个甚至几百个服务在支撑，一个请求请求可能需要多次的服务调用最后才能完成，链路追踪的作用就是来监控维护之间的调用关系,让程序员方便直观的感受到一个请求经历了哪些微服务，以及服务的请求时间，是否有异常等。</p>
+<h4 id="1-3-SpringCloud的版本"><a href="#1-3-SpringCloud的版本" class="headerlink" title="1.3.SpringCloud的版本"></a>1.3.SpringCloud的版本</h4><p>SpringCloud是基于SpringBoot的,所以两者的jar包都需要导入,需要注意的是SprinbCloud的版本需要和SpringBoot的版本兼容，<strong>本文章采用的SpringBoot版本是2.0.5.RELEASE ， SpringCloud的版本是Finchley.SR1**</strong>。下面是版本兼容图：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Release Train</th>
+<th align="left">Boot Version</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Hoxton</td>
+<td align="left">2.2.x</td>
+</tr>
+<tr>
+<td align="left">Greenwich</td>
+<td align="left">2.1.x</td>
+</tr>
+<tr>
+<td align="left"><strong>Finchley</strong></td>
+<td align="left"><strong>2.0.x</strong></td>
+</tr>
+<tr>
+<td align="left">Edgware</td>
+<td align="left">1.5.x</td>
+</tr>
+<tr>
+<td align="left">Dalston</td>
+<td align="left">1.5.x</td>
+</tr>
+</tbody></table>
+<h3 id="2-服务通信协议"><a href="#2-服务通信协议" class="headerlink" title="2.服务通信协议"></a>2.服务通信协议</h3><p>在微服务中服务间通过网络进行通信，那么服务间的远程调用方式有哪些呢？</p>
+<h4 id="2-1-RPC"><a href="#2-1-RPC" class="headerlink" title="2.1.RPC"></a>2.1.RPC</h4><p>RPC(Remote Produce Call)远程过程调用，类似的还有RMI。自定义数据格式，基于原生TCP通信，速度快，效率高。早期的webservice，现在热门的dubbo，都是RPC的典型</p>
+<h4 id="2-2-Http"><a href="#2-2-Http" class="headerlink" title="2.2.Http"></a>2.2.Http</h4><p>Http其实是一种网络传输协议，基于TCP，规定了数据传输的格式。现在客户端浏览器与服务端通信基本都是采用Http协议。也可以用来进行远程服务调用。缺点是消息封装臃肿。  现在热门的Rest风格，就可以通过http协议来实现</p>
+<p>我们可以认为SpringCloud就是基于Http协议实现服务之间的通信。</p>
+<h4 id="2-2-如何选择"><a href="#2-2-如何选择" class="headerlink" title="2.2.如何选择"></a>2.2.如何选择</h4><p>其实我们并不需要刻意去选择该使用RPC或者是Http，如果架构师选择Dubbo作为微服务开发框架，通信方式自然就是RPC，当架构师选择了SpringCloud作为微服务开发框架，那么通信方式自然就是基于Http协议，当然，如果服务的通信方式成为了微服务的性能瓶颈，那么架构师自然需要去考虑更换微服务的通信协议。</p>
+<h3 id="2-SpringCloud与Dubbo"><a href="#2-SpringCloud与Dubbo" class="headerlink" title="2. SpringCloud与Dubbo"></a><strong>2.</strong> <strong>SpringCloud与Dubbo</strong></h3><h4 id="2-1-Dubbo简介"><a href="#2-1-Dubbo简介" class="headerlink" title="2.1.Dubbo简介"></a>2.1.Dubbo简介</h4><p>Dubbo最早是有阿里巴巴提供的一个服务治理和服务调用框架，现在已经成为Apache的顶级项目，Dubbo跟SpringCloud最显著的区别是Dubbo的定位只是一个RPC框架，相比SpringCloud来说它缺少很多功能模块，如：网关，链路追踪等，所以往往在使用Dubbo作为微服务开发框架的时候，还需要去配合其他的框架一起使用，如:加入zookeeper作为注册中心。</p>
+<h4 id="2-2-SpringCloud与Dubbo的区别"><a href="#2-2-SpringCloud与Dubbo的区别" class="headerlink" title="2.2.SpringCloud与Dubbo的区别"></a>2.2.SpringCloud与Dubbo的区别</h4><p>早期在国内做分布式(微服务)应用Dubbo是比较热门的框架，被许多互联网公司所采用，并产生了许多衍生版本，如网易，京东，新浪，当当等等，奈何在2014年10月Dubbo停止维护，在Dubbo停更的时间里Spring Cloud快速追赶上。在2017年9月，阿里宣布重启Dubbo项目，计划对Dubbo进行持续更新维护。2018.2月，阿里将Dubbo捐献给Apache基金会，Dubbo成为Apache孵化器项目。</p>
+<p>所以当前微服务架构，Dubbo和SpringCloud比较火，另外还有Thrift、gRPC等等 。很多人把SpringCloud 和Dubbo进行对比，其实两个框架并没有太大的可比性，因为他们的定位不同。Spring Cloud是一个完整的微服务解决方案,它提供了微服务各问题的解决方案集合，而Dubbo是一个高性能的RPC框架，它有着很多功能的缺失。</p>
+<p><strong>定位不一样</strong></p>
+<p>SpringCloud为了微服务的落地提供了一套完整的组件，而Dubbo只是一个RPC框架，缺失的功能很多。</p>
+<p><strong>通信协议不一样</strong></p>
+<p>Dubbo的通信方式是RPC，基于原声的tcp,性能较好，而SpringCloud的通信方式基于Http协议，虽然底层基于tcp，但是Http的封装过于臃肿，但是使用Http好处在于互相通信的两个服务可以使用不同的变成语言去编写，只要他们都支持Http通信即可互相调用，而Dubbo只支持Java,当然Dubbo交给Apache维护之后做了升级，Dubbo在以后不仅仅支持Java。</p>
+<p><strong>背景都很强大</strong></p>
+<p>Dubbo背靠阿里和Apache,淘宝就是使用的Dubbo来开发经理过双“11”期间的高并发大流量检验，可以说是非常的稳定和成熟，SpringCloud是Spring家族的成员，严格遵循Martin Fowler提出的微服务规范，可以认为SpringCloud是微服务架构的标准，总之两者背景都很强大，文档完善，社区活跃，所以不管作何选择，都是很有前途的。</p>
+<p><strong>开发风格</strong></p>
+<p>从开发风格上来讲，Dubbo官方推荐倾向于使用Spring xml配置方式，SpringCloud是基于SpringBoot的开发风格，即采用注解的方式进行配置，从开发速度上来说，SpringCloud具有更高的开发和部署速度。</p>
+<p>下面是网上比较流行的Dubbo和Spring Cloud功能对比图：<br>| 功能         | Dubbo         | SpringCloud                  |<br>| ———— | ————- | —————————- |<br>| 服务注册中心 | Zookeeper     | Spring Cloud Netfix Eureka   |<br>| 服务调用方式 | RPC           | REST API                     |<br>| 服务监控     | Dubbo-monitor | Spring Boot Admin            |<br>| 熔断器       | 不完善        | Spring Cloud Netflix Hystrix |<br>| 服务网关     | 无            | Spring Cloud Netflix Zuul    |<br>| 分布式配置   | 无            | Spring Cloud Config          |<br>| 服务跟踪     | 无            | Spring Cloud Sleuth          |<br>| 数据流       | 无            | Spring Cloud Stream          |<br>| 批量任务     | 无            | Spring Cloud Task            |<br>| 信息总线     | 无            | Spring Cloud Bus             |</p>
+
+      <div class="tags">
+          <a href="/tags/SpringCloud/" rel="tag"><i class="ic i-tag"></i> SpringCloud</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2020-11-15 12:48:23" itemprop="dateModified" datetime="2020-11-15T12:48:23+08:00">2020-11-15</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="whale-chen 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="whale-chen 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="whale-chen 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>whale-chen <i class="ic i-at"><em>@</em></i>俏如来
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://whalechen578.github.io/2020/11/15/%E4%BA%8C.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-SpringCloud%E7%AE%80%E4%BB%8B/" title="二.SpringCloud极简入门-SpringCloud简介">https://whalechen578.github.io/2020/11/15/二.SpringCloud极简入门-SpringCloud简介/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/11/15/SpringCloud%E5%85%A5%E9%97%A8%E5%88%B0%E8%B6%85%E7%A5%9E/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;whale-blog.oss-cn-beijing.aliyuncs.com&#x2F;springcloud.jpg?Expires&#x3D;1605418426&amp;OSSAccessKeyId&#x3D;TMP.3KidWMS2RVeYHA1W4g7LNHv8LY9ihwBbJD1z4ReLaoR4L88ZE1mMWMFoBbSSA9Xd4fWpbgxduu13vm4xQTkj7cbH5WSq7Z&amp;Signature&#x3D;KlvJ%2BgfEHHD0UbZvYQmxmZu4w2Y%3D&amp;versionId&#x3D;CAEQDxiBgIDtxNqorhciIDI1NTk3YWZmNDg2NTQ5OTdhMzdmYjg1MGNlYzBjNDY1&amp;response-content-type&#x3D;application%2Foctet-stream" title="SpringCloud入门到超神系列文章目录">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>SpringCloud入门到超神系列文章目录</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-SpringCloud%E4%B8%8E%E5%BE%AE%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.</span> <span class="toc-text">二. SpringCloud与微服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AFSpringCloud"><span class="toc-number">1.1.</span> <span class="toc-text">1. 什么是SpringCloud</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-SpringCloud%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1.SpringCloud基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-SpringCloud%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2. SpringCloud常用组件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Netflix-Eureka"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">Netflix Eureka</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Netflix-Ribbon-Feign-%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">Netflix Ribbon\Feign : 客户端负载均衡</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Netflix-Hystrix-%EF%BC%9A%E6%96%AD%E8%B7%AF%E5%99%A8"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">Netflix Hystrix ：断路器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Netflix-Zuul-%EF%BC%9A-%E6%9C%8D%E5%8A%A1%E7%BD%91%E5%85%B3"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">Netflix Zuul ： 服务网关</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Spring-Cloud-Config-%EF%BC%9A%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE"><span class="toc-number">1.1.2.5.</span> <span class="toc-text">Spring Cloud Config ：分布式配置</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Spring-Cloud-Bus-%E6%B6%88%E6%81%AF%E6%80%BB%E7%BA%BF"><span class="toc-number">1.1.2.6.</span> <span class="toc-text">Spring Cloud Bus : 消息总线</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Spring-Cloud-sleuth-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%93%BE%E8%B7%AF%E8%BF%BD%E8%B8%AA"><span class="toc-number">1.1.2.7.</span> <span class="toc-text">Spring Cloud sleuth :微服务链路追踪</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-SpringCloud%E7%9A%84%E7%89%88%E6%9C%AC"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3.SpringCloud的版本</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9C%8D%E5%8A%A1%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.2.</span> <span class="toc-text">2.服务通信协议</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-RPC"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1.RPC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-Http"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2.Http</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.2.如何选择</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-SpringCloud%E4%B8%8EDubbo"><span class="toc-number">1.3.</span> <span class="toc-text">2. SpringCloud与Dubbo</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-Dubbo%E7%AE%80%E4%BB%8B"><span class="toc-number">1.3.1.</span> <span class="toc-text">2.1.Dubbo简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-SpringCloud%E4%B8%8EDubbo%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.2.SpringCloud与Dubbo的区别</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="whale-chen"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">whale-chen</p>
+  <div class="description" itemprop="description">SpringCloud,SpringCloudAlibaba,Redis,ES</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">3</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">2</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/15/SpringCloud%E5%85%A5%E9%97%A8%E5%88%B0%E8%B6%85%E7%A5%9E/" title="SpringCloud入门到超神系列文章目录">SpringCloud入门到超神系列文章目录</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/15/%E4%B8%80.%20SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98/" title="一. SpringCloud极简入门-应用架构的演变">一. SpringCloud极简入门-应用架构的演变</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/15/%E4%BA%8C.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-SpringCloud%E7%AE%80%E4%BB%8B/" title="二.SpringCloud极简入门-SpringCloud简介">二.SpringCloud极简入门-SpringCloud简介</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2020</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">whale-chen @ 墨家巨子</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/11/15/二.SpringCloud极简入门-SpringCloud简介/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
