@@ -1,0 +1,590 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="俏如来" href="https://whalechen578.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="俏如来" href="https://whalechen578.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="俏如来" href="https://whalechen578.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="SpringCloud,微服务开发,SpringCloudAlibaba" />
+
+
+<link rel="canonical" href="https://whalechen578.github.io/2020/11/15/%E4%B8%80.SpringCloudAlibaba%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E4%BB%80%E4%B9%88%E6%98%AF%20Spring%20Cloud%20Alibaba/">
+
+
+
+  <title>
+一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba - SpringCloudAlibaba |
+墨家巨子 = 俏如来</title>
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-11-15 11:09:29">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-11-15T11:09:29+08:00">2020-11-15</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>4.2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>4 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">墨家巨子</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="https://whale-blog.oss-cn-beijing.aliyuncs.com/springcloud3.jpg">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/SpringCloudAlibaba/" itemprop="item" rel="index" title="分类于 SpringCloudAlibaba"><span itemprop="name">SpringCloudAlibaba</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://whalechen578.github.io/2020/11/15/%E4%B8%80.SpringCloudAlibaba%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E4%BB%80%E4%B9%88%E6%98%AF%20Spring%20Cloud%20Alibaba/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="whale-chen">
+    <meta itemprop="description" content=", 热爱编程的一名小学生">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="俏如来">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
+<h4 id="1-Spring-Cloud-与-Dubbo-与-Spring-Cloud-Alibaba"><a href="#1-Spring-Cloud-与-Dubbo-与-Spring-Cloud-Alibaba" class="headerlink" title="1.Spring Cloud 与 Dubbo 与 Spring Cloud Alibaba"></a>1.Spring Cloud 与 Dubbo 与 Spring Cloud Alibaba</h4><p>早期在国内做分布式(微服务)应用Dubbo是比较热门的框架，被许多互联网公司所采用，并产生了许多衍生版本，如网易，京东，新浪，当当等等，奈何在2014年10月Dubbo停止维护，在Dubbo停更的时间里Spring Cloud快速追赶上。在2017年9月，阿里宣布重启Dubbo项目，计划对Dubbo进行持续更新维护。2018.2月，阿里将Dubbo捐献给Apache基金会，Dubbo成为Apache孵化器项目。</p>
+<p>所以当前微服务架构，Dubbo和SpringCloud比较火，另外还有Thrift、gRPC等等 。很多人把SpringCloud 和Dubbo进行对比，其实两个框架并没有太大的可比性，因为他们的定位不同。Spring Cloud是一个完整的微服务解决方案,它提供了微服务各问题的解决方案集合，而Dubbo是一个高性能的RPC框架，它有着很多功能的缺失。</p>
+<p>但是很多企业一边想要Dubbo的高性能RPC ，一边又想要Spring Cloud 完整的生态，然后在项目中出现了两个微服务框架的身影 。甚至市面上出现了一些Dubbo和Sprng Cloud的融合方案，但是最终都不是特别成熟。直到Spring Cloud官方出现了Spring Cloud Alibaba 才算是吧Dubbo和Spring Cloud真正的融合在一起。</p>
+<h4 id="2-什么是-Spring-Cloud-Alibaba"><a href="#2-什么是-Spring-Cloud-Alibaba" class="headerlink" title="2.什么是 Spring Cloud Alibaba"></a>2.什么是 Spring Cloud Alibaba</h4><p>下面是Spring Cloud 官方对Spring Cloud Alibaba的介绍</p>
+<blockquote>
+<p>Spring Cloud Alibaba旨在为微服务开发提供一站式解决方案。该项目包括开发分布式应用程序和服务所需的组件，以便开发人员可以使用Spring Cloud编程模型轻松开发分布式应用程序。使用Spring Cloud Alibaba，您只需要添加一些注释和配置，就可以为您的应用程序使用Alibaba的分布式解决方案，并使用Alibaba中间件构建自己的分布式系统。</p>
+</blockquote>
+<p>Spring Cloud Alibaba其实是阿里的微服务解决方案，是阿里巴巴结合自身微服务实践,开源的微服务全家桶，在Spring Cloud项目中孵化成为Spring Cloud的子项目。第一代的Spring Cloud标准中很多组件已经停更,如：Eureak,zuul等。所以Spring Cloud Alibaba很有可能成为Spring Cloud第二代的标准实现，所以许多组件在业界逐渐开始使用，已有很多成功案例。</p>
+<p>值得一提的是Spring Cloud Alibaba对Dubbo做了很好的兼容，同时也提供了一些强大的功能，如 Sentinel 流控 ，Seata 分布式事务，Nacos 服务发现与注册等等。</p>
+<h4 id="3-Spring-Cloud-Alibaba的功能"><a href="#3-Spring-Cloud-Alibaba的功能" class="headerlink" title="3.Spring Cloud Alibaba的功能"></a>3.Spring Cloud Alibaba的功能</h4><p>Spring Cloud Alibaba是阿里巴巴结合自身的微服务实践开源的微服务全家桶，我个人觉得其组件比Spring Cloud 中的组件更加好用和强大。并且对的Spring Cloud组件做了很好的兼容。比如在Spirng Cloud Alibaba中依然可以使用Feign作为服务调用方式，使用Eureak做服务注册发现等等。Spring Cloud Alibaba主要的功能如下：</p>
+<ul>
+<li><p><strong>流控制和服务降级</strong>：支持WebServlet，WebFlux，OpenFeign，RestTemplate，Dubbo访问限制和降级流的功能。它可以在运行时通过控制台实时修改限制和降级流的规则，并且还支持监视限制和降级度量标准。</p>
+</li>
+<li><p><strong>服务注册和发现</strong>：可以注册服务，并且客户可以使用Spring托管的bean（自动集成功能区）发现实例。</p>
+</li>
+<li><p><strong>分布式配置</strong>：支持分布式系统中的外部配置，配置更改时自动刷新。</p>
+</li>
+<li><p><strong>Rpc服务</strong>：扩展Spring Cloud客户端RestTemplate和OpenFeign以支持调用Dubbo RPC服务。</p>
+</li>
+<li><p><strong>事件驱动</strong>：支持构建与共享消息系统连接的高度可扩展的事件驱动微服务。</p>
+</li>
+<li><p><strong>分布式事务</strong>：支持高性能且易于使用的分布式事务解决方案。</p>
+</li>
+<li><p><strong>阿里云对象存储</strong>：大规模，安全，低成本，高度可靠的云存储服务。支持随时随地在任何应用程序中存储和访问任何类型的数据。</p>
+</li>
+<li><p><strong>阿里云SchedulerX</strong>：准确，高度可靠，高可用性的计划作业调度服务，响应时间在几秒钟内。</p>
+</li>
+<li><p><strong>阿里云短信</strong>：<strong>阿里云短信</strong>服务覆盖全球，提供便捷，高效，智能的通信功能，帮助企业快速联系客户。</p>
+</li>
+</ul>
+<p>下面是SpringCloud 和 Spring Cloud Alibaba(命名 Dubbo Spring Cloud )的功能对比</p>
+<table>
+<thead>
+<tr>
+<th>功能组件</th>
+<th>Spring Cloud</th>
+<th>Dubbo Spring Cloud</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>分布式配置（Distributed configuration）</td>
+<td>Git、Zookeeper、Consul、JDBC</td>
+<td>Spring Cloud 分布式配置 + Dubbo 配置中心（Nacos）</td>
+</tr>
+<tr>
+<td>服务注册与发现（Service registration and discovery）</td>
+<td>Eureka、Zookeeper、Consul</td>
+<td>Spring Cloud 原生注册中心 + Dubbo 原生注册中心（Nacos）</td>
+</tr>
+<tr>
+<td>负载均衡（Load balancing）</td>
+<td>Ribbon（随机、轮询等算法）</td>
+<td>Dubbo 内建实现（随机、轮询等算法 + 权重等特性）</td>
+</tr>
+<tr>
+<td>服务熔断（Circuit Breakers）</td>
+<td>Spring Cloud Hystrix</td>
+<td>Spring Cloud Hystrix + Alibaba Sentinel 等</td>
+</tr>
+<tr>
+<td>服务调用（Service-to-service calls）</td>
+<td>Open Feign、RestTemplate</td>
+<td>Spring Cloud 服务调用 + Dubbo @Reference</td>
+</tr>
+<tr>
+<td>链路跟踪（Tracing）</td>
+<td>Spring Cloud Sleuth + Zipkin</td>
+<td>Zipkin、opentracing 等</td>
+</tr>
+</tbody></table>
+<h4 id="4-Spring-Cloud-Alibaba的版本"><a href="#4-Spring-Cloud-Alibaba的版本" class="headerlink" title="4.Spring Cloud Alibaba的版本"></a>4.Spring Cloud Alibaba的版本</h4><p>Spring Cloud Alibaba是Spring Cloud的子项目 ，Spring Cloud 基于Spring Boot，所以我们在选择版本的时候需要考虑三个框架的版本，目前官方给出的版本如下：<br>| Spring Cloud Version   | Spring Cloud Alibaba Version | Spring Boot Version |<br>| ———————- | —————————- | ——————- |<br>| Spring Cloud Greenwich | 2.1.x.RELEASE                | 2.1.x.RELEASE       |<br>| Spring Cloud Finchley  | 2.0.x.RELEASE                | 2.0.x.RELEASE       |<br>| Spring Cloud Edgware   | 1.5.x.RELEASE                | 1.5.x.RELEASE       |</p>
+<p>这里给出一个G版的版本配置：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--公共的一些配置--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">spring-cloud.version</span>&gt;</span>Greenwich.SR2<span class="tag">&lt;/<span class="name">spring-cloud.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">alibaba.version</span>&gt;</span>2.1.0.RELEASE<span class="tag">&lt;/<span class="name">alibaba.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">spring-boot.version</span>&gt;</span>2.1.13.RELEASE<span class="tag">&lt;/<span class="name">spring-boot.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--1.管理SpringBoot的依赖--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span> org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring-boot.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-alibaba-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;alibaba.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring-cloud.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/SpringCloud/" rel="tag"><i class="ic i-tag"></i> SpringCloud</a>
+          <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/" rel="tag"><i class="ic i-tag"></i> 微服务开发</a>
+          <a href="/tags/SpringCloudAlibaba/" rel="tag"><i class="ic i-tag"></i> SpringCloudAlibaba</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2020-11-15 15:38:53" itemprop="dateModified" datetime="2020-11-15T15:38:53+08:00">2020-11-15</time>
+  </span>
+  <span id="2020/11/15/一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba/" class="item leancloud_visitors" data-flag-title="一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="whale-chen 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="whale-chen 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="whale-chen 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>whale-chen <i class="ic i-at"><em>@</em></i>俏如来
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://whalechen578.github.io/2020/11/15/%E4%B8%80.SpringCloudAlibaba%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E4%BB%80%E4%B9%88%E6%98%AF%20Spring%20Cloud%20Alibaba/" title="一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba">https://whalechen578.github.io/2020/11/15/一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/11/15/%E4%BA%8C.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-SpringCloud%E7%AE%80%E4%BB%8B/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;whale-blog.oss-cn-beijing.aliyuncs.com&#x2F;springcloud3.jpg" title="二.SpringCloud极简入门-SpringCloud简介">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> SpringCloud</span>
+  <h3>二.SpringCloud极简入门-SpringCloud简介</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/11/15/%E4%B8%80.%20SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;whale-blog.oss-cn-beijing.aliyuncs.com&#x2F;springcloud2.jpg" title="一. SpringCloud极简入门-应用架构的演变">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> SpringCloud</span>
+  <h3>一. SpringCloud极简入门-应用架构的演变</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Spring-Cloud-%E4%B8%8E-Dubbo-%E4%B8%8E-Spring-Cloud-Alibaba"><span class="toc-number">1.</span> <span class="toc-text">1.Spring Cloud 与 Dubbo 与 Spring Cloud Alibaba</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BB%80%E4%B9%88%E6%98%AF-Spring-Cloud-Alibaba"><span class="toc-number">2.</span> <span class="toc-text">2.什么是 Spring Cloud Alibaba</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Spring-Cloud-Alibaba%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">3.</span> <span class="toc-text">3.Spring Cloud Alibaba的功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-Spring-Cloud-Alibaba%E7%9A%84%E7%89%88%E6%9C%AC"><span class="toc-number">4.</span> <span class="toc-text">4.Spring Cloud Alibaba的版本</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2020/11/15/%E4%B8%80.SpringCloudAlibaba%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E4%BB%80%E4%B9%88%E6%98%AF%20Spring%20Cloud%20Alibaba/" rel="bookmark" title="一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba">一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="whale-chen"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">whale-chen</p>
+  <div class="description" itemprop="description">热爱编程的一名小学生</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">5</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">4</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <a href="https://whalechen578.github.io/" title="https:&#x2F;&#x2F;whalechen578.github.io&#x2F;" class="item github"><i class="ic i-github"></i></a>
+      <a href="https://whalechen578.github.io/" title="https:&#x2F;&#x2F;whalechen578.github.io&#x2F;" class="item twitter"><i class="ic i-twitter"></i></a>
+      <a href="https://whalechen578.github.io/" title="https:&#x2F;&#x2F;whalechen578.github.io&#x2F;" class="item zhihu"><i class="ic i-zhihu"></i></a>
+      <a href="https://whalechen578.github.io/" title="https:&#x2F;&#x2F;whalechen578.github.io&#x2F;" class="item music"><i class="ic i-cloud-music"></i></a>
+      <a href="https://whalechen578.github.io/" title="https:&#x2F;&#x2F;whalechen578.github.io&#x2F;" class="item weibo"><i class="ic i-weibo"></i></a>
+      <a href="https://whalechen578.github.io/" title="https:&#x2F;&#x2F;whalechen578.github.io&#x2F;" class="item about"><i class="ic i-address-card"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/11/15/%E4%BA%8C.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-SpringCloud%E7%AE%80%E4%BB%8B/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/11/15/%E4%B8%80.%20SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/SpringCloud/" title="分类于 SpringCloud">SpringCloud</a>
+</div>
+
+    <span><a href="/2020/11/15/%E4%BA%8C.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-SpringCloud%E7%AE%80%E4%BB%8B/" title="二.SpringCloud极简入门-SpringCloud简介">二.SpringCloud极简入门-SpringCloud简介</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/SpringCloud/" title="分类于 SpringCloud">SpringCloud</a>
+</div>
+
+    <span><a href="/2020/11/15/SpringCloud%E5%85%A5%E9%97%A8%E5%88%B0%E8%B6%85%E7%A5%9E/" title="SpringCloud入门到超神系列文章目录">SpringCloud入门到超神系列文章目录</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/SpringCloud/" title="分类于 SpringCloud">SpringCloud</a>
+</div>
+
+    <span><a href="/2020/11/15/%E4%B8%80.%20SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98/" title="一. SpringCloud极简入门-应用架构的演变">一. SpringCloud极简入门-应用架构的演变</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/SpringCloudAlibaba/" title="分类于 SpringCloudAlibaba">SpringCloudAlibaba</a>
+</div>
+
+    <span><a href="/2020/11/15/%E4%B8%80.SpringCloudAlibaba%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E4%BB%80%E4%B9%88%E6%98%AF%20Spring%20Cloud%20Alibaba/" title="一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba">一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/SpringCloud/" title="分类于 SpringCloud">SpringCloud</a>
+</div>
+
+    <span><a href="/2020/11/15/%E4%B8%89.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0Eureka/" title="三.SpringCloud极简入门-服务注册与发现-Eureka">三.SpringCloud极简入门-服务注册与发现-Eureka</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2019 – 
+    <span itemprop="copyrightYear">2020</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">whale-chen @ 墨家巨子</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">25k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">23 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/11/15/一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
