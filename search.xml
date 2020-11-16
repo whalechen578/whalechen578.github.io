@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>SpringCloud入门到超神系列文章目录</title>
+    <url>/2020/11/15/SpringCloud%E5%85%A5%E9%97%A8%E5%88%B0%E8%B6%85%E7%A5%9E/</url>
+    <content><![CDATA[<p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
+<h4 id="《Spring-Cloud-极简入门》"><a href="#《Spring-Cloud-极简入门》" class="headerlink" title="《Spring Cloud 极简入门》"></a>《Spring Cloud 极简入门》</h4><p><em>适用人群：有Spring Boot基础的童鞋</em></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNDQ4Nzk1MA==">一. SpringCloud极简入门-应用架构的演变</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNDk4MTA0OQ==">二.SpringCloud极简入门-SpringCloud简介</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNDk4Nzg4OQ==">三.SpringCloud极简入门-服务注册与发现-Eureka</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTAwMDA3Mw==">四.SpringCloud极简入门-Eureka集群</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTAzMDQyNA==">五.SpringCloud极简入门-使用RestTemplate实现服务通信</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTAwMjA5NQ==">六.SpringCloud极简入门-客户端负载均衡Ribbon</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTAzODM0OQ==">七.SpringCloud极简入门-客户端负载均衡－Feign</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTA1NTIzMQ==">八.SpringCloud极简入门-熔断器Hystrix</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTA4ODczMg==">九.SpringCloud极简入门-Feign开启Hystrix</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTA5NDgxNw==">十.SpringCloud极简入门-服务监控-Hystrix Dashboard &amp; Turbine</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTA5ODM2Mg==">十一.SpringCloud极简入门-服务网关-spring cloud zuul</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTE1OTczMA==">十二.SpringCloud极简入门-配置中心Spring Cloud Config</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTE2NjM3Mg==">十三.SpringCloud极简入门-消息总线实现配置刷新-Spring Cloud Bus</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTE3NzU2MQ==">十四.SpringCloud极简入门-链路追踪-Spring Cloud Sleuth</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDE0Mw==">十五.SpringCloud极简入门-Spring Cloud Stream消息驱动</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDE4NA==">十六.SpringCloud极简入门-服务网关Gateway</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNjg4NDgxOA==">十七.SpringCloud极简入门-Spring Boot Admin服务监控</span><br>—————————————–持续更新————————————————-</p>
+<h4 id="《Spring-Cloud-Alibaba-极简入门》"><a href="#《Spring-Cloud-Alibaba-极简入门》" class="headerlink" title="《Spring Cloud Alibaba 极简入门》"></a>《Spring Cloud Alibaba 极简入门》</h4><p><em>适用人群：有Spring Cloud基础的童鞋</em></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDI5Ng==">一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDIyMA==">二.SpringCloudAlibaba极简入门-服务注册与发现Nacos</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDI1MA==">三.SpringCloudAlibaba极简入门-配置中心Nacos</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTY1NjAzNg==">四.SpringCloudAlibaba极简入门-Nacos持久化和集群</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTY5NTM4NQ==">五.SpringCloudAlibaba极简入门-修改Nacos控制台密码</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDQxMA==">六.SpringCloudAlibaba极简入门-Sentinel限流</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ5NTY3Ng==">七.SpringCloudAlibaba极简入门-Sentinel熔断</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTc2MTEyMw==">八.SpringCloudAlibaba极简入门-Sentinel兼容Feign进行服务熔断</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTc2MTIzMg==">九.SpringCloudAlibaba极简入门-持久化Sentinel限流规则</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ5NTY4Nw==">十.SpringCloudAlibaba极简入门-分布式事务理论基础</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTc4MTkyMA==">十一.SpringCloudAlibaba极简入门-分布式事务实战seata</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ5NTY5Mg==">十二.SpringCloudAlibaba极简入门-集成Dubbo实现服务通信</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODg1ODM2MA==">十三.SpringCloudAlibaba极简入门-集成阿里云OSS对象存储</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwOTY4NjE2Ng==">十四.SpringCloudAlibaba极简入门-Sentinel对Gateway网关进行限流</span></p>
+<p>—————————————–持续更新————————————————-</p>
+<h4 id="《Spring-Cloud-源码剖析》"><a href="#《Spring-Cloud-源码剖析》" class="headerlink" title="《Spring Cloud 源码剖析》"></a>《Spring Cloud 源码剖析》</h4><p><em>适用人群：有 Spring Cloud基础的童鞋</em></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNzkwNDMwMQ==">一.SpringCloud源码剖析-Eureka核心API</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNzk4MjkyMA==">二.SpringCloud源码剖析-Eureka Client 初始化过程</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNjkwNzkxMQ==">三.SpringCloud源码剖析-Eureka服务注册</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODIxNzY1Ng==">四.SpringCloud源码剖析-Eureka服务发现</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODMxNTQwNQ==">五.SpringCloud源码剖析-Eureka Client服务续约</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODMxOTgxNQ==">六.SpringCloud源码剖析-Eureka Client取消注册</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODM1MTgyNw==">七.SpringCloud源码剖析-Eureka Server的自动配置</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODQ2OTIzMQ==">八.SpringCloud源码剖析-Eureka Server初始化流程</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODg2MTQwOQ==">九.SpringCloud源码剖析-Eureka Server服务注册流程</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODg4NDIxMA==">十.SpringCloud源码剖析-Eureka Server服务续约</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODg5NTU1Nw==">十一.SpringCloud源码剖析-Eureka Server服务注册表拉取</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODkwMDg4NA==">十二.SpringCloud源码剖析-Eureka Server服务剔除</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODkwNTcyNw==">十三.SpringCloud源码剖析-Eureka Server服务下线</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODkxNTA1Mw==">十四.SpringCloud源码剖析-Ribbon的初始化配置</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODkwNjUyOA==">十五.SpringCloud源码剖析-Ribbon工作流程分析</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwOTY0MTU0Nw==">十六.SpringCloud源码剖析-Feign的注册流程</span></p>
+<p>—————————————–持续更新————————————————-</p>
+<h4 id="《Spring-Cloud-Alibaba-源码剖析》"><a href="#《Spring-Cloud-Alibaba-源码剖析》" class="headerlink" title="《Spring Cloud Alibaba 源码剖析》"></a>《Spring Cloud Alibaba 源码剖析》</h4><p><em>适用人群：有 Spring Cloud Alibaba 基础的童鞋</em></p>
+<p>—————————————–持续更新————————————————-</p>
+]]></content>
+      <categories>
+        <category>SpringCloud</category>
+      </categories>
+      <tags>
+        <tag>SpringCloud</tag>
+        <tag>微服务开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一. SpringCloud极简入门-应用架构的演变</title>
+    <url>/2020/11/15/%E4%B8%80.%20SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98/</url>
+    <content><![CDATA[<p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
+<h1 id="一-应用架构的演变"><a href="#一-应用架构的演变" class="headerlink" title="一. 应用架构的演变"></a><strong>一.</strong> <strong>应用架构的演变</strong></h1><p>随着互联的发展,使用互联网的人群越来越多,软件应用的体量越来越庞大和复杂，传统的单体应用可能不足以支撑大数据量以及高并发场景,应用的架构也随之进行演变，从最开始的单体应用架构到分布式(SOA)架构再到今天比较火的微服务架构，以及服务网格架构。</p>
+<p> <img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyMy85Q09Pdmg4VzZsYWoucG5n?x-oss-process=image/format,png" alt="mark"></p>
+<h2 id="1-单体架构"><a href="#1-单体架构" class="headerlink" title="1. 单体架构"></a><strong>1.</strong> <strong>单体架构</strong></h2><h3 id="1-1-什么是单体架构"><a href="#1-1-什么是单体架构" class="headerlink" title="1.1. 什么是单体架构"></a><strong>1.1.</strong> <strong>什么是单体架构</strong></h3><p>简单来说我们以前传统的应用的就是单体架构,即所有的模块，组件等都在一个应用中应用最终打成一个(war,jar)包使用一个容器(Tomcat)进行部署，通常一个应用享用一个数据库。在单体应用中我们通常把应用分为三个组成部分：持久层，业务层，表现层，这样的应用结构在项目初期业务较少的情况下没有任何问题，但是随着业务需求不断的增加要求单体应用中的业务逻辑，业务组件等日益扩张，应用将会变得越来越臃肿,往后的开发和维护就会变得特别麻烦，再加上越来越大访的问量，并发越来越高，面对海量的用户无论从应用性能还是从数据库方面都有吃不消的时候。所以单体应用在数据量，并发量到一定程度的时候一定会遇到瓶颈。如下图：</p>
+<p> <img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC9PTzgwNkNJMUFndmEucG5n?x-oss-process=image/format,png" alt="mark"></p>
+<h3 id="1-2-单体架构的优缺点"><a href="#1-2-单体架构的优缺点" class="headerlink" title="1.2. 单体架构的优缺点"></a><strong>1.2.</strong> <strong>单体架构的优缺点</strong></h3><p>当然单体应用在项目初期也有很多优势，主要有如下表现</p>
+<ul>
+<li>易于开发 ：架构简单，技术成本低</li>
+<li>易于测试 ：所有功能在一个项目，方便测试</li>
+<li>易于部署 ：一个Tomcat就可以实现部署，简单方便</li>
+</ul>
+<p>随着项目规模日益变大，我们可以采用集群的手段来出来解决高并发，但包含了所有组成部分的单体应用终归是有许多不足，主要缺点如下</p>
+<ul>
+<li><p>代码臃肿不方便开发维护(代码可读性差)</p>
+</li>
+<li><p>代码编译系统启动变慢</p>
+</li>
+<li><p>系统扩展性能变差(牵一发而动全身)</p>
+</li>
+<li><p>无法针对某一个业务做扩展(集群)</p>
+</li>
+<li><p>对大数据量,高并发量的处理不占优势</p>
+</li>
+<li><p>技术选型单一</p>
+</li>
+<li><p>模块/业务耦合度高</p>
+</li>
+</ul>
+<h3 id="1-2-单体应用与集群"><a href="#1-2-单体应用与集群" class="headerlink" title="1.2.单体应用与集群"></a>1.2.单体应用与集群</h3><p><strong>什么是集群</strong></p>
+<p>在单体架构中，为了提升应用的并发作业能力和防止应用的单节点故障(一个Tomcat挂了，应用就挂了)我们通常会对应用做集群，这里的集群指的是把应用进行复制多个相同的应用一起工作来提高作业能力，多个应用做的是相同的事情。就如同我们生活中的场景”收银”,一个收银台不足以支撑超市大量客户的结账流程，所以需要多个收银台同时工作，多个收银台都是做的相同的收银工作，这就是集群，如下图：</p>
+<p> <img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC9oQ0VDcmtNc0U4WGkucG5n?x-oss-process=image/format,png" alt="mark"></p>
+<p>总结一下：集群就是多个应用分散在不同的服务器，每个应用跑的是同一套代码做的是相同的工作，以提高系统的整体性能，简单理解”多个人在一起做相同的事情，每个人做的事情都是完整的，有点1+1=2的感觉”。</p>
+<p><strong>什么是负载均衡</strong></p>
+<p>当应用做了集群之后作业能力得到提升，能够处理更高的并发请求，同时产生了一个新的问题，就是客户端的请求应该如何相对平局的分发到集群中的多个应用呢？这就需要负载均衡器了。</p>
+<p>为了方便理解我们来再看我们的收银台案例：假如收银台排队的客户比较多，收银台可能也比较多，后面继续加入排队的客户可能无法选择人数最少的那个收银台进行排队，为了解决这一情况我们增加一个大显示屏来显示每个收银台的排队结账人数，那么结账客户可以就可以根据屏幕显示的人数来选择人数最少的收银台队列，如下图：</p>
+<p><img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC9UaGhjSGttOW03QzEucG5n?x-oss-process=image/format,png" alt="mark"></p>
+<p>在我们的应用程序中也是这样，当我们的应用做了集群，那么就会存在多个应用节点，多个应用将会暴露多个访问地址(ip:port)，那客户端是不知道该访问哪个应用节点的，这个时候我们就需要有一个请求分发的功能的组件(负载均衡器)将客户端的请求相对平均的分发多个应用节点上，这就是负载均衡，这个做请求分发的组件就是负载均衡器，如下图：</p>
+<p>  <img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC8zdmhtTGxJRkhhS2QucG5n?x-oss-process=image/format,png" alt="mark"></p>
+<p>这里的Nginx就是一个负载均衡器，它可以按照某种算法(轮询,ip_hash等等)将请求路由到不同的后端服务器上，同类型的负载均衡器还有如“HAproxy”，“LVS”等，这里不展开讨论。</p>
+<p><strong>负债均衡算法</strong>(Nginx)</p>
+<ul>
+<li>轮询(round robin) : 依次将请求分配到各个后台服务器中，默认的负载均衡方式</li>
+<li>权重(weight) ： 根据权重值将请求分配到后台服务器中，权重值越大，分配比例越高</li>
+<li>IP_HASH：按照ip地址进行hash运算，同一ip的请求会被分配到相同的机器上</li>
+<li>url_hash ： 根据请求的url的hash值将请求分到不同的机器中。</li>
+<li>fair：根据服务器响应时间来分发请求，时间越短分发的请求越多</li>
+</ul>
+<p><strong>小结</strong></p>
+<p>总之,当我们的单体应用没办法支撑较高的并发请求时，我们可以对应用做集群，同时加入负载均衡器来提升应用的作业能力，甚至我们也可以在数据库层也做集群(如主从复制)，这样的架构有一定的并发处理能力，也能满足一定的复杂业务需求，但是就应用本身而言任然是单体结构，仍然有其不足之处，如：</p>
+<ul>
+<li>项目本身任然是单体，代码依然臃肿</li>
+<li>面对海量数据数据库会成为性能瓶颈(需要分库分表)</li>
+<li>持续交互能力差，代码臃肿，业务复杂，开发维护时间长，新人入手成本高。</li>
+</ul>
+<p>所以当单体应用不能满足复杂的业务和海量数据的系统时，我们需要考虑其他的架构方式。</p>
+<h2 id="2-分布式架构与SOA"><a href="#2-分布式架构与SOA" class="headerlink" title="2. 分布式架构与SOA"></a><strong>2.</strong> <strong>分布式架构与SOA</strong></h2><h3 id="2-1-分布式架构"><a href="#2-1-分布式架构" class="headerlink" title="2.1.分布式架构"></a>2.1.分布式架构</h3><p>我们知道，单体应用包含了整个项目的所有代码和服务逻辑，也就是说一个Tomcat需要把整个系统跑起来，那么Tomcat总有处理不过来的时候，我们是否可以为Tomcat减轻一些压力呢？当然可以。我们拿生活中的案例”厨师炒菜”，来说，当饭店规模小的时候我们一个厨师就可以完成所有厨房的工作如”洗菜”,”切菜”，“炒菜”三件事情，当饭店规模增加，一个厨师就忙不过来，这个时候可能要再招聘两个厨师，然后进行分工，厨师A负责洗菜，厨师B负责切菜，厨师C负责炒菜，这样一来每个厨师的压力减轻，并且每个厨师就只需要专注一件事情即可。</p>
+<p>将上面的案例映射到我们的应用程序中也是一样的道理，当一个Tomcat负担不起系统中的所有业务的时候，我们可以按照业务把应用进行拆分成多个小的应用，每个小应用都用一个Tomcat去运行，每个小应用都是单体架构，每个应用只需要关系自己的业务即可，应用之间通过API相互调用，如图：</p>
+<p> <img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC9STk5BdndzZURMbUQucG5n?x-oss-process=image/format,png" alt="mark"></p>
+<p>当然如果某个子系统压力依然很大，可以单独对该子系统再做集群，所以分布式和集群并不冲突。</p>
+<p>总结一下什么是分布式 ：分布式就是将应用按照业务进行拆分成多个子应用，多个子应用部署在不同的服务器中，多个子应用组成一个完整的系统，所有的子系统一起工作相互通信相互协调才能完成最终的业务流程，缺一不可，简单理解：”多个人在一起做不同的事情，多人和在一起才是一件完整的事情，有点0.5+0.5=1的感觉”。</p>
+<h3 id="2-2-面向服务的架构SOA"><a href="#2-2-面向服务的架构SOA" class="headerlink" title="2.2.面向服务的架构SOA"></a>2.2.面向服务的架构SOA</h3><p>SOA是面向服务的架构,它的思想是每个子应用可以通过网络通信协议向其他子应用提供服务或者消费服务，SOA也是分布式架构，我们可以简单的理解为SOA把分布式架构划分成表示层和服务层，服务层中包含了业务逻辑和相关流程，只需要对外暴露服务即可，表现层负责处理和页面的交互。这样的划分好处在于系统之间调用的方便性，如用户子系统只需要调用订单子系统的服务层即可完成应用之间的通信。这样的结构划分提高了应用的重用性，业务逻辑也变得可组合。如图：</p>
+<p><img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC9JbU9FTjZYRGlCNDYucG5n?x-oss-process=image/format,png" alt="mark"></p>
+<p>SOA架构中有重要的两个角色，服务消费者(Consumer)和服务提供者(Provider)即服务调用者和服务被调用者，这样的架构优点有：</p>
+<ul>
+<li>模块拆分，使用API通信，降低模块之间的耦合度</li>
+<li>项目拆分多个子应用，每个子应用业务简单，代码简单，方便维护开发。</li>
+<li>不同技术人员可以负责不同的子应用</li>
+<li>提高服务之间的重用性，业务逻辑可组合。</li>
+</ul>
+<p>其缺点在于：</p>
+<ul>
+<li>服务之间的API接口开发增加了工作量，</li>
+<li>SOA服务之间的网络通信调用对性能有一定的影响(尽管很小)</li>
+<li>相对于单体应用来说，技术,人力成本较高。</li>
+<li>部署和运维相对麻烦</li>
+</ul>
+<h2 id="3-微服务架构"><a href="#3-微服务架构" class="headerlink" title="3. 微服务架构"></a><strong>3.</strong> <strong>微服务架构</strong></h2><h3 id="3-1-什么是微服务"><a href="#3-1-什么是微服务" class="headerlink" title="3.1. 什么是微服务"></a><strong>3.1.</strong> <strong>什么是微服务</strong></h3><p>微服务架构可以认识是在SOA架构上的一种发展，最早由“Martin Fowler”提出：</p>
+<blockquote>
+<p>就目前而言，对于微服务业界并没有一个统一的、标准的定义（While there is no precise definition of this architectural style ) 。但通常而言，微服务架构是一种架构模式或者说是一种架构风格，它提倡将单一应用程序划分成一组小的服务，每个服务运行独立的自己的进程中，服务之间互相协调、互相配合，为用户提供最终价值。服务之间采用轻量级的通信机制互相沟通（通常是基于 HTTP 的 RESTful API ) 。每个服务都围绕着具体业务进行构建，并且能够被独立地部署到生产环境、类生产环境等。</p>
+<p>另外，应尽量避免统一的、集中式的服务管理机制，对具体的一个服务而言，应根据业务上下文，选择合适的语言、工具对其进行构建，可以有一个非常轻量级的集中式管理来协调这些服务。可以使用不同的语言来编写服务，也可以使用不同的数据存储。</p>
+</blockquote>
+<p>我们从这段描述中可以看出，微服务架构和SOA架构很像，总体来说，微服务就是把单一应用进行细粒度的拆分成多个小(微)的服务相，每个服务独立运行，每个服务只需要专注一个业务即可，并且每个服务都可以有自己的数据库(分库)，服务之间互协调配合完成整个系统的业务，我们用一个图来理解微服务架构：</p>
+<p><img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyMy9xU2hSYTRRT0pMdzUucG5n?x-oss-process=image/format,png" alt="mark"></p>
+<p>我们总结一下微服务有如下的特点 ：</p>
+<ul>
+<li>由多个服务组成完整的系统</li>
+<li>每个服务都是独立的，有自己的进程</li>
+<li>服务之间使用HTTP协议通信</li>
+<li>不同的服务可以使用不同的编程语言</li>
+<li>不同的服务的数据库可以多样化选择</li>
+<li>微服务是一个分布式系统</li>
+</ul>
+<h3 id="3-2-微服务的优缺点"><a href="#3-2-微服务的优缺点" class="headerlink" title="3.2. 微服务的优缺点"></a><strong>3.2.</strong> <strong>微服务的优缺点</strong></h3><p>在项目规模较大的时候，相对于单体应用来说，微服务具备很多优势，主要体现在如下方面：</p>
+<ul>
+<li>单个服务业务简单，代码简单方便开发维护</li>
+<li>服务之间无耦合，服务之间升级维护互不影响</li>
+<li>轻量级HTTP通信机制，使得的不同的服务可以采用不同的编程语言</li>
+<li>微服务有极强的扩展能力,业务量大的服务可以再次拆分服务，也可以进行集群部署，剔除服务也很方便</li>
+<li>更大的系统负载能力和容错能力(集群)</li>
+<li>对于开发人员来说,通常只需要关注单一服务,新员工上手也比较快</li>
+<li>微服务架构对现在流行的敏捷开发支持优化</li>
+</ul>
+<p>凡是都有双面性，微服务展示出了他都优势之处，同时也有其不足的地方，主要体现如下方面：</p>
+<ul>
+<li><p>分布式事务 ：服务通信机制增加了事务的复杂性，架构师要选择合适的分布式方案(CAP理论)</p>
+</li>
+<li><p>部署麻烦 ：微服务众多，部署麻烦，需要借助容器技术和自动化部署工具，这又增加了开发人员的学习成本。</p>
+</li>
+<li><p>技术成本高  ：微服务架构本身比较复杂,技术成本高，开发人员需要花更多的时间学习相关技术。</p>
+</li>
+<li><p>服务通信对性能的损耗  ： 微服务架构一定要考虑服务通信延迟对服务调用性能的损耗问题，开发人员需要选择合适的通信方式解决这一问题。</p>
+</li>
+</ul>
+<h3 id="3-3-如何选型"><a href="#3-3-如何选型" class="headerlink" title="3.3.如何选型"></a>3.3.如何选型</h3><p>虽然微服务有诸多好处，但是不是任何系统都适合用微服务架构来开发，在项目规模不大的情况下单体应用性能表现良好，当项目规模较大，用户体量，并发较大的时候，微服务总体性能占优势，所以我们应该根据项目类型以及项目规模来决定应用架构的选型，如大型电商，物流，售票等系统我们可以选择使用微服务架构，对于中小型的企业级应用我们依然可以选择单体架构。下面是项目规模和性能的走式图：</p>
+<p> <img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC9NVmh0UTBoUjl2Z2cucG5n?x-oss-process=image/format,png" alt="mark"></p>
+]]></content>
+      <categories>
+        <category>SpringCloud</category>
+      </categories>
+      <tags>
+        <tag>SpringCloud</tag>
+        <tag>微服务开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba</title>
+    <url>/2020/11/15/%E4%B8%80.SpringCloudAlibaba%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E4%BB%80%E4%B9%88%E6%98%AF%20Spring%20Cloud%20Alibaba/</url>
+    <content><![CDATA[<p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
+<h4 id="1-Spring-Cloud-与-Dubbo-与-Spring-Cloud-Alibaba"><a href="#1-Spring-Cloud-与-Dubbo-与-Spring-Cloud-Alibaba" class="headerlink" title="1.Spring Cloud 与 Dubbo 与 Spring Cloud Alibaba"></a>1.Spring Cloud 与 Dubbo 与 Spring Cloud Alibaba</h4><p>早期在国内做分布式(微服务)应用Dubbo是比较热门的框架，被许多互联网公司所采用，并产生了许多衍生版本，如网易，京东，新浪，当当等等，奈何在2014年10月Dubbo停止维护，在Dubbo停更的时间里Spring Cloud快速追赶上。在2017年9月，阿里宣布重启Dubbo项目，计划对Dubbo进行持续更新维护。2018.2月，阿里将Dubbo捐献给Apache基金会，Dubbo成为Apache孵化器项目。</p>
+<p>所以当前微服务架构，Dubbo和SpringCloud比较火，另外还有Thrift、gRPC等等 。很多人把SpringCloud 和Dubbo进行对比，其实两个框架并没有太大的可比性，因为他们的定位不同。Spring Cloud是一个完整的微服务解决方案,它提供了微服务各问题的解决方案集合，而Dubbo是一个高性能的RPC框架，它有着很多功能的缺失。</p>
+<p>但是很多企业一边想要Dubbo的高性能RPC ，一边又想要Spring Cloud 完整的生态，然后在项目中出现了两个微服务框架的身影 。甚至市面上出现了一些Dubbo和Sprng Cloud的融合方案，但是最终都不是特别成熟。直到Spring Cloud官方出现了Spring Cloud Alibaba 才算是吧Dubbo和Spring Cloud真正的融合在一起。</p>
+<h4 id="2-什么是-Spring-Cloud-Alibaba"><a href="#2-什么是-Spring-Cloud-Alibaba" class="headerlink" title="2.什么是 Spring Cloud Alibaba"></a>2.什么是 Spring Cloud Alibaba</h4><p>下面是Spring Cloud 官方对Spring Cloud Alibaba的介绍</p>
+<blockquote>
+<p>Spring Cloud Alibaba旨在为微服务开发提供一站式解决方案。该项目包括开发分布式应用程序和服务所需的组件，以便开发人员可以使用Spring Cloud编程模型轻松开发分布式应用程序。使用Spring Cloud Alibaba，您只需要添加一些注释和配置，就可以为您的应用程序使用Alibaba的分布式解决方案，并使用Alibaba中间件构建自己的分布式系统。</p>
+</blockquote>
+<p>Spring Cloud Alibaba其实是阿里的微服务解决方案，是阿里巴巴结合自身微服务实践,开源的微服务全家桶，在Spring Cloud项目中孵化成为Spring Cloud的子项目。第一代的Spring Cloud标准中很多组件已经停更,如：Eureak,zuul等。所以Spring Cloud Alibaba很有可能成为Spring Cloud第二代的标准实现，所以许多组件在业界逐渐开始使用，已有很多成功案例。</p>
+<p>值得一提的是Spring Cloud Alibaba对Dubbo做了很好的兼容，同时也提供了一些强大的功能，如 Sentinel 流控 ，Seata 分布式事务，Nacos 服务发现与注册等等。</p>
+<h4 id="3-Spring-Cloud-Alibaba的功能"><a href="#3-Spring-Cloud-Alibaba的功能" class="headerlink" title="3.Spring Cloud Alibaba的功能"></a>3.Spring Cloud Alibaba的功能</h4><p>Spring Cloud Alibaba是阿里巴巴结合自身的微服务实践开源的微服务全家桶，我个人觉得其组件比Spring Cloud 中的组件更加好用和强大。并且对的Spring Cloud组件做了很好的兼容。比如在Spirng Cloud Alibaba中依然可以使用Feign作为服务调用方式，使用Eureak做服务注册发现等等。Spring Cloud Alibaba主要的功能如下：</p>
+<ul>
+<li><p><strong>流控制和服务降级</strong>：支持WebServlet，WebFlux，OpenFeign，RestTemplate，Dubbo访问限制和降级流的功能。它可以在运行时通过控制台实时修改限制和降级流的规则，并且还支持监视限制和降级度量标准。</p>
+</li>
+<li><p><strong>服务注册和发现</strong>：可以注册服务，并且客户可以使用Spring托管的bean（自动集成功能区）发现实例。</p>
+</li>
+<li><p><strong>分布式配置</strong>：支持分布式系统中的外部配置，配置更改时自动刷新。</p>
+</li>
+<li><p><strong>Rpc服务</strong>：扩展Spring Cloud客户端RestTemplate和OpenFeign以支持调用Dubbo RPC服务。</p>
+</li>
+<li><p><strong>事件驱动</strong>：支持构建与共享消息系统连接的高度可扩展的事件驱动微服务。</p>
+</li>
+<li><p><strong>分布式事务</strong>：支持高性能且易于使用的分布式事务解决方案。</p>
+</li>
+<li><p><strong>阿里云对象存储</strong>：大规模，安全，低成本，高度可靠的云存储服务。支持随时随地在任何应用程序中存储和访问任何类型的数据。</p>
+</li>
+<li><p><strong>阿里云SchedulerX</strong>：准确，高度可靠，高可用性的计划作业调度服务，响应时间在几秒钟内。</p>
+</li>
+<li><p><strong>阿里云短信</strong>：<strong>阿里云短信</strong>服务覆盖全球，提供便捷，高效，智能的通信功能，帮助企业快速联系客户。</p>
+</li>
+</ul>
+<p>下面是SpringCloud 和 Spring Cloud Alibaba(命名 Dubbo Spring Cloud )的功能对比</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201115154600600.png" alt="cloud-dubbo"></p>
+<h4 id="4-Spring-Cloud-Alibaba的版本"><a href="#4-Spring-Cloud-Alibaba的版本" class="headerlink" title="4.Spring Cloud Alibaba的版本"></a>4.Spring Cloud Alibaba的版本</h4><p>Spring Cloud Alibaba是Spring Cloud的子项目 ，Spring Cloud 基于Spring Boot，所以我们在选择版本的时候需要考虑三个框架的版本，目前官方给出的版本如下：<br>| Spring Cloud Version   | Spring Cloud Alibaba Version | Spring Boot Version |<br>| ———————- | —————————- | ——————- |<br>| Spring Cloud Greenwich | 2.1.x.RELEASE                | 2.1.x.RELEASE       |<br>| Spring Cloud Finchley  | 2.0.x.RELEASE                | 2.0.x.RELEASE       |<br>| Spring Cloud Edgware   | 1.5.x.RELEASE                | 1.5.x.RELEASE       |</p>
+<p>这里给出一个G版的版本配置：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--公共的一些配置--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">spring-cloud.version</span>&gt;</span>Greenwich.SR2<span class="tag">&lt;/<span class="name">spring-cloud.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">alibaba.version</span>&gt;</span>2.1.0.RELEASE<span class="tag">&lt;/<span class="name">alibaba.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">spring-boot.version</span>&gt;</span>2.1.13.RELEASE<span class="tag">&lt;/<span class="name">spring-boot.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--1.管理SpringBoot的依赖--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span> org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring-boot.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-alibaba-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;alibaba.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring-cloud.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>SpringCloudAlibaba</category>
+      </categories>
+      <tags>
+        <tag>SpringCloud</tag>
+        <tag>微服务开发</tag>
+        <tag>SpringCloudAlibaba</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二.SpringCloud极简入门-SpringCloud简介</title>
+    <url>/2020/11/15/%E4%BA%8C.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-SpringCloud%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
+<h2 id="二-SpringCloud与微服务"><a href="#二-SpringCloud与微服务" class="headerlink" title="二. SpringCloud与微服务"></a><strong>二.</strong> <strong>SpringCloud与微服务</strong></h2><h3 id="1-什么是SpringCloud"><a href="#1-什么是SpringCloud" class="headerlink" title="1. 什么是SpringCloud"></a><strong>1.</strong> <strong>什么是SpringCloud</strong></h3><h4 id="1-1-SpringCloud基本概念"><a href="#1-1-SpringCloud基本概念" class="headerlink" title="1.1.SpringCloud基本概念"></a>1.1.SpringCloud基本概念</h4><p>Spring cloud是一个基于Spring Boot实现的服务治理工具包，用于微服务架构中管理和协调服务的。Spring Cloud是一系列框架的有序集合。它利用Spring Boot的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控等，都可以用Spring Boot的开发风格做到一键启动和部署。通过Spring Boot风格进行再封装屏蔽掉了复杂的配置和实现原理，最终给开发者留出了一套简单易懂、易部署和易维护的分布式系统开发工具包。有了SpringCloud之后，让微服务架构的落地变得更简单。</p>
+<h4 id="1-2-SpringCloud常用组件"><a href="#1-2-SpringCloud常用组件" class="headerlink" title="1.2. SpringCloud常用组件"></a><strong>1.2.</strong> <strong>SpringCloud常用组件</strong></h4><p>当我们的项目采用微服务架构之后就会引发一些列的难题需要去解决，如众多微服务的通信地址应该如何管理，微服务之间应该使用何种方式发起调用，微服务故障该如何处理，众多微服务的配置文件如何集中管理等等，SpringCloud为这一系列的难题提供了相应的组件来解决，下面我们简单来理解一下SpringCloud最核心的几大组件如如下：<br><img data-src="https://img-blog.csdnimg.cn/20200329232256382.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h5 id="Netflix-Eureka"><a href="#Netflix-Eureka" class="headerlink" title="Netflix Eureka"></a><strong>Netflix Eureka</strong></h5><p>当我们的微服务过多的时候，管理服务的通信地址是一个非常麻烦的事情，Eureka就是用来管理微服务的通信地址清单的，有了Eureka之后我们通过服务的名字就能实现服务的调用。</p>
+<h5 id="Netflix-Ribbon-Feign-客户端负载均衡"><a href="#Netflix-Ribbon-Feign-客户端负载均衡" class="headerlink" title="Netflix Ribbon\Feign : 客户端负载均衡"></a><strong>Netflix Ribbon\Feign : 客户端负载均衡</strong></h5><p>Ribbon和Feign都是客户端负载均衡器，它的作用是在服务发生调用的时候帮我们将请求按照某种规则分发到多个目标服务器上，简单理解就是用来解决微服务之间的通信问题。</p>
+<h5 id="Netflix-Hystrix-：断路器"><a href="#Netflix-Hystrix-：断路器" class="headerlink" title="Netflix Hystrix ：断路器"></a><strong>Netflix Hystrix ：断路器</strong></h5><p>微服务的调用是非常复杂的，有的时候一个请求需要很多的微服务共同完成，那么一旦某个服务发生故障，导致整个调用链上的微服务全都出现异常，甚至导致整个微服务架构瘫痪。Hystrix就是用来解决微服务故障，保护微服务安全的组件。</p>
+<h5 id="Netflix-Zuul-：-服务网关"><a href="#Netflix-Zuul-：-服务网关" class="headerlink" title="Netflix Zuul ： 服务网关"></a><strong>Netflix Zuul ： 服务网关</strong></h5><p>zuul作为服务网关，我们可以把它看作是微服务的大门，所有的请求都需要经过zuul之后才能到达目标服务，根据这一特性，我们可以把微服务公共的是事情交给zuul统一处理，如：用户鉴权，请求监控等。</p>
+<h5 id="Spring-Cloud-Config-：分布式配置"><a href="#Spring-Cloud-Config-：分布式配置" class="headerlink" title="Spring Cloud Config ：分布式配置"></a><strong>Spring Cloud Config ：分布式配置</strong></h5><p>微服务架构中的服务实例非常的多，服务的配置文件分散在每个服务中，每次修改服务的配置文件和重新服务实例都是一个很麻烦的工作，Spring Cloud Config作为分布式配置管理中心就是用来统一的管理服务的配置文件。</p>
+<h5 id="Spring-Cloud-Bus-消息总线"><a href="#Spring-Cloud-Bus-消息总线" class="headerlink" title="Spring Cloud Bus : 消息总线"></a><strong>Spring Cloud Bus : 消息总线</strong></h5><p>消息总线是在微服务中给各个微服务广播消息的一个组件，我们使用消息总线构建一个消息中心，其他微服务来接入到消息中心，当消息总线发起消息，接入的微服务都可以收到消息从而进行消费。</p>
+<h5 id="Spring-Cloud-sleuth-微服务链路追踪"><a href="#Spring-Cloud-sleuth-微服务链路追踪" class="headerlink" title="Spring Cloud sleuth :微服务链路追踪"></a><strong>Spring Cloud sleuth :微服务链路追踪</strong></h5><p>当我们的应用采用微服务架构之后，后台可能有几十个甚至几百个服务在支撑，一个请求请求可能需要多次的服务调用最后才能完成，链路追踪的作用就是来监控维护之间的调用关系,让程序员方便直观的感受到一个请求经历了哪些微服务，以及服务的请求时间，是否有异常等。</p>
+<h4 id="1-3-SpringCloud的版本"><a href="#1-3-SpringCloud的版本" class="headerlink" title="1.3.SpringCloud的版本"></a>1.3.SpringCloud的版本</h4><p>SpringCloud是基于SpringBoot的,所以两者的jar包都需要导入,需要注意的是SprinbCloud的版本需要和SpringBoot的版本兼容，<strong>本文章采用的SpringBoot版本是2.0.5.RELEASE ， SpringCloud的版本是Finchley.SR1**</strong>。下面是版本兼容图：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Release Train</th>
+<th align="left">Boot Version</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Hoxton</td>
+<td align="left">2.2.x</td>
+</tr>
+<tr>
+<td align="left">Greenwich</td>
+<td align="left">2.1.x</td>
+</tr>
+<tr>
+<td align="left"><strong>Finchley</strong></td>
+<td align="left"><strong>2.0.x</strong></td>
+</tr>
+<tr>
+<td align="left">Edgware</td>
+<td align="left">1.5.x</td>
+</tr>
+<tr>
+<td align="left">Dalston</td>
+<td align="left">1.5.x</td>
+</tr>
+</tbody></table>
+<h3 id="2-服务通信协议"><a href="#2-服务通信协议" class="headerlink" title="2.服务通信协议"></a>2.服务通信协议</h3><p>在微服务中服务间通过网络进行通信，那么服务间的远程调用方式有哪些呢？</p>
+<h4 id="2-1-RPC"><a href="#2-1-RPC" class="headerlink" title="2.1.RPC"></a>2.1.RPC</h4><p>RPC(Remote Produce Call)远程过程调用，类似的还有RMI。自定义数据格式，基于原生TCP通信，速度快，效率高。早期的webservice，现在热门的dubbo，都是RPC的典型</p>
+<h4 id="2-2-Http"><a href="#2-2-Http" class="headerlink" title="2.2.Http"></a>2.2.Http</h4><p>Http其实是一种网络传输协议，基于TCP，规定了数据传输的格式。现在客户端浏览器与服务端通信基本都是采用Http协议。也可以用来进行远程服务调用。缺点是消息封装臃肿。  现在热门的Rest风格，就可以通过http协议来实现</p>
+<p>我们可以认为SpringCloud就是基于Http协议实现服务之间的通信。</p>
+<h4 id="2-2-如何选择"><a href="#2-2-如何选择" class="headerlink" title="2.2.如何选择"></a>2.2.如何选择</h4><p>其实我们并不需要刻意去选择该使用RPC或者是Http，如果架构师选择Dubbo作为微服务开发框架，通信方式自然就是RPC，当架构师选择了SpringCloud作为微服务开发框架，那么通信方式自然就是基于Http协议，当然，如果服务的通信方式成为了微服务的性能瓶颈，那么架构师自然需要去考虑更换微服务的通信协议。</p>
+<h3 id="2-SpringCloud与Dubbo"><a href="#2-SpringCloud与Dubbo" class="headerlink" title="2. SpringCloud与Dubbo"></a><strong>2.</strong> <strong>SpringCloud与Dubbo</strong></h3><h4 id="2-1-Dubbo简介"><a href="#2-1-Dubbo简介" class="headerlink" title="2.1.Dubbo简介"></a>2.1.Dubbo简介</h4><p>Dubbo最早是有阿里巴巴提供的一个服务治理和服务调用框架，现在已经成为Apache的顶级项目，Dubbo跟SpringCloud最显著的区别是Dubbo的定位只是一个RPC框架，相比SpringCloud来说它缺少很多功能模块，如：网关，链路追踪等，所以往往在使用Dubbo作为微服务开发框架的时候，还需要去配合其他的框架一起使用，如:加入zookeeper作为注册中心。</p>
+<h4 id="2-2-SpringCloud与Dubbo的区别"><a href="#2-2-SpringCloud与Dubbo的区别" class="headerlink" title="2.2.SpringCloud与Dubbo的区别"></a>2.2.SpringCloud与Dubbo的区别</h4><p>早期在国内做分布式(微服务)应用Dubbo是比较热门的框架，被许多互联网公司所采用，并产生了许多衍生版本，如网易，京东，新浪，当当等等，奈何在2014年10月Dubbo停止维护，在Dubbo停更的时间里Spring Cloud快速追赶上。在2017年9月，阿里宣布重启Dubbo项目，计划对Dubbo进行持续更新维护。2018.2月，阿里将Dubbo捐献给Apache基金会，Dubbo成为Apache孵化器项目。</p>
+<p>所以当前微服务架构，Dubbo和SpringCloud比较火，另外还有Thrift、gRPC等等 。很多人把SpringCloud 和Dubbo进行对比，其实两个框架并没有太大的可比性，因为他们的定位不同。Spring Cloud是一个完整的微服务解决方案,它提供了微服务各问题的解决方案集合，而Dubbo是一个高性能的RPC框架，它有着很多功能的缺失。</p>
+<p><strong>定位不一样</strong></p>
+<p>SpringCloud为了微服务的落地提供了一套完整的组件，而Dubbo只是一个RPC框架，缺失的功能很多。</p>
+<p><strong>通信协议不一样</strong></p>
+<p>Dubbo的通信方式是RPC，基于原声的tcp,性能较好，而SpringCloud的通信方式基于Http协议，虽然底层基于tcp，但是Http的封装过于臃肿，但是使用Http好处在于互相通信的两个服务可以使用不同的变成语言去编写，只要他们都支持Http通信即可互相调用，而Dubbo只支持Java,当然Dubbo交给Apache维护之后做了升级，Dubbo在以后不仅仅支持Java。</p>
+<p><strong>背景都很强大</strong></p>
+<p>Dubbo背靠阿里和Apache,淘宝就是使用的Dubbo来开发经理过双“11”期间的高并发大流量检验，可以说是非常的稳定和成熟，SpringCloud是Spring家族的成员，严格遵循Martin Fowler提出的微服务规范，可以认为SpringCloud是微服务架构的标准，总之两者背景都很强大，文档完善，社区活跃，所以不管作何选择，都是很有前途的。</p>
+<p><strong>开发风格</strong></p>
+<p>从开发风格上来讲，Dubbo官方推荐倾向于使用Spring xml配置方式，SpringCloud是基于SpringBoot的开发风格，即采用注解的方式进行配置，从开发速度上来说，SpringCloud具有更高的开发和部署速度。</p>
+<p>下面是网上比较流行的Dubbo和Spring Cloud功能对比图：</p>
+<p><img data-src="https://whale-blog.oss-cn-beijing.aliyuncs.com/1605420970599.png" alt="1605420970599"></p>
+]]></content>
+      <categories>
+        <category>SpringCloud</category>
+      </categories>
+      <tags>
+        <tag>SpringCloud</tag>
+        <tag>微服务开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>三.SpringCloud极简入门-服务注册与发现-Eureka</title>
+    <url>/2020/11/15/%E4%B8%89.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0Eureka/</url>
+    <content><![CDATA[<p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
+<h2 id="三-服务注册与发现-Eureka"><a href="#三-服务注册与发现-Eureka" class="headerlink" title="三. 服务注册与发现-Eureka"></a><strong>三.</strong> <strong>服务注册与发现-Eureka</strong></h2><h3 id="1-Eureka介绍"><a href="#1-Eureka介绍" class="headerlink" title="1. Eureka介绍"></a><strong>1.</strong> <strong>Eureka介绍</strong></h3><h4 id="1-1-什么是Eureka"><a href="#1-1-什么是Eureka" class="headerlink" title="1.1. 什么是Eureka"></a><strong>1.1.</strong> <strong>什么是Eureka</strong></h4><p>微服务的其中一个特点是服务之间需要进行网络通信，服务器之间发起调用时调用服务得知道被调用服务的通信地址，试问当微服务数量成百上千之多，程序员该如何管理众多的服务通信地址，对于随时新增加的微服务和下线的微服务，又应该如何去动态添加和删除这些微服务的通信地址呢？所以手工管理服务的通信地址是一件遥不可及的事情，我们需要借助一个强大的工具帮我们实现这一功能 - Eureka，同类型的组件还有 zookeeper,consul等</p>
+<h4 id="1-2-Eureka的工作原理"><a href="#1-2-Eureka的工作原理" class="headerlink" title="1.2. Eureka的工作原理"></a><strong>1.2.</strong> <strong>Eureka的工作原理</strong></h4><p><strong>服务注册</strong> </p>
+<p>Eureka是一个服务注册与发现组件,简单说就是用来统一管理微服务的通信地址的组件，它包含了EurekaServer 服务端(也叫注册中心)和EurekaClient客户端两部分组成，EurekaServer是独立的服务，而EurekaClient需要集成到每个微服务中。 </p>
+<p>微服务(EurekaClient)在启动的时候会向EurekaServer提交自己的服务信息(通信地址如:服务名,ip,端口等)，在 EurekaServer会形成一个微服务的通信地址列表存储起来。 — 这叫服务注册 </p>
+<p><strong>服务发现</strong> </p>
+<p>微服务(EurekaClient)会定期(RegistryFetchIntervalSeconds:默认30s)的从EurekaServer拉取一份微服务通信地址列表缓存到本地。当一个微服务在向另一个微服务发起调用的时候会根据目标服务的服务名找到其通信地址，然后基于HTTP协议向目标服务发起请求。—这叫服务发现 </p>
+<p><strong>服务续约</strong></p>
+<p>另外，微服务(EurekaClient)采用定时(LeaseRenewalIntervalInSeconds:默认30s)发送“心跳”请求向EurekaServer发请求进行服务续约，其实就是定时向 EurekaServer发请求报告自己的健康状况，告诉EurekaServer自己还活着，不要把自己从服务地址清单中剔除掉，那么当微服务(EurekaClient)宕机未向EurekaServer续约，或者续约请求超时，注册中心机会从服务地址清单中剔除该续约失败的服务。</p>
+<p><strong>服务下线</strong></p>
+<p>微服务(EurekaClient)关闭服务前向注册中心发送下线请求，注册中心(EurekaServer)接受到下线请求负责将该服务实例从注册列表剔除</p>
+<p>下面我们用一张图来介绍Eureka的工作流程</p>
+<p><img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDMxOS80dzBTeGppZ2p5eHgucG5n?x-oss-process=image/format,png" alt="mark"></p>
+<h3 id="2-EurekaServer实战"><a href="#2-EurekaServer实战" class="headerlink" title="2. EurekaServer实战"></a><strong>2.</strong> <strong>EurekaServer实战</strong></h3><p>文章采用“用户”,“订单”，“支付”等业务来演示整个SpringCloud的各个组件</p>
+<h4 id="2-1-多模块项目结构"><a href="#2-1-多模块项目结构" class="headerlink" title="2.1.多模块项目结构"></a>2.1.多模块项目结构</h4><h5 id="1-搭建项目结构"><a href="#1-搭建项目结构" class="headerlink" title="1.搭建项目结构"></a>1.搭建项目结构</h5><p>欲善其事，比利其器，为了方便演示SpringCloud的各个组件，我这里采用多模块的方式搭建项目，所有的jar包交给父工程来管理，搭建好的项目结构如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">springcloud-parent <span class="comment">//父项目</span></span><br><span class="line">pom.xml	<span class="comment">//父项目的pom</span></span><br><span class="line">	springcloud-eureka-server-<span class="number">1010</span> <span class="comment">//注册中心EurekaServer </span></span><br><span class="line">	springcloud-user-server-<span class="number">1020</span>   <span class="comment">//用户服务EurekaClient ,提供者 </span></span><br><span class="line">	springcloud-order-server-<span class="number">1030</span>  <span class="comment">//订单服务EurekaClient ,消费者</span></span><br></pre></td></tr></table></figure>
+
+<p>啥？不懂SpringBoot?找篇文章学一学!!!  , 啥？多模块项目不会搭建？找篇文章学一学!!!</p>
+<h5 id="2-父项目管理依赖"><a href="#2-父项目管理依赖" class="headerlink" title="2.父项目管理依赖"></a><strong>2.父项目管理依赖</strong></h5><p>SpringCloud的Jar包管理参照文档：<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC5zcHJpbmcuaW8vc3ByaW5nLWNsb3VkLXN0YXRpYy9HcmVlbndpY2guU1I1L211bHRpL211bHRpX19xdWlja19zdGFydC5odG1sI19jbGllbnRfc2lkZV91c2FnZQ==">https://cloud.spring.io/spring-cloud-static/Greenwich.SR5/multi/multi__quick_start.html#_client_side_usage</span></p>
+<p>springcloud-parent父工程负责管理SpringBoot和SpringCloud的jar包 ，pom.xml如下</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.itsource.springboot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springcloud-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modules</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">module</span>&gt;</span>springcloud-eureka-server-1010<span class="tag">&lt;/<span class="name">module</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">module</span>&gt;</span>springcloud-user-server-1020<span class="tag">&lt;/<span class="name">module</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">module</span>&gt;</span>springcloud-order-server-1030<span class="tag">&lt;/<span class="name">module</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">modules</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--公共的一些配置--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">spring-cloud.version</span>&gt;</span>Finchley.SR1<span class="tag">&lt;/<span class="name">spring-cloud.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--1.管理 SpringBoot的jar包--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span> org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.5.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--2.管理 SpringCloud的jar包</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">           </span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring-cloud.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--3.这里是所有子项目都可以用的jar包--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-搭建Eureka-Server"><a href="#2-2-搭建Eureka-Server" class="headerlink" title="2.2. 搭建Eureka Server"></a><strong>2.2.</strong> <strong>搭建Eureka Server</strong></h4><p>参照文档：<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC5zcHJpbmcuaW8vc3ByaW5nLWNsb3VkLXN0YXRpYy9HcmVlbndpY2guU1I1L211bHRpL211bHRpX3NwcmluZy1jbG91ZC1ldXJla2Etc2VydmVyLmh0bWwjbmV0ZmxpeC1ldXJla2Etc2VydmVyLXN0YXJ0ZXI=">https://cloud.spring.io/spring-cloud-static/Greenwich.SR5/multi/multi_spring-cloud-eureka-server.html#netflix-eureka-server-starter</span></p>
+<p>在springcloud-parent父工程下面搭建好子工程springcloud-eureka-server-1010，然后我们来集成EurekaServer。</p>
+<h5 id="1-导入依赖"><a href="#1-导入依赖" class="headerlink" title="1.导入依赖"></a>1.导入依赖</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!--集成自己的父工程--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springcloud-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.itsource.springboot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springcloud-eureka-server-1010<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>springcloud-eureka-server-1010<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--spring-cloud-starter-netflix-eureka-server --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>提示：spring-cloud-starter-netflix-eureka-server作为EurekaServer端的基础依赖，但同时这个包也把EurekaClient端的以来也导入进来了，spring-boot-starter-web作为web服务的基础依赖是不可缺少的。</p>
+<h5 id="2-主配置类"><a href="#2-主配置类" class="headerlink" title="2.主配置类"></a>2.主配置类</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 注册中心启动类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@EnableEurekaServer</span> : 开启EurekaServer服务端</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableEurekaServer</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EurekaServerApplication1010</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">( String[] args )</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        SpringApplication.run(EurekaServerApplication1010.class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>提示：在主配置类上通过 @EnableEurekaServer 注解开启了EurekaServer端的功能。</p>
+<h5 id="3-application-yml配置文件"><a href="#3-application-yml配置文件" class="headerlink" title="3.application.yml配置文件"></a>3.application.yml配置文件</h5><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">1010</span>  <span class="comment">#端口</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">instance:</span></span><br><span class="line">    <span class="attr">hostname:</span> <span class="string">localhost</span> <span class="comment">#主机</span></span><br><span class="line">  <span class="attr">client:</span> <span class="comment">#客户端配置</span></span><br><span class="line">    <span class="attr">registerWithEureka:</span> <span class="literal">false</span>  <span class="comment">#EurekaServer自己不要注册到EurekaServer自己 ，只有EurekaClient才注册</span></span><br><span class="line">    <span class="attr">fetchRegistry:</span> <span class="literal">false</span>  <span class="comment">#EurekaServer不要拉取服务的通信地址列表 ，只有EurekaClient才拉取地址列表</span></span><br><span class="line">    <span class="attr">serviceUrl:</span>  <span class="comment">#注册中心的注册地址</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://localhost:1010/eureka/</span>  <span class="comment">#http://$&#123;eureka.instance.hostname&#125;:$&#123;server.port&#125;/eureka/</span></span><br><span class="line">  <span class="attr">server:</span></span><br><span class="line">    <span class="attr">enable-self-preservation:</span> <span class="literal">false</span> <span class="comment">#关闭自我保护警告</span></span><br></pre></td></tr></table></figure>
+
+<p>提示：这里配置了EurekaServer的端口为 1010 ，主机名 localhost  ，需要特别说明的是我们再引入EurekaServer的基础依赖spring-cloud-starter-netflix-eureka-server时，这个依赖即引入了EurekaServer所需要的包，也引入了EurekaClient的包，换句话说，现在的springcloud-eureka-server-1010工程既是一个 EurekaServer，也是一个EurekaClient。</p>
+<p>我们这里暂时把EurekaClient的功能屏蔽掉 ，即关闭它的服务注册和发现功能，让他做好EurekaServer该做的事情即可。</p>
+<ul>
+<li>serviceUrl是服务注册地址，EurekaClient需要注册到EurekaServer就得跟上该地址。</li>
+<li>registerWithEureka=false ：禁止自己向自己注册</li>
+<li>fetchRegistry=false ： 禁止拉取服务注册列表</li>
+</ul>
+<h5 id="4-启动测试"><a href="#4-启动测试" class="headerlink" title="4.启动测试"></a>4.启动测试</h5><p>启动springcloud-eureka-server-1010工程，浏览器访问 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDoxMDEwLw==">http://localhost:1010</span> ,出现如下界面代码EurekaServer集成成功：</p>
+<p><img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDMyMC8zZ3JEd3Nha2J6TEoucG5n?x-oss-process=image/format,png" alt="mark"></p>
+<h4 id="2-3-Eureka自我保护"><a href="#2-3-Eureka自我保护" class="headerlink" title="2.3.Eureka自我保护"></a>2.3.Eureka自我保护</h4><p>默认情况下，当EurekaServer接收到服务续约的心跳失败比例在15分钟之内低于85%，EurekaServer会把这些服务保护起来，即不会把该服务从服务注册地址清单中剔除掉，但是在此种情况下有可能会出现服务下线，那么消费者就会拿到一个无效的服务，请求会失败，那我们需要对消费者服务做一些重试，或在熔断策略。</p>
+<p>当EurekaServer开启自我保护时，监控主界面会出现红色警告信息，我们可以使用<code>eureka.server.enable-self-preservation=false</code>来关闭EurekaServer的保护机制，这样可以确保注册中心中不可用的实例被及时的剔除，但是不推荐</p>
+<p>关闭Eureka自我保护后的配置如下：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">1010</span>  <span class="comment">#端口</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">instance:</span></span><br><span class="line">    <span class="attr">hostname:</span> <span class="string">localhost</span> <span class="comment">#主机</span></span><br><span class="line">  <span class="attr">client:</span> <span class="comment">#客户端配置</span></span><br><span class="line">    <span class="attr">registerWithEureka:</span> <span class="literal">false</span>  <span class="comment">#EurekaServer自己不要注册到EurekaServer自己</span></span><br><span class="line">    <span class="attr">fetchRegistry:</span> <span class="literal">false</span>  <span class="comment">#不要拉取服务的通信地址列表</span></span><br><span class="line">    <span class="attr">serviceUrl:</span>  <span class="comment">#注册中心的注册地址</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://localhost:1010/eureka/</span>  <span class="comment">#http://$&#123;eureka.instance.hostname&#125;:$&#123;server.port&#125;/eureka/</span></span><br><span class="line">  <span class="attr">server:</span></span><br><span class="line">    <span class="attr">enable-self-preservation:</span> <span class="literal">false</span> <span class="comment">#关闭自我保护</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="3-EurekaClient实战-用户服务"><a href="#3-EurekaClient实战-用户服务" class="headerlink" title="3.EurekaClient实战-用户服务"></a>3.EurekaClient实战-用户服务</h3><p>参照官方文档 ： <span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC5zcHJpbmcuaW8vc3ByaW5nLWNsb3VkLXN0YXRpYy9HcmVlbndpY2guU1I1L211bHRpL211bHRpX19zZXJ2aWNlX2Rpc2NvdmVyeV9ldXJla2FfY2xpZW50cy5odG1sI25ldGZsaXgtZXVyZWthLWNsaWVudC1zdGFydGVy">https://cloud.spring.io/spring-cloud-static/Greenwich.SR5/multi/multi__service_discovery_eureka_clients.html#netflix-eureka-client-starter</span><br>根据上一章节我们的Eureka的理解，Eureka分为服务端和客户端，服务端已经搭建成功，我们来搭建客户端。再来看一下我们之前的那张图：<br><img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDMxOS80dzBTeGppZ2p5eHgucG5n?x-oss-process=image/format,png" alt="mark"></p>
+<p>其实我们的用户服务 springcloud-user-server-1020 ，订单服务springcloud-order-server-1030 两个工程都是EurekaClient客户端，都需要去集成EurekaClient,我们先从springcloud-user-server-1020 下手 。</p>
+<h4 id="3-1-导入依赖"><a href="#3-1-导入依赖" class="headerlink" title="3.1.导入依赖"></a>3.1.导入依赖</h4><p>修改springcloud-user-server-1020，导入EurekaClient基础依赖：spring-cloud-starter-netflix-eureka-client，导入web的基础依赖：spring-boot-starter-web，具体的pom.xml如下：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springcloud-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.itsource.springboot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springcloud-user-server-1020<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>springcloud-user-server-1020<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>提示：不要忘记导入web的基础依赖 spring-boot-starter-web</p>
+<h4 id="3-2-主配置类"><a href="#3-2-主配置类" class="headerlink" title="3.2.主配置类"></a>3.2.主配置类</h4><p>我们可以在主配置通过注解@EnableEurekaClient标记服务作为Eureka客户端</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 用户的启动类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@EnableEurekaClient</span>： 标记该应用是 Eureka客户端</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableEurekaClient</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserServerApplication1020</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">( String[] args )</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        SpringApplication.run(UserServerApplication1020.class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>提示：主配置类通过打@EnableEurekaClient注解开启EurekaClient客户端功能，当然如果不打这个标签也能实现功能，因为导入spring-cloud-starter-netflix-eureka-client 依赖后，默认就开启了EurekaClient</p>
+<h4 id="3-3-application-yml配置"><a href="#3-3-application-yml配置" class="headerlink" title="3.3.application.yml配置"></a>3.3.application.yml配置</h4><p>在配置文件中，我们需要通过eureka.client.serviceUrl配置EurekaServer的地址，EurekaClient根据该地址把自己注册给服务端。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#注册到EurekaServer</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">serviceUrl:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://localhost:1010/eureka/</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">user-server</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">1020</span></span><br></pre></td></tr></table></figure>
+
+<p>提示：serviceUrl是EurekaServer注册中的地址，主机和端口都应该指向springcloud-eureka-server-1010工程，这里额外指定了服务的名字，和端口，这些信息都会被注册到EurekaServer</p>
+<h4 id="3-4-测试EurekaClient"><a href="#3-4-测试EurekaClient" class="headerlink" title="3.4.测试EurekaClient"></a>3.4.测试EurekaClient</h4><p>启动springcloud-eureka-server-1010 , 启动springcloud-user-server-1020 ， 浏览器再次访问<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDoxMDEw77yM6YKj5L2g5bqU6K+l5Y+v5Lul55yL5Yiw5oiR5Lus55qEdXNlci1zZXJ2ZXLmnI3liqHlt7Lnu4/ooqvms6jlhozliLBFdXJla2FTZXJ2ZXLjgILlpoLkuIvvvJo=">http://localhost:1010，那你应该可以看到我们的user-server服务已经被注册到EurekaServer。如下：</span></p>
+<p><img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDMyMC9yU01xWXVYaDA4SXkucG5n?x-oss-process=image/format,png" alt="mark"></p>
+<h4 id="3-5-使用IP进行注册"><a href="#3-5-使用IP进行注册" class="headerlink" title="3.5.使用IP进行注册"></a>3.5.使用IP进行注册</h4><p>默认情况下EurekaClient使用hostname进行注册到EurekaServer，我们希望使用ip进行注册，可以通过配置<code>eureka.instance.prefer-ip-address=true</code>来指定，同时为了方便区分和管理服务实例，我们指定服务的实例ID，通过<code>eureka.instance.instance-id为user-serer:1020</code>来指定，具体配置如下：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#注册到EurekaServer</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">serviceUrl:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://localhost:1010/eureka/</span></span><br><span class="line">  <span class="attr">instance:</span></span><br><span class="line">    <span class="attr">prefer-ip-address:</span> <span class="literal">true</span> <span class="comment">#使用ip地址进行注册</span></span><br><span class="line">    <span class="attr">instance-id:</span> <span class="string">user-server:1020</span>	<span class="comment">#实例ID</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">user-server</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">1020</span></span><br></pre></td></tr></table></figure>
+
+<p>重启springcloud-user-server-1020 工程，访问注册中心，可以看到实例ID已经发生改变，如下：</p>
+<p><img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDMyMC9OYlJIOTZLQ1ZFQ2QucG5n?x-oss-process=image/format,png" alt="mark"></p>
+<h3 id="4-Eureka-Client实战-订单服务"><a href="#4-Eureka-Client实战-订单服务" class="headerlink" title="4.Eureka Client实战-订单服务"></a>4.Eureka Client实战-订单服务</h3><p>订单服务和用户服务的做法一样，只是yml配置文件中有些稍微的不同。</p>
+<h4 id="4-1-导入依赖"><a href="#4-1-导入依赖" class="headerlink" title="4.1.导入依赖"></a>4.1.导入依赖</h4><p>同用户服务一样，省略…</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">...省略部分不重要的内容...</span><br><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-2-主配置类"><a href="#4-2-主配置类" class="headerlink" title="4.2.主配置类"></a>4.2.主配置类</h4><p>同用户服务一样，省略…</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 订单的启动类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@EnableEurekaClient</span>： 标记该应用是 Eureka客户端</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableEurekaClient</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OrderServerApplication1030</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">( String[] args )</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        SpringApplication.run(OrderServerApplication1030.class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="4-3-application-yml配置"><a href="#4-3-application-yml配置" class="headerlink" title="4.3.application.yml配置"></a>4.3.application.yml配置</h4><p>订单服务除了服务名，端口和用户服务不一样，其他的都一样，如下：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">serviceUrl:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://localhost:1010/eureka/</span></span><br><span class="line">  <span class="attr">instance:</span></span><br><span class="line">    <span class="attr">prefer-ip-address:</span> <span class="literal">true</span> <span class="comment">#使用ip地址进行注册</span></span><br><span class="line">    <span class="attr">instance-id:</span> <span class="string">order-server:1030</span>	<span class="comment">#实例ID</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">order-server</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">1030</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-4-测试"><a href="#4-4-测试" class="headerlink" title="4.4.测试"></a>4.4.测试</h4><p>启动订单服务，访问Eureka Server的监控界面：<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDoxMDEwLOWPr+S7peeci+WIsOiuouWNleacjeWKoeS5n+azqOWGjOi/m+WOu+S6huOAgg==">http://localhost:1010,可以看到订单服务也注册进去了。</span></p>
+<h4 id="4-5-做个小结"><a href="#4-5-做个小结" class="headerlink" title="4.5.做个小结"></a>4.5.做个小结</h4><p>到这里Eureka服务注册与发现案例已经完成，服务端和客户端的搭建都相对简单，一般都是导个包，打个标签，配置文件都搞定了，作为一个合格的程序员，我们不能光停留在用的层面，它的一些重要工作方式与思想也是需要我们去掌握。</p>
+]]></content>
+      <categories>
+        <category>SpringCloud</category>
+      </categories>
+      <tags>
+        <tag>SpringCloud</tag>
+        <tag>微服务开发</tag>
+        <tag>Eureka</tag>
+      </tags>
+  </entry>
+</search>
