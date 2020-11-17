@@ -1,0 +1,592 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="俏如来" href="https://whalechen578.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="俏如来" href="https://whalechen578.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="俏如来" href="https://whalechen578.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Security,认证授权" />
+
+
+<link rel="canonical" href="https://whalechen578.github.io/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/security/%E4%B8%80.SpringSecurity%E5%9F%BA%E7%A1%80-%E8%AE%A4%E8%AF%81%E5%92%8C%E6%8E%88%E6%9D%83%E6%A6%82%E8%BF%B0/">
+
+
+
+  <title>
+一.SpringSecurity基础-认证和授权概述 - security - 认证授权 - Java后端 |
+墨家巨子 = 俏如来</title>
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">一.SpringSecurity基础-认证和授权概述
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-11-17 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-11-17T00:00:00+08:00">2020-11-17</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.6k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">墨家巨子</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="https://whale-blog.oss-cn-beijing.aliyuncs.com/security-01-cover.jpg">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Java%E5%90%8E%E7%AB%AF/" itemprop="item" rel="index" title="分类于 Java后端"><span itemprop="name">Java后端</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Java%E5%90%8E%E7%AB%AF/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/" itemprop="item" rel="index" title="分类于 认证授权"><span itemprop="name">认证授权</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Java%E5%90%8E%E7%AB%AF/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/security/" itemprop="item" rel="index" title="分类于 security"><span itemprop="name">security</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://whalechen578.github.io/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/security/%E4%B8%80.SpringSecurity%E5%9F%BA%E7%A1%80-%E8%AE%A4%E8%AF%81%E5%92%8C%E6%8E%88%E6%9D%83%E6%A6%82%E8%BF%B0/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="whale-chen">
+    <meta itemprop="description" content=", 热爱编程的一名小学生">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="俏如来">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>老鸟飞过 ， 只做学习使用，欢迎交流</p>
+<h3 id="1-认证授权概述"><a href="#1-认证授权概述" class="headerlink" title="1.认证授权概述"></a>1.认证授权概述</h3><p>为了给学习SpringSecurity打下基础，我们来回顾一下传统的认证授权流程</p>
+<h4 id="1-1-什么是认证"><a href="#1-1-什么是认证" class="headerlink" title="1.1.什么是认证"></a>1.1.什么是认证</h4><p>认证是对主体/用户身份的确认，在我们的生活中随处可见认证场景，如：小区门禁卡，人脸识别，指纹识别等都是对用户身份的确认，在传统的应用中我们通常使用用户名/用户ID和密码来进行用户的身份确认，即登录，但登录的方式不仅限制于用户名/密码的方式，认证是我们应用的第一道安全门，所以对于整个系统的安全来说显得极其重要。</p>
+<h4 id="1-2-什么是授权"><a href="#1-2-什么是授权" class="headerlink" title="1.2.什么是授权"></a>1.2.什么是授权</h4><p>控制不同的用户访问不同的权限 ，用户认证成功后，就可以对某些资源进行访问，但是不同的用户有不同的资源访问权利，那么对用户的授权也都不一样。如：公司老板拥有对公司的所有权限，而部门主管只能有对自己管理的部门的权限，所以在程序中授权的过程就是赋予不同用户不同权限的过程。</p>
+<h4 id="1-3-什么是RBAC"><a href="#1-3-什么是RBAC" class="headerlink" title="1.3.什么是RBAC"></a>1.3.什么是RBAC</h4><p>RBAC是基于角色的访问控制（Role-Based Access Control ）在 RBAC 中，权限与角色相关联，用户通过成为适当角色的成员而得到这些角色的权限。这就极大地简化了权限的管理。这样管理都是层级相互依赖的，权限赋予给角色，而把角色又赋予用户，这样的权限设计很清楚，管理起来很方便。 </p>
+<p>举例：可以把部门的展示,添加,修改,删除等资源或功能打包成角色“部门管理”，然后把“部门管理”这个角色赋予某个用户，那么这个用户就是部门管理员，拥有部门的相关权限。</p>
+<p>RBAC 认为授权实际上是Who 、What 、How 三元组之间的关系，也就是Who 对What 进行How 的操作。</p>
+<ul>
+<li>主体(Who ) ：是权限的拥有者或主体（如：User，Role）。</li>
+<li>资源 (what)： 是操作或对象，如：页面，菜单，按钮，控制器(controller，hanler)等</li>
+<li>权限(how) ：具体的权限， 如：张三可以删除员工。 那么删除员工就是一个权限<h3 id="2-基于session的认证授权"><a href="#2-基于session的认证授权" class="headerlink" title="2.基于session的认证授权"></a>2.基于session的认证授权</h3></li>
+</ul>
+<h4 id="2-1-认证流程"><a href="#2-1-认证流程" class="headerlink" title="2.1.认证流程"></a>2.1.认证流程</h4><p>基于Session的认证方案即当用户认证成功之后将认证信息缓存在session中，主体(用户)在发起资源访问时需要进行是否做过认证校验，即检查session中是否有缓存认证信息。详细的认证流程如下图：</p>
+<h5 id="认证流程"><a href="#认证流程" class="headerlink" title="认证流程"></a>认证流程</h5><p><img data-src="https://img-blog.csdnimg.cn/20200827151431214.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<ol>
+<li>客户端(浏览器)提交用户名和密码发起认证请求</li>
+<li>请求中的认证信息被封装成对象(User),控制层(controller)接收到认证请求</li>
+<li>Controller调用服务层(Service)的认证逻辑进行认证，传入User</li>
+<li>Service调用持久层(Dao)根据传入的User中的账号查询数据库中的认证信息(User)</li>
+<li>Service获取到持久层返回的User和请求传入的User进行密码比对</li>
+<li>认证成功将认证信息(User)和用户的权限信息通过UserContext存储到(Session中)</li>
+<li>返回认证结果给客户端</li>
+</ol>
+<h5 id="认证检查"><a href="#认证检查" class="headerlink" title="认证检查"></a>认证检查</h5><p><img data-src="https://img-blog.csdnimg.cn/20200827151422769.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>当用户再次发起请求，拦截器会负责检查是否已经完成认证，通过UserContext从Session中获取User对象进行判断，如果没认证就会返回错误信息，如果已经完成认证就直接访问url对应的资源，返回资源给客户端。</p>
+<h4 id="2-2-授权流程"><a href="#2-2-授权流程" class="headerlink" title="2.2.授权流程"></a>2.2.授权流程</h4><p>授权是约束用户对资源的访问权限，通过系统事先需要对资源做好授权操作，即约定好哪些资源需要什么样的权限才能访问。并且平台的用户需要被分配好其拥有的权限(用户/角色/权限) ， 在用户认证成功之后即为用户加载其拥有的权限列表和认证信息一起封装成对象缓存到session中 ，当用户发起资源请求时，除了需要做认证检查还需要做权限检查，即判断当前认证用户所拥有的权限列表中是否拥有当前访问的资源所需要的权限。详细授权流程如下如：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20200827151408774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<ol>
+<li>认证通过，加载当前用户的权限列表，和认证信息一起封装成对象存储到session中</li>
+<li>服务端登录检查拦截器，校验是否已经认证(从session获取认证信息)</li>
+<li>服务端权限检查拦截器，校验是否拥有访问权限(用户的权限列表是否包含资源所需要的权限）</li>
+</ol>
+
+      <div class="tags">
+          <a href="/tags/Security/" rel="tag"><i class="ic i-tag"></i> Security</a>
+          <a href="/tags/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/" rel="tag"><i class="ic i-tag"></i> 认证授权</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2020-11-17 22:35:21" itemprop="dateModified" datetime="2020-11-17T22:35:21+08:00">2020-11-17</time>
+  </span>
+  <span id="2020/11/17/Java后端/认证授权/security/一.SpringSecurity基础-认证和授权概述/" class="item leancloud_visitors" data-flag-title="一.SpringSecurity基础-认证和授权概述" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="whale-chen 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="whale-chen 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="whale-chen 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>whale-chen <i class="ic i-at"><em>@</em></i>俏如来
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://whalechen578.github.io/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/security/%E4%B8%80.SpringSecurity%E5%9F%BA%E7%A1%80-%E8%AE%A4%E8%AF%81%E5%92%8C%E6%8E%88%E6%9D%83%E6%A6%82%E8%BF%B0/" title="一.SpringSecurity基础-认证和授权概述">https://whalechen578.github.io/2020/11/17/Java后端/认证授权/security/一.SpringSecurity基础-认证和授权概述/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/11/15/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/SpringCloud%E5%85%A5%E9%97%A8%E5%88%B0%E8%B6%85%E7%A5%9E/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;whale-blog.oss-cn-beijing.aliyuncs.com&#x2F;springcloud.jpg" title="SpringCloud入门到超神系列文章目录">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> SpringCloud</span>
+  <h3>SpringCloud入门到超神系列文章目录</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/redis/%E4%B8%80.Redis%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-Redis%E8%AE%A4%E8%AF%86%E4%B8%8E%E5%AE%89%E8%A3%85/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;whale-blog.oss-cn-beijing.aliyuncs.com&#x2F;redis-01-cover.jpg" title="一.Redis极简入门-Redis认识与安装">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> redis</span>
+  <h3>一.Redis极简入门-Redis认识与安装</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">1.认证授权概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E4%BB%80%E4%B9%88%E6%98%AF%E8%AE%A4%E8%AF%81"><span class="toc-number">1.1.</span> <span class="toc-text">1.1.什么是认证</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E4%BB%80%E4%B9%88%E6%98%AF%E6%8E%88%E6%9D%83"><span class="toc-number">1.2.</span> <span class="toc-text">1.2.什么是授权</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E4%BB%80%E4%B9%88%E6%98%AFRBAC"><span class="toc-number">1.3.</span> <span class="toc-text">1.3.什么是RBAC</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9F%BA%E4%BA%8Esession%E7%9A%84%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83"><span class="toc-number">2.</span> <span class="toc-text">2.基于session的认证授权</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B"><span class="toc-number">2.1.</span> <span class="toc-text">2.1.认证流程</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B"><span class="toc-number">2.1.1.</span> <span class="toc-text">认证流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AE%A4%E8%AF%81%E6%A3%80%E6%9F%A5"><span class="toc-number">2.1.2.</span> <span class="toc-text">认证检查</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-%E6%8E%88%E6%9D%83%E6%B5%81%E7%A8%8B"><span class="toc-number">2.2.</span> <span class="toc-text">2.2.授权流程</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/security/%E4%B8%80.SpringSecurity%E5%9F%BA%E7%A1%80-%E8%AE%A4%E8%AF%81%E5%92%8C%E6%8E%88%E6%9D%83%E6%A6%82%E8%BF%B0/" rel="bookmark" title="一.SpringSecurity基础-认证和授权概述">一.SpringSecurity基础-认证和授权概述</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="whale-chen"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">whale-chen</p>
+  <div class="description" itemprop="description">热爱编程的一名小学生</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">7</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">8</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">8</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <a href="https://whalechen578.github.io/" title="https:&#x2F;&#x2F;whalechen578.github.io&#x2F;" class="item github"><i class="ic i-github"></i></a>
+      <a href="https://whalechen578.github.io/" title="https:&#x2F;&#x2F;whalechen578.github.io&#x2F;" class="item twitter"><i class="ic i-twitter"></i></a>
+      <a href="https://whalechen578.github.io/" title="https:&#x2F;&#x2F;whalechen578.github.io&#x2F;" class="item zhihu"><i class="ic i-zhihu"></i></a>
+      <a href="https://whalechen578.github.io/" title="https:&#x2F;&#x2F;whalechen578.github.io&#x2F;" class="item music"><i class="ic i-cloud-music"></i></a>
+      <a href="https://whalechen578.github.io/" title="https:&#x2F;&#x2F;whalechen578.github.io&#x2F;" class="item weibo"><i class="ic i-weibo"></i></a>
+      <a href="https://whalechen578.github.io/" title="https:&#x2F;&#x2F;whalechen578.github.io&#x2F;" class="item about"><i class="ic i-address-card"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/11/15/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/SpringCloud%E5%85%A5%E9%97%A8%E5%88%B0%E8%B6%85%E7%A5%9E/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/redis/%E4%B8%80.Redis%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-Redis%E8%AE%A4%E8%AF%86%E4%B8%8E%E5%AE%89%E8%A3%85/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/" title="分类于 Java后端">Java后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/" title="分类于 微服务开发">微服务开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/" title="分类于 SpringCloud">SpringCloud</a>
+</div>
+
+    <span><a href="/2020/11/15/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/%E4%B8%80.%20SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98/" title="一. SpringCloud极简入门-应用架构的演变">一. SpringCloud极简入门-应用架构的演变</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/" title="分类于 Java后端">Java后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/" title="分类于 微服务开发">微服务开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloudAlibaba/" title="分类于 SpringCloudAlibaba">SpringCloudAlibaba</a>
+</div>
+
+    <span><a href="/2020/11/15/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloudAlibaba/%E4%B8%80.SpringCloudAlibaba%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E4%BB%80%E4%B9%88%E6%98%AF%20Spring%20Cloud%20Alibaba/" title="一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba">一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/" title="分类于 Java后端">Java后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/" title="分类于 微服务开发">微服务开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/" title="分类于 SpringCloud">SpringCloud</a>
+</div>
+
+    <span><a href="/2020/11/15/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/%E4%B8%89.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0Eureka/" title="三.SpringCloud极简入门-服务注册与发现-Eureka">三.SpringCloud极简入门-服务注册与发现-Eureka</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/" title="分类于 Java后端">Java后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/" title="分类于 微服务开发">微服务开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/" title="分类于 SpringCloud">SpringCloud</a>
+</div>
+
+    <span><a href="/2020/11/15/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/SpringCloud%E5%85%A5%E9%97%A8%E5%88%B0%E8%B6%85%E7%A5%9E/" title="SpringCloud入门到超神系列文章目录">SpringCloud入门到超神系列文章目录</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/" title="分类于 Java后端">Java后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="分类于 缓存服务器">缓存服务器</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/redis/" title="分类于 redis">redis</a>
+</div>
+
+    <span><a href="/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/redis/%E4%B8%80.Redis%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-Redis%E8%AE%A4%E8%AF%86%E4%B8%8E%E5%AE%89%E8%A3%85/" title="一.Redis极简入门-Redis认识与安装">一.Redis极简入门-Redis认识与安装</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/" title="分类于 Java后端">Java后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/" title="分类于 认证授权">认证授权</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/security/" title="分类于 security">security</a>
+</div>
+
+    <span><a href="/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/security/%E4%B8%80.SpringSecurity%E5%9F%BA%E7%A1%80-%E8%AE%A4%E8%AF%81%E5%92%8C%E6%8E%88%E6%9D%83%E6%A6%82%E8%BF%B0/" title="一.SpringSecurity基础-认证和授权概述">一.SpringSecurity基础-认证和授权概述</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/" title="分类于 Java后端">Java后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/" title="分类于 微服务开发">微服务开发</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/" title="分类于 SpringCloud">SpringCloud</a>
+</div>
+
+    <span><a href="/2020/11/15/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/%E4%BA%8C.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-SpringCloud%E7%AE%80%E4%BB%8B/" title="二.SpringCloud极简入门-SpringCloud简介">二.SpringCloud极简入门-SpringCloud简介</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2019 – 
+    <span itemprop="copyrightYear">2020</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">whale-chen @ 墨家巨子</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">29k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">26 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/11/17/Java后端/认证授权/security/一.SpringSecurity基础-认证和授权概述/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
