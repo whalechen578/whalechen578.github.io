@@ -602,4 +602,87 @@
         <tag>Eureka</tag>
       </tags>
   </entry>
+  <entry>
+    <title>六.Redis极简入门-Redis实现分布式锁原理</title>
+    <url>/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/redis/%E5%85%AD.Redis%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-Redis%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<p>老鸟飞过，学习使用，欢迎交流</p>
+<h2 id="理解分布式锁"><a href="#理解分布式锁" class="headerlink" title="理解分布式锁"></a>理解分布式锁</h2><h3 id="为什么要分布式锁"><a href="#为什么要分布式锁" class="headerlink" title="为什么要分布式锁"></a>为什么要分布式锁</h3><p>在并发场景中，我们可以使用加锁的手段来保证业务方法或代码的原子性操作，从而防止数据被并发修改引发安全问题，在单体应用中我们可以使用互斥锁如： <code>synchronized</code> 同步代码块 或者 <code>Lock</code>锁来实现，如图:</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065726132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7lCrzyXy-1605714910565)(分布式锁.assets/1605692967171.png)]"></p>
+<p>但是在<code>集群/分布式</code>应用中单纯的互斥锁是不能保证多个节点中对同一个数据的原性操作的，如图：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065801491.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rGJm7d9A-1605714910569)(分布式锁.assets/1605695422135.png)]"></p>
+<p>集群模式中，每个服务都加了锁但是只能锁住自己，每个服务做库存做扣减操作，当库存都剩1的时候，三个服务并发减库存可能会导致库存减到 -2 出现线程不安全问题。</p>
+<p>那应该如何解决上述问题呢？我们需要使用<code>分布式事务</code>保证三个服务对库存的<code>原子性操作</code></p>
+<h3 id="什么是分布式锁"><a href="#什么是分布式锁" class="headerlink" title="什么是分布式锁"></a>什么是分布式锁</h3><p>分布式锁的目的就是在<code>分布式/集群</code>环境中使用加锁手段保证<code>多个服务节点对同一个数据的原子性操作</code>，保证数据的安全性，如上图，三个服务都在同时扣减库存，我们需要<code>对减库存进行原子性操作</code>，如：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065835586.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ITVue2Th-1605714910572)(分布式锁.assets/1605709890367.png)]"></p>
+<p>实现分布式锁的原理也很简单，就是需要得有一把唯一且共享的锁，多个服务同时去获取锁，但是只有一个服务才能获取到锁，其他没有获取到锁的服务需要等待或者自旋，等获取到锁的服务业务执行完成释放锁，其他的服务就可以再次尝试获取锁。</p>
+<h2 id="Redis分布式锁的原理"><a href="#Redis分布式锁的原理" class="headerlink" title="Redis分布式锁的原理"></a>Redis分布式锁的原理</h2><p>实现分布式锁的方案有很多，比如基于数据库实现分布式锁，使用<code>ZooKeeper</code>实现分布式锁，本文采用的是使用<code>Redis实现分布式</code>锁方案。</p>
+<h3 id="加锁和释放锁"><a href="#加锁和释放锁" class="headerlink" title="加锁和释放锁"></a>加锁和释放锁</h3><p>Redis提供了一个命令<code>setnx</code> 可以来实现分布式锁，该命令只在键 <code>key</code> 不存在的情况下 将键 <code>key</code> 的值设置为 <code>value</code> ，若键 <code>key</code> 已经存在， 则 <code>SETNX</code> 命令不做任何动作。根据这一特性我们就可以制定Redis实现分布式锁的方案了。</p>
+<p>简单理解就是 ：如果三个服务同时抢锁，服务A抢先一步执行<code>setnx(lock_stock,1)</code>加上锁，那么当服务B在执行<code>setnx(lock_stock,1)</code>加锁的时候就会失败，服务C也一样，服务A抢到锁执行完业务逻辑后就会释放锁，可以使用<code>del(lock_stock)</code>删除锁，其他服务就可以执行<code>setnx(lock_stock,1)</code>加锁了，如图：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065912813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7U0ig190-1605714910578)(分布式锁.assets/1605709864403.png)]"></p>
+<h3 id="锁超时问题"><a href="#锁超时问题" class="headerlink" title="锁超时问题"></a>锁超时问题</h3><p>这里有一个问题，如果获取到锁的服务在<code>释放锁的时候宕机</code>了，那么Redis中<code>lock-stock</code>不就永远存在，那<code>锁不就释放不了</code>么，别的服务也就没办法获取到锁，就造成了<code>死锁</code>，为了解决这个问题，我们需要设置<code>锁的自动超时</code>也就是Key的超时自动删除，即使服务宕机没有调用del释放锁，那么锁本身也有超时时间，可以自动删除锁，别的服务就可以获取锁了，Redis中Key的过期时间可以使用Redis的 <code>expire（lock_stock，30）</code>命令实现，这里给出伪代码如下</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>（jedis.setnx（lock_stock，<span class="number">1</span>） == <span class="number">1</span>）&#123;	<span class="comment">//获取锁</span></span><br><span class="line">    expire（lock_stock，<span class="number">5</span>）		 <span class="comment">//设置锁超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        jedis.del（lock_stock）			 <span class="comment">//释放锁</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="原子性问题"><a href="#原子性问题" class="headerlink" title="原子性问题"></a>原子性问题</h3><p>上面的代码依然有问题，就是<code>setnx</code>获取锁和<code>expire</code>不是原子性操作，假设有一极端情况，当线程通过<code>setnx（lock_stock，1）</code>获取到锁，还没来得及执行<code>expire（lock_stock，30）</code>设置锁的过期时间，服务就宕机了，那是不是锁也永远得不到释放呢？？？又变成了死锁，这个问题可以使用<code>set</code>命令解决，我们先来看一下这个命令的语法</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SET key value [EX seconds] [PX milliseconds] [NX|XX]</span><br></pre></td></tr></table></figure>
+
+<p>从 Redis 2.6.12 版本开始， <code>SET</code> 命令的行为可以通过一系列参数来修改：</p>
+<ul>
+<li><code>EX seconds</code> ： 将键的过期时间设置为 <code>seconds</code> 秒。 执行 <code>SET key value EX seconds</code> 的效果等同于执行 <code>SETEX key seconds value</code> 。</li>
+<li><code>PX milliseconds</code> ： 将键的过期时间设置为 <code>milliseconds</code> 毫秒。 执行 <code>SET key value PX milliseconds</code> 的效果等同于执行 <code>PSETEX key milliseconds value</code> 。</li>
+<li><code>NX</code> ： 只在键不存在时， 才对键进行设置操作。 执行 <code>SET key value NX</code> 的效果等同于执行 <code>SETNX key value</code> 。</li>
+<li><code>XX</code> ： 只在键已经存在时， 才对键进行设置操作。</li>
+</ul>
+<p>也就是说该命令可以当做<code>setnx</code>和<code>expire</code>的组合命令来使用，而且是原子性的，改造代码如</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>（set(lock_stock,<span class="number">1</span>,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        del（lock_stock）			 		<span class="comment">//释放锁</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="锁的误删除问题"><a href="#锁的误删除问题" class="headerlink" title="锁的误删除问题"></a>锁的误删除问题</h3><p>上面的方案依然有问题，就是在<code>del</code>释放锁的时候可能会误删除别人加的锁，例如服务A获取到锁<code>lock_stock</code>，过期时间为 5s，如果在服务A执行业务逻辑的这一段时间内，锁到期自动删除，且别的服务获取到了锁<code>lock_stock</code>，那么服务A业务执行完成执行<code>del(lock_stock)</code>是不是会把别人的锁给删除掉呢？？？如图：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065939549.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rSEN6vhr-1605714910581)(分布式锁.assets/1605712581554.png)]"></p>
+<p>那么这个问题怎么解决呢？我们可以在删除锁的时候先判断一下要删除的锁是不是自己上的锁，比如可以把锁的值使用一个UUID，在释放锁的时候先获取一下锁的值和当前业务中创建的UUID是不是同一个，如果是才执行·<code>del</code>删除锁，当然也可以使用线程的ID替代UUID，代码如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String uuid = UUID.randomUUID().toString();</span><br><span class="line"><span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        String lockValue = jedis.get(lock_stock);	<span class="comment">//获取锁的值</span></span><br><span class="line">        <span class="keyword">if</span>(lockValue.equals(uuid))&#123;			<span class="comment">//判断是不是自己的锁</span></span><br><span class="line">            jedis.del（lock_stock）			 	  <span class="comment">//释放锁</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Lua脚本保证原子性"><a href="#Lua脚本保证原子性" class="headerlink" title="Lua脚本保证原子性"></a>Lua脚本保证原子性</h3><p>但是上面的代码依然有问题，就是判断锁的代码和删除锁的代码也不是原子性的，依然可能会导致锁的误删除问题，比如服务A在判断锁成功准备删除锁时，锁自动过期，别的服务B获取到了锁，然后服务A执行<code>DEL</code>就可能会把服务B的锁给删除掉，所以，我们必须保证  获取锁 -&gt; 判断锁 -&gt; 删除锁 的操作是原子性的才可以，解决方案可以使用Redis+Lua脚本来解决一致性问题</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">String script = &quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] </span><br><span class="line">	then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>这是一段Lua脚本，可以保证多个命令的原子性</p>
+<ul>
+<li>redis.call(‘get’, KEYS[1])  ：是调用redis的get命令，key可以通过参数传入</li>
+<li>== ARGV[1] ：意思是是否和 某个值相等，这里的值也可以参数传入</li>
+<li>then return redis.call(‘del’, KEYS[1])  ：如果相等就执行 <code>redis.call(&#39;del&#39;, KEYS[1])  </code>删除操作</li>
+<li>else return 0 end ：否则就返回 0</li>
+</ul>
+<p>如果我们把数据带入<code>KEYS[1]</code>的值为“lock_stock”,<code>ARGV[1]</code>的值为UUID如“xoxoxo”，所以大概的含义是如果调用get(“lock_stock”)获取到的值  等于 “xoxoxo” ,那就调用 del(“lock_stock”)，否则就返回 0 。 说白了就是把我们上面的判断锁和删除锁的动作使用Lua脚本去执行而已，现在代码可以这样写了</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String uuid = UUID.randomUUID().toString();</span><br><span class="line"><span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="comment">//lua脚本</span></span><br><span class="line">        String script = <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">        <span class="comment">//执行脚本</span></span><br><span class="line">        jedis.eval(script, Collections.singletonList(<span class="string">&quot;lock_stock&quot;</span>),Collections.singletonList(uuid));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Arrays.asList(“lock_stock”) 转给 KEYS[1]</li>
+<li>Arrays.asList(uuid)转给 ARGV[1]</li>
+</ul>
+<h3 id="可重入锁"><a href="#可重入锁" class="headerlink" title="可重入锁"></a>可重入锁</h3><p>上面的代码是不完整的，如果某个线程没有获取到锁是不是就不会进入 IF 呢？如果是这样的话未获取到锁的线程就执行失败了，啥也没做，这是不可行的，我们是不是需要让未获取到锁的线程等待片刻之后再次尝试获取锁呢？如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">	String uuid = UUID.randomUUID().toString();</span><br><span class="line">	<span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">	    <span class="keyword">try</span> &#123;</span><br><span class="line">	        业务代码</span><br><span class="line">	    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">	        <span class="comment">//lua脚本</span></span><br><span class="line">	        String script = <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">	        <span class="comment">//执行脚本</span></span><br><span class="line">	        jedis.eval(script, Collections.singletonList(<span class="string">&quot;lock_stock&quot;</span>),Collections.singletonList(uuid));</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="comment">//休眠一会儿，重入方法，尝试获取锁</span></span><br><span class="line">		Thread.sleep(<span class="number">100</span>);</span><br><span class="line">		method();	<span class="comment">//自旋，重新进入方法</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>上面的代码增加了else获取锁失败的逻辑，休眠一会儿后<code>重入方法尝试重新获取锁</code>，休眠时间结合业务逻辑的执行时间设定</p>
+<h2 id="分布式锁的特点"><a href="#分布式锁的特点" class="headerlink" title="分布式锁的特点"></a>分布式锁的特点</h2><p>当然要实现一个分布式锁还需要考虑一些东西，比如Redis的健壮性，它不能随便挂掉，这里总结一下分布式锁的一些要素<br>首先，为了确保分布式锁可用，我们至少要确保锁的实现同时满足以下四个条件：</p>
+<ul>
+<li><p>互斥性：同一时间只能一个节点获取到锁，其他节点需要等待获取到锁的节点释放了锁才可以获取到锁，而这里的等待一般是通过阻塞，和自旋两种方式</p>
+</li>
+<li><p>安全性：解铃还须系铃人，只能释放自己的锁不能误删别人的锁</p>
+</li>
+<li><p>死锁：比如在节点宕机时最容易出现锁没被释放的问题，然后出现死锁，所以做锁的过期</p>
+</li>
+<li><p>容错：当Redis宕机，客户端仍然可以释放锁</p>
+</li>
+<li><p>可重入：获取锁失败可以重新尝试获取锁</p>
+</li>
+</ul>
+<h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>文章结束，这里主要探讨了一下Redis实现分布式锁的核心原理，以及过程中的一些问题，当然我们如果真的要在项目中实现分布式锁其实也没这么麻烦，请期待下一章Redisson实现分布式锁</p>
+]]></content>
+      <categories>
+        <category>Java后端</category>
+        <category>缓存服务器</category>
+        <category>redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+        <tag>缓存</tag>
+      </tags>
+  </entry>
 </search>
