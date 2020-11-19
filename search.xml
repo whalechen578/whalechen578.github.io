@@ -199,6 +199,77 @@
       </tags>
   </entry>
   <entry>
+    <title>二.SpringCloud极简入门-SpringCloud简介</title>
+    <url>/2020/11/15/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/%E4%BA%8C.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-SpringCloud%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
+<h2 id="二-SpringCloud与微服务"><a href="#二-SpringCloud与微服务" class="headerlink" title="二. SpringCloud与微服务"></a><strong>二.</strong> <strong>SpringCloud与微服务</strong></h2><h3 id="1-什么是SpringCloud"><a href="#1-什么是SpringCloud" class="headerlink" title="1. 什么是SpringCloud"></a><strong>1.</strong> <strong>什么是SpringCloud</strong></h3><h4 id="1-1-SpringCloud基本概念"><a href="#1-1-SpringCloud基本概念" class="headerlink" title="1.1.SpringCloud基本概念"></a>1.1.SpringCloud基本概念</h4><p>Spring cloud是一个基于Spring Boot实现的服务治理工具包，用于微服务架构中管理和协调服务的。Spring Cloud是一系列框架的有序集合。它利用Spring Boot的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控等，都可以用Spring Boot的开发风格做到一键启动和部署。通过Spring Boot风格进行再封装屏蔽掉了复杂的配置和实现原理，最终给开发者留出了一套简单易懂、易部署和易维护的分布式系统开发工具包。有了SpringCloud之后，让微服务架构的落地变得更简单。</p>
+<h4 id="1-2-SpringCloud常用组件"><a href="#1-2-SpringCloud常用组件" class="headerlink" title="1.2. SpringCloud常用组件"></a><strong>1.2.</strong> <strong>SpringCloud常用组件</strong></h4><p>当我们的项目采用微服务架构之后就会引发一些列的难题需要去解决，如众多微服务的通信地址应该如何管理，微服务之间应该使用何种方式发起调用，微服务故障该如何处理，众多微服务的配置文件如何集中管理等等，SpringCloud为这一系列的难题提供了相应的组件来解决，下面我们简单来理解一下SpringCloud最核心的几大组件如如下：<br><img data-src="https://img-blog.csdnimg.cn/20200329232256382.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h5 id="Netflix-Eureka"><a href="#Netflix-Eureka" class="headerlink" title="Netflix Eureka"></a><strong>Netflix Eureka</strong></h5><p>当我们的微服务过多的时候，管理服务的通信地址是一个非常麻烦的事情，Eureka就是用来管理微服务的通信地址清单的，有了Eureka之后我们通过服务的名字就能实现服务的调用。</p>
+<h5 id="Netflix-Ribbon-Feign-客户端负载均衡"><a href="#Netflix-Ribbon-Feign-客户端负载均衡" class="headerlink" title="Netflix Ribbon\Feign : 客户端负载均衡"></a><strong>Netflix Ribbon\Feign : 客户端负载均衡</strong></h5><p>Ribbon和Feign都是客户端负载均衡器，它的作用是在服务发生调用的时候帮我们将请求按照某种规则分发到多个目标服务器上，简单理解就是用来解决微服务之间的通信问题。</p>
+<h5 id="Netflix-Hystrix-：断路器"><a href="#Netflix-Hystrix-：断路器" class="headerlink" title="Netflix Hystrix ：断路器"></a><strong>Netflix Hystrix ：断路器</strong></h5><p>微服务的调用是非常复杂的，有的时候一个请求需要很多的微服务共同完成，那么一旦某个服务发生故障，导致整个调用链上的微服务全都出现异常，甚至导致整个微服务架构瘫痪。Hystrix就是用来解决微服务故障，保护微服务安全的组件。</p>
+<h5 id="Netflix-Zuul-：-服务网关"><a href="#Netflix-Zuul-：-服务网关" class="headerlink" title="Netflix Zuul ： 服务网关"></a><strong>Netflix Zuul ： 服务网关</strong></h5><p>zuul作为服务网关，我们可以把它看作是微服务的大门，所有的请求都需要经过zuul之后才能到达目标服务，根据这一特性，我们可以把微服务公共的是事情交给zuul统一处理，如：用户鉴权，请求监控等。</p>
+<h5 id="Spring-Cloud-Config-：分布式配置"><a href="#Spring-Cloud-Config-：分布式配置" class="headerlink" title="Spring Cloud Config ：分布式配置"></a><strong>Spring Cloud Config ：分布式配置</strong></h5><p>微服务架构中的服务实例非常的多，服务的配置文件分散在每个服务中，每次修改服务的配置文件和重新服务实例都是一个很麻烦的工作，Spring Cloud Config作为分布式配置管理中心就是用来统一的管理服务的配置文件。</p>
+<h5 id="Spring-Cloud-Bus-消息总线"><a href="#Spring-Cloud-Bus-消息总线" class="headerlink" title="Spring Cloud Bus : 消息总线"></a><strong>Spring Cloud Bus : 消息总线</strong></h5><p>消息总线是在微服务中给各个微服务广播消息的一个组件，我们使用消息总线构建一个消息中心，其他微服务来接入到消息中心，当消息总线发起消息，接入的微服务都可以收到消息从而进行消费。</p>
+<h5 id="Spring-Cloud-sleuth-微服务链路追踪"><a href="#Spring-Cloud-sleuth-微服务链路追踪" class="headerlink" title="Spring Cloud sleuth :微服务链路追踪"></a><strong>Spring Cloud sleuth :微服务链路追踪</strong></h5><p>当我们的应用采用微服务架构之后，后台可能有几十个甚至几百个服务在支撑，一个请求请求可能需要多次的服务调用最后才能完成，链路追踪的作用就是来监控维护之间的调用关系,让程序员方便直观的感受到一个请求经历了哪些微服务，以及服务的请求时间，是否有异常等。</p>
+<h4 id="1-3-SpringCloud的版本"><a href="#1-3-SpringCloud的版本" class="headerlink" title="1.3.SpringCloud的版本"></a>1.3.SpringCloud的版本</h4><p>SpringCloud是基于SpringBoot的,所以两者的jar包都需要导入,需要注意的是SprinbCloud的版本需要和SpringBoot的版本兼容，<strong>本文章采用的SpringBoot版本是2.0.5.RELEASE ， SpringCloud的版本是Finchley.SR1**</strong>。下面是版本兼容图：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Release Train</th>
+<th align="left">Boot Version</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Hoxton</td>
+<td align="left">2.2.x</td>
+</tr>
+<tr>
+<td align="left">Greenwich</td>
+<td align="left">2.1.x</td>
+</tr>
+<tr>
+<td align="left"><strong>Finchley</strong></td>
+<td align="left"><strong>2.0.x</strong></td>
+</tr>
+<tr>
+<td align="left">Edgware</td>
+<td align="left">1.5.x</td>
+</tr>
+<tr>
+<td align="left">Dalston</td>
+<td align="left">1.5.x</td>
+</tr>
+</tbody></table>
+<h3 id="2-服务通信协议"><a href="#2-服务通信协议" class="headerlink" title="2.服务通信协议"></a>2.服务通信协议</h3><p>在微服务中服务间通过网络进行通信，那么服务间的远程调用方式有哪些呢？</p>
+<h4 id="2-1-RPC"><a href="#2-1-RPC" class="headerlink" title="2.1.RPC"></a>2.1.RPC</h4><p>RPC(Remote Produce Call)远程过程调用，类似的还有RMI。自定义数据格式，基于原生TCP通信，速度快，效率高。早期的webservice，现在热门的dubbo，都是RPC的典型</p>
+<h4 id="2-2-Http"><a href="#2-2-Http" class="headerlink" title="2.2.Http"></a>2.2.Http</h4><p>Http其实是一种网络传输协议，基于TCP，规定了数据传输的格式。现在客户端浏览器与服务端通信基本都是采用Http协议。也可以用来进行远程服务调用。缺点是消息封装臃肿。  现在热门的Rest风格，就可以通过http协议来实现</p>
+<p>我们可以认为SpringCloud就是基于Http协议实现服务之间的通信。</p>
+<h4 id="2-2-如何选择"><a href="#2-2-如何选择" class="headerlink" title="2.2.如何选择"></a>2.2.如何选择</h4><p>其实我们并不需要刻意去选择该使用RPC或者是Http，如果架构师选择Dubbo作为微服务开发框架，通信方式自然就是RPC，当架构师选择了SpringCloud作为微服务开发框架，那么通信方式自然就是基于Http协议，当然，如果服务的通信方式成为了微服务的性能瓶颈，那么架构师自然需要去考虑更换微服务的通信协议。</p>
+<h3 id="2-SpringCloud与Dubbo"><a href="#2-SpringCloud与Dubbo" class="headerlink" title="2. SpringCloud与Dubbo"></a><strong>2.</strong> <strong>SpringCloud与Dubbo</strong></h3><h4 id="2-1-Dubbo简介"><a href="#2-1-Dubbo简介" class="headerlink" title="2.1.Dubbo简介"></a>2.1.Dubbo简介</h4><p>Dubbo最早是有阿里巴巴提供的一个服务治理和服务调用框架，现在已经成为Apache的顶级项目，Dubbo跟SpringCloud最显著的区别是Dubbo的定位只是一个RPC框架，相比SpringCloud来说它缺少很多功能模块，如：网关，链路追踪等，所以往往在使用Dubbo作为微服务开发框架的时候，还需要去配合其他的框架一起使用，如:加入zookeeper作为注册中心。</p>
+<h4 id="2-2-SpringCloud与Dubbo的区别"><a href="#2-2-SpringCloud与Dubbo的区别" class="headerlink" title="2.2.SpringCloud与Dubbo的区别"></a>2.2.SpringCloud与Dubbo的区别</h4><p>早期在国内做分布式(微服务)应用Dubbo是比较热门的框架，被许多互联网公司所采用，并产生了许多衍生版本，如网易，京东，新浪，当当等等，奈何在2014年10月Dubbo停止维护，在Dubbo停更的时间里Spring Cloud快速追赶上。在2017年9月，阿里宣布重启Dubbo项目，计划对Dubbo进行持续更新维护。2018.2月，阿里将Dubbo捐献给Apache基金会，Dubbo成为Apache孵化器项目。</p>
+<p>所以当前微服务架构，Dubbo和SpringCloud比较火，另外还有Thrift、gRPC等等 。很多人把SpringCloud 和Dubbo进行对比，其实两个框架并没有太大的可比性，因为他们的定位不同。Spring Cloud是一个完整的微服务解决方案,它提供了微服务各问题的解决方案集合，而Dubbo是一个高性能的RPC框架，它有着很多功能的缺失。</p>
+<p><strong>定位不一样</strong></p>
+<p>SpringCloud为了微服务的落地提供了一套完整的组件，而Dubbo只是一个RPC框架，缺失的功能很多。</p>
+<p><strong>通信协议不一样</strong></p>
+<p>Dubbo的通信方式是RPC，基于原声的tcp,性能较好，而SpringCloud的通信方式基于Http协议，虽然底层基于tcp，但是Http的封装过于臃肿，但是使用Http好处在于互相通信的两个服务可以使用不同的变成语言去编写，只要他们都支持Http通信即可互相调用，而Dubbo只支持Java,当然Dubbo交给Apache维护之后做了升级，Dubbo在以后不仅仅支持Java。</p>
+<p><strong>背景都很强大</strong></p>
+<p>Dubbo背靠阿里和Apache,淘宝就是使用的Dubbo来开发经理过双“11”期间的高并发大流量检验，可以说是非常的稳定和成熟，SpringCloud是Spring家族的成员，严格遵循Martin Fowler提出的微服务规范，可以认为SpringCloud是微服务架构的标准，总之两者背景都很强大，文档完善，社区活跃，所以不管作何选择，都是很有前途的。</p>
+<p><strong>开发风格</strong></p>
+<p>从开发风格上来讲，Dubbo官方推荐倾向于使用Spring xml配置方式，SpringCloud是基于SpringBoot的开发风格，即采用注解的方式进行配置，从开发速度上来说，SpringCloud具有更高的开发和部署速度。</p>
+<p>下面是网上比较流行的Dubbo和Spring Cloud功能对比图：</p>
+<p><img data-src="https://whale-blog.oss-cn-beijing.aliyuncs.com/1605420970599.png" alt="1605420970599"></p>
+]]></content>
+      <categories>
+        <category>Java后端</category>
+        <category>微服务开发</category>
+        <category>SpringCloud</category>
+      </categories>
+      <tags>
+        <tag>SpringCloud</tag>
+        <tag>微服务开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba</title>
     <url>/2020/11/15/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloudAlibaba/%E4%B8%80.SpringCloudAlibaba%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E4%BB%80%E4%B9%88%E6%98%AF%20Spring%20Cloud%20Alibaba/</url>
     <content><![CDATA[<p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
@@ -246,6 +317,89 @@
         <tag>SpringCloud</tag>
         <tag>微服务开发</tag>
         <tag>SpringCloudAlibaba</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>六.Redis极简入门-Redis实现分布式锁原理</title>
+    <url>/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/redis/%E5%85%AD.Redis%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-Redis%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<p>老鸟飞过，学习使用，欢迎交流</p>
+<h2 id="理解分布式锁"><a href="#理解分布式锁" class="headerlink" title="理解分布式锁"></a>理解分布式锁</h2><h3 id="为什么要分布式锁"><a href="#为什么要分布式锁" class="headerlink" title="为什么要分布式锁"></a>为什么要分布式锁</h3><p>在并发场景中，我们可以使用加锁的手段来保证业务方法或代码的原子性操作，从而防止数据被并发修改引发安全问题，在单体应用中我们可以使用互斥锁如： <code>synchronized</code> 同步代码块 或者 <code>Lock</code>锁来实现，如图:</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065726132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7lCrzyXy-1605714910565)(分布式锁.assets/1605692967171.png)]"></p>
+<p>但是在<code>集群/分布式</code>应用中单纯的互斥锁是不能保证多个节点中对同一个数据的原性操作的，如图：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065801491.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rGJm7d9A-1605714910569)(分布式锁.assets/1605695422135.png)]"></p>
+<p>集群模式中，每个服务都加了锁但是只能锁住自己，每个服务做库存做扣减操作，当库存都剩1的时候，三个服务并发减库存可能会导致库存减到 -2 出现线程不安全问题。</p>
+<p>那应该如何解决上述问题呢？我们需要使用<code>分布式事务</code>保证三个服务对库存的<code>原子性操作</code></p>
+<h3 id="什么是分布式锁"><a href="#什么是分布式锁" class="headerlink" title="什么是分布式锁"></a>什么是分布式锁</h3><p>分布式锁的目的就是在<code>分布式/集群</code>环境中使用加锁手段保证<code>多个服务节点对同一个数据的原子性操作</code>，保证数据的安全性，如上图，三个服务都在同时扣减库存，我们需要<code>对减库存进行原子性操作</code>，如：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065835586.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ITVue2Th-1605714910572)(分布式锁.assets/1605709890367.png)]"></p>
+<p>实现分布式锁的原理也很简单，就是需要得有一把唯一且共享的锁，多个服务同时去获取锁，但是只有一个服务才能获取到锁，其他没有获取到锁的服务需要等待或者自旋，等获取到锁的服务业务执行完成释放锁，其他的服务就可以再次尝试获取锁。</p>
+<h2 id="Redis分布式锁的原理"><a href="#Redis分布式锁的原理" class="headerlink" title="Redis分布式锁的原理"></a>Redis分布式锁的原理</h2><p>实现分布式锁的方案有很多，比如基于数据库实现分布式锁，使用<code>ZooKeeper</code>实现分布式锁，本文采用的是使用<code>Redis实现分布式</code>锁方案。</p>
+<h3 id="加锁和释放锁"><a href="#加锁和释放锁" class="headerlink" title="加锁和释放锁"></a>加锁和释放锁</h3><p>Redis提供了一个命令<code>setnx</code> 可以来实现分布式锁，该命令只在键 <code>key</code> 不存在的情况下 将键 <code>key</code> 的值设置为 <code>value</code> ，若键 <code>key</code> 已经存在， 则 <code>SETNX</code> 命令不做任何动作。根据这一特性我们就可以制定Redis实现分布式锁的方案了。</p>
+<p>简单理解就是 ：如果三个服务同时抢锁，服务A抢先一步执行<code>setnx(lock_stock,1)</code>加上锁，那么当服务B在执行<code>setnx(lock_stock,1)</code>加锁的时候就会失败，服务C也一样，服务A抢到锁执行完业务逻辑后就会释放锁，可以使用<code>del(lock_stock)</code>删除锁，其他服务就可以执行<code>setnx(lock_stock,1)</code>加锁了，如图：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065912813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7U0ig190-1605714910578)(分布式锁.assets/1605709864403.png)]"></p>
+<h3 id="锁超时问题"><a href="#锁超时问题" class="headerlink" title="锁超时问题"></a>锁超时问题</h3><p>这里有一个问题，如果获取到锁的服务在<code>释放锁的时候宕机</code>了，那么Redis中<code>lock-stock</code>不就永远存在，那<code>锁不就释放不了</code>么，别的服务也就没办法获取到锁，就造成了<code>死锁</code>，为了解决这个问题，我们需要设置<code>锁的自动超时</code>也就是Key的超时自动删除，即使服务宕机没有调用del释放锁，那么锁本身也有超时时间，可以自动删除锁，别的服务就可以获取锁了，Redis中Key的过期时间可以使用Redis的 <code>expire（lock_stock，30）</code>命令实现，这里给出伪代码如下</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>（jedis.setnx（lock_stock，<span class="number">1</span>） == <span class="number">1</span>）&#123;	<span class="comment">//获取锁</span></span><br><span class="line">    expire（lock_stock，<span class="number">5</span>）		 <span class="comment">//设置锁超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        jedis.del（lock_stock）			 <span class="comment">//释放锁</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="原子性问题"><a href="#原子性问题" class="headerlink" title="原子性问题"></a>原子性问题</h3><p>上面的代码依然有问题，就是<code>setnx</code>获取锁和<code>expire</code>不是原子性操作，假设有一极端情况，当线程通过<code>setnx（lock_stock，1）</code>获取到锁，还没来得及执行<code>expire（lock_stock，30）</code>设置锁的过期时间，服务就宕机了，那是不是锁也永远得不到释放呢？？？又变成了死锁，这个问题可以使用<code>set</code>命令解决，我们先来看一下这个命令的语法</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SET key value [EX seconds] [PX milliseconds] [NX|XX]</span><br></pre></td></tr></table></figure>
+
+<p>从 Redis 2.6.12 版本开始， <code>SET</code> 命令的行为可以通过一系列参数来修改：</p>
+<ul>
+<li><code>EX seconds</code> ： 将键的过期时间设置为 <code>seconds</code> 秒。 执行 <code>SET key value EX seconds</code> 的效果等同于执行 <code>SETEX key seconds value</code> 。</li>
+<li><code>PX milliseconds</code> ： 将键的过期时间设置为 <code>milliseconds</code> 毫秒。 执行 <code>SET key value PX milliseconds</code> 的效果等同于执行 <code>PSETEX key milliseconds value</code> 。</li>
+<li><code>NX</code> ： 只在键不存在时， 才对键进行设置操作。 执行 <code>SET key value NX</code> 的效果等同于执行 <code>SETNX key value</code> 。</li>
+<li><code>XX</code> ： 只在键已经存在时， 才对键进行设置操作。</li>
+</ul>
+<p>也就是说该命令可以当做<code>setnx</code>和<code>expire</code>的组合命令来使用，而且是原子性的，改造代码如</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>（set(lock_stock,<span class="number">1</span>,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        del（lock_stock）			 		<span class="comment">//释放锁</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="锁的误删除问题"><a href="#锁的误删除问题" class="headerlink" title="锁的误删除问题"></a>锁的误删除问题</h3><p>上面的方案依然有问题，就是在<code>del</code>释放锁的时候可能会误删除别人加的锁，例如服务A获取到锁<code>lock_stock</code>，过期时间为 5s，如果在服务A执行业务逻辑的这一段时间内，锁到期自动删除，且别的服务获取到了锁<code>lock_stock</code>，那么服务A业务执行完成执行<code>del(lock_stock)</code>是不是会把别人的锁给删除掉呢？？？如图：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065939549.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rSEN6vhr-1605714910581)(分布式锁.assets/1605712581554.png)]"></p>
+<p>那么这个问题怎么解决呢？我们可以在删除锁的时候先判断一下要删除的锁是不是自己上的锁，比如可以把锁的值使用一个UUID，在释放锁的时候先获取一下锁的值和当前业务中创建的UUID是不是同一个，如果是才执行·<code>del</code>删除锁，当然也可以使用线程的ID替代UUID，代码如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String uuid = UUID.randomUUID().toString();</span><br><span class="line"><span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        String lockValue = jedis.get(lock_stock);	<span class="comment">//获取锁的值</span></span><br><span class="line">        <span class="keyword">if</span>(lockValue.equals(uuid))&#123;			<span class="comment">//判断是不是自己的锁</span></span><br><span class="line">            jedis.del（lock_stock）			 	  <span class="comment">//释放锁</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Lua脚本保证原子性"><a href="#Lua脚本保证原子性" class="headerlink" title="Lua脚本保证原子性"></a>Lua脚本保证原子性</h3><p>但是上面的代码依然有问题，就是判断锁的代码和删除锁的代码也不是原子性的，依然可能会导致锁的误删除问题，比如服务A在判断锁成功准备删除锁时，锁自动过期，别的服务B获取到了锁，然后服务A执行<code>DEL</code>就可能会把服务B的锁给删除掉，所以，我们必须保证  获取锁 -&gt; 判断锁 -&gt; 删除锁 的操作是原子性的才可以，解决方案可以使用Redis+Lua脚本来解决一致性问题</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">String script = &quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] </span><br><span class="line">	then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>这是一段Lua脚本，可以保证多个命令的原子性</p>
+<ul>
+<li>redis.call(‘get’, KEYS[1])  ：是调用redis的get命令，key可以通过参数传入</li>
+<li>== ARGV[1] ：意思是是否和 某个值相等，这里的值也可以参数传入</li>
+<li>then return redis.call(‘del’, KEYS[1])  ：如果相等就执行 <code>redis.call(&#39;del&#39;, KEYS[1])  </code>删除操作</li>
+<li>else return 0 end ：否则就返回 0</li>
+</ul>
+<p>如果我们把数据带入<code>KEYS[1]</code>的值为“lock_stock”,<code>ARGV[1]</code>的值为UUID如“xoxoxo”，所以大概的含义是如果调用get(“lock_stock”)获取到的值  等于 “xoxoxo” ,那就调用 del(“lock_stock”)，否则就返回 0 。 说白了就是把我们上面的判断锁和删除锁的动作使用Lua脚本去执行而已，现在代码可以这样写了</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String uuid = UUID.randomUUID().toString();</span><br><span class="line"><span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="comment">//lua脚本</span></span><br><span class="line">        String script = <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">        <span class="comment">//执行脚本</span></span><br><span class="line">        jedis.eval(script, Collections.singletonList(<span class="string">&quot;lock_stock&quot;</span>),Collections.singletonList(uuid));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Arrays.asList(“lock_stock”) 转给 KEYS[1]</li>
+<li>Arrays.asList(uuid)转给 ARGV[1]</li>
+</ul>
+<h3 id="可重入锁"><a href="#可重入锁" class="headerlink" title="可重入锁"></a>可重入锁</h3><p>上面的代码是不完整的，如果某个线程没有获取到锁是不是就不会进入 IF 呢？如果是这样的话未获取到锁的线程就执行失败了，啥也没做，这是不可行的，我们是不是需要让未获取到锁的线程等待片刻之后再次尝试获取锁呢？如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">	String uuid = UUID.randomUUID().toString();</span><br><span class="line">	<span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">	    <span class="keyword">try</span> &#123;</span><br><span class="line">	        业务代码</span><br><span class="line">	    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">	        <span class="comment">//lua脚本</span></span><br><span class="line">	        String script = <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">	        <span class="comment">//执行脚本</span></span><br><span class="line">	        jedis.eval(script, Collections.singletonList(<span class="string">&quot;lock_stock&quot;</span>),Collections.singletonList(uuid));</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="comment">//休眠一会儿，重入方法，尝试获取锁</span></span><br><span class="line">		Thread.sleep(<span class="number">100</span>);</span><br><span class="line">		method();	<span class="comment">//自旋，重新进入方法</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>上面的代码增加了else获取锁失败的逻辑，休眠一会儿后<code>重入方法尝试重新获取锁</code>，休眠时间结合业务逻辑的执行时间设定</p>
+<h2 id="分布式锁的特点"><a href="#分布式锁的特点" class="headerlink" title="分布式锁的特点"></a>分布式锁的特点</h2><p>当然要实现一个分布式锁还需要考虑一些东西，比如Redis的健壮性，它不能随便挂掉，这里总结一下分布式锁的一些要素<br>首先，为了确保分布式锁可用，我们至少要确保锁的实现同时满足以下四个条件：</p>
+<ul>
+<li><p>互斥性：同一时间只能一个节点获取到锁，其他节点需要等待获取到锁的节点释放了锁才可以获取到锁，而这里的等待一般是通过阻塞，和自旋两种方式</p>
+</li>
+<li><p>安全性：解铃还须系铃人，只能释放自己的锁不能误删别人的锁</p>
+</li>
+<li><p>死锁：比如在节点宕机时最容易出现锁没被释放的问题，然后出现死锁，所以做锁的过期</p>
+</li>
+<li><p>容错：当Redis宕机，客户端仍然可以释放锁</p>
+</li>
+<li><p>可重入：获取锁失败可以重新尝试获取锁</p>
+</li>
+</ul>
+<h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>文章结束，这里主要探讨了一下Redis实现分布式锁的核心原理，以及过程中的一些问题，当然我们如果真的要在项目中实现分布式锁其实也没这么麻烦，请期待下一章Redisson实现分布式锁</p>
+]]></content>
+      <categories>
+        <category>Java后端</category>
+        <category>缓存服务器</category>
+        <category>redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+        <tag>缓存</tag>
       </tags>
   </entry>
   <entry>
@@ -392,77 +546,6 @@
       </tags>
   </entry>
   <entry>
-    <title>二.SpringCloud极简入门-SpringCloud简介</title>
-    <url>/2020/11/15/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/%E4%BA%8C.SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-SpringCloud%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[<p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
-<h2 id="二-SpringCloud与微服务"><a href="#二-SpringCloud与微服务" class="headerlink" title="二. SpringCloud与微服务"></a><strong>二.</strong> <strong>SpringCloud与微服务</strong></h2><h3 id="1-什么是SpringCloud"><a href="#1-什么是SpringCloud" class="headerlink" title="1. 什么是SpringCloud"></a><strong>1.</strong> <strong>什么是SpringCloud</strong></h3><h4 id="1-1-SpringCloud基本概念"><a href="#1-1-SpringCloud基本概念" class="headerlink" title="1.1.SpringCloud基本概念"></a>1.1.SpringCloud基本概念</h4><p>Spring cloud是一个基于Spring Boot实现的服务治理工具包，用于微服务架构中管理和协调服务的。Spring Cloud是一系列框架的有序集合。它利用Spring Boot的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控等，都可以用Spring Boot的开发风格做到一键启动和部署。通过Spring Boot风格进行再封装屏蔽掉了复杂的配置和实现原理，最终给开发者留出了一套简单易懂、易部署和易维护的分布式系统开发工具包。有了SpringCloud之后，让微服务架构的落地变得更简单。</p>
-<h4 id="1-2-SpringCloud常用组件"><a href="#1-2-SpringCloud常用组件" class="headerlink" title="1.2. SpringCloud常用组件"></a><strong>1.2.</strong> <strong>SpringCloud常用组件</strong></h4><p>当我们的项目采用微服务架构之后就会引发一些列的难题需要去解决，如众多微服务的通信地址应该如何管理，微服务之间应该使用何种方式发起调用，微服务故障该如何处理，众多微服务的配置文件如何集中管理等等，SpringCloud为这一系列的难题提供了相应的组件来解决，下面我们简单来理解一下SpringCloud最核心的几大组件如如下：<br><img data-src="https://img-blog.csdnimg.cn/20200329232256382.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h5 id="Netflix-Eureka"><a href="#Netflix-Eureka" class="headerlink" title="Netflix Eureka"></a><strong>Netflix Eureka</strong></h5><p>当我们的微服务过多的时候，管理服务的通信地址是一个非常麻烦的事情，Eureka就是用来管理微服务的通信地址清单的，有了Eureka之后我们通过服务的名字就能实现服务的调用。</p>
-<h5 id="Netflix-Ribbon-Feign-客户端负载均衡"><a href="#Netflix-Ribbon-Feign-客户端负载均衡" class="headerlink" title="Netflix Ribbon\Feign : 客户端负载均衡"></a><strong>Netflix Ribbon\Feign : 客户端负载均衡</strong></h5><p>Ribbon和Feign都是客户端负载均衡器，它的作用是在服务发生调用的时候帮我们将请求按照某种规则分发到多个目标服务器上，简单理解就是用来解决微服务之间的通信问题。</p>
-<h5 id="Netflix-Hystrix-：断路器"><a href="#Netflix-Hystrix-：断路器" class="headerlink" title="Netflix Hystrix ：断路器"></a><strong>Netflix Hystrix ：断路器</strong></h5><p>微服务的调用是非常复杂的，有的时候一个请求需要很多的微服务共同完成，那么一旦某个服务发生故障，导致整个调用链上的微服务全都出现异常，甚至导致整个微服务架构瘫痪。Hystrix就是用来解决微服务故障，保护微服务安全的组件。</p>
-<h5 id="Netflix-Zuul-：-服务网关"><a href="#Netflix-Zuul-：-服务网关" class="headerlink" title="Netflix Zuul ： 服务网关"></a><strong>Netflix Zuul ： 服务网关</strong></h5><p>zuul作为服务网关，我们可以把它看作是微服务的大门，所有的请求都需要经过zuul之后才能到达目标服务，根据这一特性，我们可以把微服务公共的是事情交给zuul统一处理，如：用户鉴权，请求监控等。</p>
-<h5 id="Spring-Cloud-Config-：分布式配置"><a href="#Spring-Cloud-Config-：分布式配置" class="headerlink" title="Spring Cloud Config ：分布式配置"></a><strong>Spring Cloud Config ：分布式配置</strong></h5><p>微服务架构中的服务实例非常的多，服务的配置文件分散在每个服务中，每次修改服务的配置文件和重新服务实例都是一个很麻烦的工作，Spring Cloud Config作为分布式配置管理中心就是用来统一的管理服务的配置文件。</p>
-<h5 id="Spring-Cloud-Bus-消息总线"><a href="#Spring-Cloud-Bus-消息总线" class="headerlink" title="Spring Cloud Bus : 消息总线"></a><strong>Spring Cloud Bus : 消息总线</strong></h5><p>消息总线是在微服务中给各个微服务广播消息的一个组件，我们使用消息总线构建一个消息中心，其他微服务来接入到消息中心，当消息总线发起消息，接入的微服务都可以收到消息从而进行消费。</p>
-<h5 id="Spring-Cloud-sleuth-微服务链路追踪"><a href="#Spring-Cloud-sleuth-微服务链路追踪" class="headerlink" title="Spring Cloud sleuth :微服务链路追踪"></a><strong>Spring Cloud sleuth :微服务链路追踪</strong></h5><p>当我们的应用采用微服务架构之后，后台可能有几十个甚至几百个服务在支撑，一个请求请求可能需要多次的服务调用最后才能完成，链路追踪的作用就是来监控维护之间的调用关系,让程序员方便直观的感受到一个请求经历了哪些微服务，以及服务的请求时间，是否有异常等。</p>
-<h4 id="1-3-SpringCloud的版本"><a href="#1-3-SpringCloud的版本" class="headerlink" title="1.3.SpringCloud的版本"></a>1.3.SpringCloud的版本</h4><p>SpringCloud是基于SpringBoot的,所以两者的jar包都需要导入,需要注意的是SprinbCloud的版本需要和SpringBoot的版本兼容，<strong>本文章采用的SpringBoot版本是2.0.5.RELEASE ， SpringCloud的版本是Finchley.SR1**</strong>。下面是版本兼容图：</p>
-<table>
-<thead>
-<tr>
-<th align="left">Release Train</th>
-<th align="left">Boot Version</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Hoxton</td>
-<td align="left">2.2.x</td>
-</tr>
-<tr>
-<td align="left">Greenwich</td>
-<td align="left">2.1.x</td>
-</tr>
-<tr>
-<td align="left"><strong>Finchley</strong></td>
-<td align="left"><strong>2.0.x</strong></td>
-</tr>
-<tr>
-<td align="left">Edgware</td>
-<td align="left">1.5.x</td>
-</tr>
-<tr>
-<td align="left">Dalston</td>
-<td align="left">1.5.x</td>
-</tr>
-</tbody></table>
-<h3 id="2-服务通信协议"><a href="#2-服务通信协议" class="headerlink" title="2.服务通信协议"></a>2.服务通信协议</h3><p>在微服务中服务间通过网络进行通信，那么服务间的远程调用方式有哪些呢？</p>
-<h4 id="2-1-RPC"><a href="#2-1-RPC" class="headerlink" title="2.1.RPC"></a>2.1.RPC</h4><p>RPC(Remote Produce Call)远程过程调用，类似的还有RMI。自定义数据格式，基于原生TCP通信，速度快，效率高。早期的webservice，现在热门的dubbo，都是RPC的典型</p>
-<h4 id="2-2-Http"><a href="#2-2-Http" class="headerlink" title="2.2.Http"></a>2.2.Http</h4><p>Http其实是一种网络传输协议，基于TCP，规定了数据传输的格式。现在客户端浏览器与服务端通信基本都是采用Http协议。也可以用来进行远程服务调用。缺点是消息封装臃肿。  现在热门的Rest风格，就可以通过http协议来实现</p>
-<p>我们可以认为SpringCloud就是基于Http协议实现服务之间的通信。</p>
-<h4 id="2-2-如何选择"><a href="#2-2-如何选择" class="headerlink" title="2.2.如何选择"></a>2.2.如何选择</h4><p>其实我们并不需要刻意去选择该使用RPC或者是Http，如果架构师选择Dubbo作为微服务开发框架，通信方式自然就是RPC，当架构师选择了SpringCloud作为微服务开发框架，那么通信方式自然就是基于Http协议，当然，如果服务的通信方式成为了微服务的性能瓶颈，那么架构师自然需要去考虑更换微服务的通信协议。</p>
-<h3 id="2-SpringCloud与Dubbo"><a href="#2-SpringCloud与Dubbo" class="headerlink" title="2. SpringCloud与Dubbo"></a><strong>2.</strong> <strong>SpringCloud与Dubbo</strong></h3><h4 id="2-1-Dubbo简介"><a href="#2-1-Dubbo简介" class="headerlink" title="2.1.Dubbo简介"></a>2.1.Dubbo简介</h4><p>Dubbo最早是有阿里巴巴提供的一个服务治理和服务调用框架，现在已经成为Apache的顶级项目，Dubbo跟SpringCloud最显著的区别是Dubbo的定位只是一个RPC框架，相比SpringCloud来说它缺少很多功能模块，如：网关，链路追踪等，所以往往在使用Dubbo作为微服务开发框架的时候，还需要去配合其他的框架一起使用，如:加入zookeeper作为注册中心。</p>
-<h4 id="2-2-SpringCloud与Dubbo的区别"><a href="#2-2-SpringCloud与Dubbo的区别" class="headerlink" title="2.2.SpringCloud与Dubbo的区别"></a>2.2.SpringCloud与Dubbo的区别</h4><p>早期在国内做分布式(微服务)应用Dubbo是比较热门的框架，被许多互联网公司所采用，并产生了许多衍生版本，如网易，京东，新浪，当当等等，奈何在2014年10月Dubbo停止维护，在Dubbo停更的时间里Spring Cloud快速追赶上。在2017年9月，阿里宣布重启Dubbo项目，计划对Dubbo进行持续更新维护。2018.2月，阿里将Dubbo捐献给Apache基金会，Dubbo成为Apache孵化器项目。</p>
-<p>所以当前微服务架构，Dubbo和SpringCloud比较火，另外还有Thrift、gRPC等等 。很多人把SpringCloud 和Dubbo进行对比，其实两个框架并没有太大的可比性，因为他们的定位不同。Spring Cloud是一个完整的微服务解决方案,它提供了微服务各问题的解决方案集合，而Dubbo是一个高性能的RPC框架，它有着很多功能的缺失。</p>
-<p><strong>定位不一样</strong></p>
-<p>SpringCloud为了微服务的落地提供了一套完整的组件，而Dubbo只是一个RPC框架，缺失的功能很多。</p>
-<p><strong>通信协议不一样</strong></p>
-<p>Dubbo的通信方式是RPC，基于原声的tcp,性能较好，而SpringCloud的通信方式基于Http协议，虽然底层基于tcp，但是Http的封装过于臃肿，但是使用Http好处在于互相通信的两个服务可以使用不同的变成语言去编写，只要他们都支持Http通信即可互相调用，而Dubbo只支持Java,当然Dubbo交给Apache维护之后做了升级，Dubbo在以后不仅仅支持Java。</p>
-<p><strong>背景都很强大</strong></p>
-<p>Dubbo背靠阿里和Apache,淘宝就是使用的Dubbo来开发经理过双“11”期间的高并发大流量检验，可以说是非常的稳定和成熟，SpringCloud是Spring家族的成员，严格遵循Martin Fowler提出的微服务规范，可以认为SpringCloud是微服务架构的标准，总之两者背景都很强大，文档完善，社区活跃，所以不管作何选择，都是很有前途的。</p>
-<p><strong>开发风格</strong></p>
-<p>从开发风格上来讲，Dubbo官方推荐倾向于使用Spring xml配置方式，SpringCloud是基于SpringBoot的开发风格，即采用注解的方式进行配置，从开发速度上来说，SpringCloud具有更高的开发和部署速度。</p>
-<p>下面是网上比较流行的Dubbo和Spring Cloud功能对比图：</p>
-<p><img data-src="https://whale-blog.oss-cn-beijing.aliyuncs.com/1605420970599.png" alt="1605420970599"></p>
-]]></content>
-      <categories>
-        <category>Java后端</category>
-        <category>微服务开发</category>
-        <category>SpringCloud</category>
-      </categories>
-      <tags>
-        <tag>SpringCloud</tag>
-        <tag>微服务开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一.SpringSecurity基础-认证和授权概述</title>
     <url>/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83/security/%E4%B8%80.SpringSecurity%E5%9F%BA%E7%A1%80-%E8%AE%A4%E8%AF%81%E5%92%8C%E6%8E%88%E6%9D%83%E6%A6%82%E8%BF%B0/</url>
     <content><![CDATA[<p>老鸟飞过 ， 只做学习使用，欢迎交流</p>
@@ -600,89 +683,6 @@
         <tag>SpringCloud</tag>
         <tag>微服务开发</tag>
         <tag>Eureka</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>六.Redis极简入门-Redis实现分布式锁原理</title>
-    <url>/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/redis/%E5%85%AD.Redis%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-Redis%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<p>老鸟飞过，学习使用，欢迎交流</p>
-<h2 id="理解分布式锁"><a href="#理解分布式锁" class="headerlink" title="理解分布式锁"></a>理解分布式锁</h2><h3 id="为什么要分布式锁"><a href="#为什么要分布式锁" class="headerlink" title="为什么要分布式锁"></a>为什么要分布式锁</h3><p>在并发场景中，我们可以使用加锁的手段来保证业务方法或代码的原子性操作，从而防止数据被并发修改引发安全问题，在单体应用中我们可以使用互斥锁如： <code>synchronized</code> 同步代码块 或者 <code>Lock</code>锁来实现，如图:</p>
-<p><img data-src="https://img-blog.csdnimg.cn/20201119065726132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7lCrzyXy-1605714910565)(分布式锁.assets/1605692967171.png)]"></p>
-<p>但是在<code>集群/分布式</code>应用中单纯的互斥锁是不能保证多个节点中对同一个数据的原性操作的，如图：</p>
-<p><img data-src="https://img-blog.csdnimg.cn/20201119065801491.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rGJm7d9A-1605714910569)(分布式锁.assets/1605695422135.png)]"></p>
-<p>集群模式中，每个服务都加了锁但是只能锁住自己，每个服务做库存做扣减操作，当库存都剩1的时候，三个服务并发减库存可能会导致库存减到 -2 出现线程不安全问题。</p>
-<p>那应该如何解决上述问题呢？我们需要使用<code>分布式事务</code>保证三个服务对库存的<code>原子性操作</code></p>
-<h3 id="什么是分布式锁"><a href="#什么是分布式锁" class="headerlink" title="什么是分布式锁"></a>什么是分布式锁</h3><p>分布式锁的目的就是在<code>分布式/集群</code>环境中使用加锁手段保证<code>多个服务节点对同一个数据的原子性操作</code>，保证数据的安全性，如上图，三个服务都在同时扣减库存，我们需要<code>对减库存进行原子性操作</code>，如：</p>
-<p><img data-src="https://img-blog.csdnimg.cn/20201119065835586.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ITVue2Th-1605714910572)(分布式锁.assets/1605709890367.png)]"></p>
-<p>实现分布式锁的原理也很简单，就是需要得有一把唯一且共享的锁，多个服务同时去获取锁，但是只有一个服务才能获取到锁，其他没有获取到锁的服务需要等待或者自旋，等获取到锁的服务业务执行完成释放锁，其他的服务就可以再次尝试获取锁。</p>
-<h2 id="Redis分布式锁的原理"><a href="#Redis分布式锁的原理" class="headerlink" title="Redis分布式锁的原理"></a>Redis分布式锁的原理</h2><p>实现分布式锁的方案有很多，比如基于数据库实现分布式锁，使用<code>ZooKeeper</code>实现分布式锁，本文采用的是使用<code>Redis实现分布式</code>锁方案。</p>
-<h3 id="加锁和释放锁"><a href="#加锁和释放锁" class="headerlink" title="加锁和释放锁"></a>加锁和释放锁</h3><p>Redis提供了一个命令<code>setnx</code> 可以来实现分布式锁，该命令只在键 <code>key</code> 不存在的情况下 将键 <code>key</code> 的值设置为 <code>value</code> ，若键 <code>key</code> 已经存在， 则 <code>SETNX</code> 命令不做任何动作。根据这一特性我们就可以制定Redis实现分布式锁的方案了。</p>
-<p>简单理解就是 ：如果三个服务同时抢锁，服务A抢先一步执行<code>setnx(lock_stock,1)</code>加上锁，那么当服务B在执行<code>setnx(lock_stock,1)</code>加锁的时候就会失败，服务C也一样，服务A抢到锁执行完业务逻辑后就会释放锁，可以使用<code>del(lock_stock)</code>删除锁，其他服务就可以执行<code>setnx(lock_stock,1)</code>加锁了，如图：</p>
-<p><img data-src="https://img-blog.csdnimg.cn/20201119065912813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7U0ig190-1605714910578)(分布式锁.assets/1605709864403.png)]"></p>
-<h3 id="锁超时问题"><a href="#锁超时问题" class="headerlink" title="锁超时问题"></a>锁超时问题</h3><p>这里有一个问题，如果获取到锁的服务在<code>释放锁的时候宕机</code>了，那么Redis中<code>lock-stock</code>不就永远存在，那<code>锁不就释放不了</code>么，别的服务也就没办法获取到锁，就造成了<code>死锁</code>，为了解决这个问题，我们需要设置<code>锁的自动超时</code>也就是Key的超时自动删除，即使服务宕机没有调用del释放锁，那么锁本身也有超时时间，可以自动删除锁，别的服务就可以获取锁了，Redis中Key的过期时间可以使用Redis的 <code>expire（lock_stock，30）</code>命令实现，这里给出伪代码如下</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>（jedis.setnx（lock_stock，<span class="number">1</span>） == <span class="number">1</span>）&#123;	<span class="comment">//获取锁</span></span><br><span class="line">    expire（lock_stock，<span class="number">5</span>）		 <span class="comment">//设置锁超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        jedis.del（lock_stock）			 <span class="comment">//释放锁</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="原子性问题"><a href="#原子性问题" class="headerlink" title="原子性问题"></a>原子性问题</h3><p>上面的代码依然有问题，就是<code>setnx</code>获取锁和<code>expire</code>不是原子性操作，假设有一极端情况，当线程通过<code>setnx（lock_stock，1）</code>获取到锁，还没来得及执行<code>expire（lock_stock，30）</code>设置锁的过期时间，服务就宕机了，那是不是锁也永远得不到释放呢？？？又变成了死锁，这个问题可以使用<code>set</code>命令解决，我们先来看一下这个命令的语法</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SET key value [EX seconds] [PX milliseconds] [NX|XX]</span><br></pre></td></tr></table></figure>
-
-<p>从 Redis 2.6.12 版本开始， <code>SET</code> 命令的行为可以通过一系列参数来修改：</p>
-<ul>
-<li><code>EX seconds</code> ： 将键的过期时间设置为 <code>seconds</code> 秒。 执行 <code>SET key value EX seconds</code> 的效果等同于执行 <code>SETEX key seconds value</code> 。</li>
-<li><code>PX milliseconds</code> ： 将键的过期时间设置为 <code>milliseconds</code> 毫秒。 执行 <code>SET key value PX milliseconds</code> 的效果等同于执行 <code>PSETEX key milliseconds value</code> 。</li>
-<li><code>NX</code> ： 只在键不存在时， 才对键进行设置操作。 执行 <code>SET key value NX</code> 的效果等同于执行 <code>SETNX key value</code> 。</li>
-<li><code>XX</code> ： 只在键已经存在时， 才对键进行设置操作。</li>
-</ul>
-<p>也就是说该命令可以当做<code>setnx</code>和<code>expire</code>的组合命令来使用，而且是原子性的，改造代码如</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>（set(lock_stock,<span class="number">1</span>,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        del（lock_stock）			 		<span class="comment">//释放锁</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="锁的误删除问题"><a href="#锁的误删除问题" class="headerlink" title="锁的误删除问题"></a>锁的误删除问题</h3><p>上面的方案依然有问题，就是在<code>del</code>释放锁的时候可能会误删除别人加的锁，例如服务A获取到锁<code>lock_stock</code>，过期时间为 5s，如果在服务A执行业务逻辑的这一段时间内，锁到期自动删除，且别的服务获取到了锁<code>lock_stock</code>，那么服务A业务执行完成执行<code>del(lock_stock)</code>是不是会把别人的锁给删除掉呢？？？如图：</p>
-<p><img data-src="https://img-blog.csdnimg.cn/20201119065939549.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rSEN6vhr-1605714910581)(分布式锁.assets/1605712581554.png)]"></p>
-<p>那么这个问题怎么解决呢？我们可以在删除锁的时候先判断一下要删除的锁是不是自己上的锁，比如可以把锁的值使用一个UUID，在释放锁的时候先获取一下锁的值和当前业务中创建的UUID是不是同一个，如果是才执行·<code>del</code>删除锁，当然也可以使用线程的ID替代UUID，代码如：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String uuid = UUID.randomUUID().toString();</span><br><span class="line"><span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        String lockValue = jedis.get(lock_stock);	<span class="comment">//获取锁的值</span></span><br><span class="line">        <span class="keyword">if</span>(lockValue.equals(uuid))&#123;			<span class="comment">//判断是不是自己的锁</span></span><br><span class="line">            jedis.del（lock_stock）			 	  <span class="comment">//释放锁</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Lua脚本保证原子性"><a href="#Lua脚本保证原子性" class="headerlink" title="Lua脚本保证原子性"></a>Lua脚本保证原子性</h3><p>但是上面的代码依然有问题，就是判断锁的代码和删除锁的代码也不是原子性的，依然可能会导致锁的误删除问题，比如服务A在判断锁成功准备删除锁时，锁自动过期，别的服务B获取到了锁，然后服务A执行<code>DEL</code>就可能会把服务B的锁给删除掉，所以，我们必须保证  获取锁 -&gt; 判断锁 -&gt; 删除锁 的操作是原子性的才可以，解决方案可以使用Redis+Lua脚本来解决一致性问题</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">String script = &quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] </span><br><span class="line">	then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;;</span><br></pre></td></tr></table></figure>
-
-<p>这是一段Lua脚本，可以保证多个命令的原子性</p>
-<ul>
-<li>redis.call(‘get’, KEYS[1])  ：是调用redis的get命令，key可以通过参数传入</li>
-<li>== ARGV[1] ：意思是是否和 某个值相等，这里的值也可以参数传入</li>
-<li>then return redis.call(‘del’, KEYS[1])  ：如果相等就执行 <code>redis.call(&#39;del&#39;, KEYS[1])  </code>删除操作</li>
-<li>else return 0 end ：否则就返回 0</li>
-</ul>
-<p>如果我们把数据带入<code>KEYS[1]</code>的值为“lock_stock”,<code>ARGV[1]</code>的值为UUID如“xoxoxo”，所以大概的含义是如果调用get(“lock_stock”)获取到的值  等于 “xoxoxo” ,那就调用 del(“lock_stock”)，否则就返回 0 。 说白了就是把我们上面的判断锁和删除锁的动作使用Lua脚本去执行而已，现在代码可以这样写了</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String uuid = UUID.randomUUID().toString();</span><br><span class="line"><span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="comment">//lua脚本</span></span><br><span class="line">        String script = <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">        <span class="comment">//执行脚本</span></span><br><span class="line">        jedis.eval(script, Collections.singletonList(<span class="string">&quot;lock_stock&quot;</span>),Collections.singletonList(uuid));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Arrays.asList(“lock_stock”) 转给 KEYS[1]</li>
-<li>Arrays.asList(uuid)转给 ARGV[1]</li>
-</ul>
-<h3 id="可重入锁"><a href="#可重入锁" class="headerlink" title="可重入锁"></a>可重入锁</h3><p>上面的代码是不完整的，如果某个线程没有获取到锁是不是就不会进入 IF 呢？如果是这样的话未获取到锁的线程就执行失败了，啥也没做，这是不可行的，我们是不是需要让未获取到锁的线程等待片刻之后再次尝试获取锁呢？如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">	String uuid = UUID.randomUUID().toString();</span><br><span class="line">	<span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">	    <span class="keyword">try</span> &#123;</span><br><span class="line">	        业务代码</span><br><span class="line">	    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">	        <span class="comment">//lua脚本</span></span><br><span class="line">	        String script = <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">	        <span class="comment">//执行脚本</span></span><br><span class="line">	        jedis.eval(script, Collections.singletonList(<span class="string">&quot;lock_stock&quot;</span>),Collections.singletonList(uuid));</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="comment">//休眠一会儿，重入方法，尝试获取锁</span></span><br><span class="line">		Thread.sleep(<span class="number">100</span>);</span><br><span class="line">		method();	<span class="comment">//自旋，重新进入方法</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>上面的代码增加了else获取锁失败的逻辑，休眠一会儿后<code>重入方法尝试重新获取锁</code>，休眠时间结合业务逻辑的执行时间设定</p>
-<h2 id="分布式锁的特点"><a href="#分布式锁的特点" class="headerlink" title="分布式锁的特点"></a>分布式锁的特点</h2><p>当然要实现一个分布式锁还需要考虑一些东西，比如Redis的健壮性，它不能随便挂掉，这里总结一下分布式锁的一些要素<br>首先，为了确保分布式锁可用，我们至少要确保锁的实现同时满足以下四个条件：</p>
-<ul>
-<li><p>互斥性：同一时间只能一个节点获取到锁，其他节点需要等待获取到锁的节点释放了锁才可以获取到锁，而这里的等待一般是通过阻塞，和自旋两种方式</p>
-</li>
-<li><p>安全性：解铃还须系铃人，只能释放自己的锁不能误删别人的锁</p>
-</li>
-<li><p>死锁：比如在节点宕机时最容易出现锁没被释放的问题，然后出现死锁，所以做锁的过期</p>
-</li>
-<li><p>容错：当Redis宕机，客户端仍然可以释放锁</p>
-</li>
-<li><p>可重入：获取锁失败可以重新尝试获取锁</p>
-</li>
-</ul>
-<h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>文章结束，这里主要探讨了一下Redis实现分布式锁的核心原理，以及过程中的一些问题，当然我们如果真的要在项目中实现分布式锁其实也没这么麻烦，请期待下一章Redisson实现分布式锁</p>
-]]></content>
-      <categories>
-        <category>Java后端</category>
-        <category>缓存服务器</category>
-        <category>redis</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
-        <tag>缓存</tag>
       </tags>
   </entry>
 </search>
