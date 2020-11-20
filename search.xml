@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>SpringCloud入门到超神系列文章目录</title>
+    <url>/2020/11/15/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/SpringCloud%E5%85%A5%E9%97%A8%E5%88%B0%E8%B6%85%E7%A5%9E/</url>
+    <content><![CDATA[<p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
+<h4 id="《Spring-Cloud-极简入门》"><a href="#《Spring-Cloud-极简入门》" class="headerlink" title="《Spring Cloud 极简入门》"></a>《Spring Cloud 极简入门》</h4><p><em>适用人群：有Spring Boot基础的童鞋</em></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNDQ4Nzk1MA==">一. SpringCloud极简入门-应用架构的演变</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNDk4MTA0OQ==">二.SpringCloud极简入门-SpringCloud简介</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNDk4Nzg4OQ==">三.SpringCloud极简入门-服务注册与发现-Eureka</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTAwMDA3Mw==">四.SpringCloud极简入门-Eureka集群</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTAzMDQyNA==">五.SpringCloud极简入门-使用RestTemplate实现服务通信</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTAwMjA5NQ==">六.SpringCloud极简入门-客户端负载均衡Ribbon</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTAzODM0OQ==">七.SpringCloud极简入门-客户端负载均衡－Feign</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTA1NTIzMQ==">八.SpringCloud极简入门-熔断器Hystrix</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTA4ODczMg==">九.SpringCloud极简入门-Feign开启Hystrix</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTA5NDgxNw==">十.SpringCloud极简入门-服务监控-Hystrix Dashboard &amp; Turbine</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTA5ODM2Mg==">十一.SpringCloud极简入门-服务网关-spring cloud zuul</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTE1OTczMA==">十二.SpringCloud极简入门-配置中心Spring Cloud Config</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTE2NjM3Mg==">十三.SpringCloud极简入门-消息总线实现配置刷新-Spring Cloud Bus</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTE3NzU2MQ==">十四.SpringCloud极简入门-链路追踪-Spring Cloud Sleuth</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDE0Mw==">十五.SpringCloud极简入门-Spring Cloud Stream消息驱动</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDE4NA==">十六.SpringCloud极简入门-服务网关Gateway</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNjg4NDgxOA==">十七.SpringCloud极简入门-Spring Boot Admin服务监控</span><br>—————————————–持续更新————————————————-</p>
+<h4 id="《Spring-Cloud-Alibaba-极简入门》"><a href="#《Spring-Cloud-Alibaba-极简入门》" class="headerlink" title="《Spring Cloud Alibaba 极简入门》"></a>《Spring Cloud Alibaba 极简入门》</h4><p><em>适用人群：有Spring Cloud基础的童鞋</em></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDI5Ng==">一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDIyMA==">二.SpringCloudAlibaba极简入门-服务注册与发现Nacos</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDI1MA==">三.SpringCloudAlibaba极简入门-配置中心Nacos</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTY1NjAzNg==">四.SpringCloudAlibaba极简入门-Nacos持久化和集群</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTY5NTM4NQ==">五.SpringCloudAlibaba极简入门-修改Nacos控制台密码</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDQxMA==">六.SpringCloudAlibaba极简入门-Sentinel限流</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ5NTY3Ng==">七.SpringCloudAlibaba极简入门-Sentinel熔断</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTc2MTEyMw==">八.SpringCloudAlibaba极简入门-Sentinel兼容Feign进行服务熔断</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTc2MTIzMg==">九.SpringCloudAlibaba极简入门-持久化Sentinel限流规则</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ5NTY4Nw==">十.SpringCloudAlibaba极简入门-分布式事务理论基础</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTc4MTkyMA==">十一.SpringCloudAlibaba极简入门-分布式事务实战seata</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ5NTY5Mg==">十二.SpringCloudAlibaba极简入门-集成Dubbo实现服务通信</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODg1ODM2MA==">十三.SpringCloudAlibaba极简入门-集成阿里云OSS对象存储</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwOTY4NjE2Ng==">十四.SpringCloudAlibaba极简入门-Sentinel对Gateway网关进行限流</span></p>
+<p>—————————————–持续更新————————————————-</p>
+<h4 id="《Spring-Cloud-源码剖析》"><a href="#《Spring-Cloud-源码剖析》" class="headerlink" title="《Spring Cloud 源码剖析》"></a>《Spring Cloud 源码剖析》</h4><p><em>适用人群：有 Spring Cloud基础的童鞋</em></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNzkwNDMwMQ==">一.SpringCloud源码剖析-Eureka核心API</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNzk4MjkyMA==">二.SpringCloud源码剖析-Eureka Client 初始化过程</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNjkwNzkxMQ==">三.SpringCloud源码剖析-Eureka服务注册</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODIxNzY1Ng==">四.SpringCloud源码剖析-Eureka服务发现</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODMxNTQwNQ==">五.SpringCloud源码剖析-Eureka Client服务续约</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODMxOTgxNQ==">六.SpringCloud源码剖析-Eureka Client取消注册</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODM1MTgyNw==">七.SpringCloud源码剖析-Eureka Server的自动配置</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODQ2OTIzMQ==">八.SpringCloud源码剖析-Eureka Server初始化流程</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODg2MTQwOQ==">九.SpringCloud源码剖析-Eureka Server服务注册流程</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODg4NDIxMA==">十.SpringCloud源码剖析-Eureka Server服务续约</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODg5NTU1Nw==">十一.SpringCloud源码剖析-Eureka Server服务注册表拉取</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODkwMDg4NA==">十二.SpringCloud源码剖析-Eureka Server服务剔除</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODkwNTcyNw==">十三.SpringCloud源码剖析-Eureka Server服务下线</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODkxNTA1Mw==">十四.SpringCloud源码剖析-Ribbon的初始化配置</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODkwNjUyOA==">十五.SpringCloud源码剖析-Ribbon工作流程分析</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwOTY0MTU0Nw==">十六.SpringCloud源码剖析-Feign的注册流程</span></p>
+<p>—————————————–持续更新————————————————-</p>
+<h4 id="《Spring-Cloud-Alibaba-源码剖析》"><a href="#《Spring-Cloud-Alibaba-源码剖析》" class="headerlink" title="《Spring Cloud Alibaba 源码剖析》"></a>《Spring Cloud Alibaba 源码剖析》</h4><p><em>适用人群：有 Spring Cloud Alibaba 基础的童鞋</em></p>
+<p>—————————————–持续更新————————————————-</p>
+]]></content>
+      <categories>
+        <category>Java后端</category>
+        <category>微服务开发</category>
+        <category>SpringCloud</category>
+      </categories>
+      <tags>
+        <tag>SpringCloud</tag>
+        <tag>微服务开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一. SpringCloud极简入门-应用架构的演变</title>
     <url>/2020/11/15/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/%E4%B8%80.%20SpringCloud%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98/</url>
     <content><![CDATA[<p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
@@ -118,75 +187,6 @@
 </ul>
 <h3 id="3-3-如何选型"><a href="#3-3-如何选型" class="headerlink" title="3.3.如何选型"></a>3.3.如何选型</h3><p>虽然微服务有诸多好处，但是不是任何系统都适合用微服务架构来开发，在项目规模不大的情况下单体应用性能表现良好，当项目规模较大，用户体量，并发较大的时候，微服务总体性能占优势，所以我们应该根据项目类型以及项目规模来决定应用架构的选型，如大型电商，物流，售票等系统我们可以选择使用微服务架构，对于中小型的企业级应用我们依然可以选择单体架构。下面是项目规模和性能的走式图：</p>
 <p> <img data-src="https://imgconvert.csdnimg.cn/aHR0cDovL3E2M2YyZWFjMy5ia3QuY2xvdWRkbi5jb20vYmxvZy8yMDIwMDIyNC9NVmh0UTBoUjl2Z2cucG5n?x-oss-process=image/format,png" alt="mark"></p>
-]]></content>
-      <categories>
-        <category>Java后端</category>
-        <category>微服务开发</category>
-        <category>SpringCloud</category>
-      </categories>
-      <tags>
-        <tag>SpringCloud</tag>
-        <tag>微服务开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SpringCloud入门到超神系列文章目录</title>
-    <url>/2020/11/15/Java%E5%90%8E%E7%AB%AF/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/SpringCloud/SpringCloud%E5%85%A5%E9%97%A8%E5%88%B0%E8%B6%85%E7%A5%9E/</url>
-    <content><![CDATA[<p>Spring Cloud 系列入门文章 ， 老鸟飞过 ， 只做学习使用，欢迎交流</p>
-<h4 id="《Spring-Cloud-极简入门》"><a href="#《Spring-Cloud-极简入门》" class="headerlink" title="《Spring Cloud 极简入门》"></a>《Spring Cloud 极简入门》</h4><p><em>适用人群：有Spring Boot基础的童鞋</em></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNDQ4Nzk1MA==">一. SpringCloud极简入门-应用架构的演变</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNDk4MTA0OQ==">二.SpringCloud极简入门-SpringCloud简介</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNDk4Nzg4OQ==">三.SpringCloud极简入门-服务注册与发现-Eureka</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTAwMDA3Mw==">四.SpringCloud极简入门-Eureka集群</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTAzMDQyNA==">五.SpringCloud极简入门-使用RestTemplate实现服务通信</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTAwMjA5NQ==">六.SpringCloud极简入门-客户端负载均衡Ribbon</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTAzODM0OQ==">七.SpringCloud极简入门-客户端负载均衡－Feign</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTA1NTIzMQ==">八.SpringCloud极简入门-熔断器Hystrix</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTA4ODczMg==">九.SpringCloud极简入门-Feign开启Hystrix</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTA5NDgxNw==">十.SpringCloud极简入门-服务监控-Hystrix Dashboard &amp; Turbine</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTA5ODM2Mg==">十一.SpringCloud极简入门-服务网关-spring cloud zuul</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTE1OTczMA==">十二.SpringCloud极简入门-配置中心Spring Cloud Config</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTE2NjM3Mg==">十三.SpringCloud极简入门-消息总线实现配置刷新-Spring Cloud Bus</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTE3NzU2MQ==">十四.SpringCloud极简入门-链路追踪-Spring Cloud Sleuth</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDE0Mw==">十五.SpringCloud极简入门-Spring Cloud Stream消息驱动</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDE4NA==">十六.SpringCloud极简入门-服务网关Gateway</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNjg4NDgxOA==">十七.SpringCloud极简入门-Spring Boot Admin服务监控</span><br>—————————————–持续更新————————————————-</p>
-<h4 id="《Spring-Cloud-Alibaba-极简入门》"><a href="#《Spring-Cloud-Alibaba-极简入门》" class="headerlink" title="《Spring Cloud Alibaba 极简入门》"></a>《Spring Cloud Alibaba 极简入门》</h4><p><em>适用人群：有Spring Cloud基础的童鞋</em></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDI5Ng==">一.SpringCloudAlibaba极简入门-什么是 Spring Cloud Alibaba</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDIyMA==">二.SpringCloudAlibaba极简入门-服务注册与发现Nacos</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDI1MA==">三.SpringCloudAlibaba极简入门-配置中心Nacos</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTY1NjAzNg==">四.SpringCloudAlibaba极简入门-Nacos持久化和集群</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTY5NTM4NQ==">五.SpringCloudAlibaba极简入门-修改Nacos控制台密码</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ4NDQxMA==">六.SpringCloudAlibaba极简入门-Sentinel限流</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ5NTY3Ng==">七.SpringCloudAlibaba极简入门-Sentinel熔断</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTc2MTEyMw==">八.SpringCloudAlibaba极简入门-Sentinel兼容Feign进行服务熔断</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTc2MTIzMg==">九.SpringCloudAlibaba极简入门-持久化Sentinel限流规则</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ5NTY4Nw==">十.SpringCloudAlibaba极简入门-分布式事务理论基础</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTc4MTkyMA==">十一.SpringCloudAlibaba极简入门-分布式事务实战seata</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNTQ5NTY5Mg==">十二.SpringCloudAlibaba极简入门-集成Dubbo实现服务通信</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODg1ODM2MA==">十三.SpringCloudAlibaba极简入门-集成阿里云OSS对象存储</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwOTY4NjE2Ng==">十四.SpringCloudAlibaba极简入门-Sentinel对Gateway网关进行限流</span></p>
-<p>—————————————–持续更新————————————————-</p>
-<h4 id="《Spring-Cloud-源码剖析》"><a href="#《Spring-Cloud-源码剖析》" class="headerlink" title="《Spring Cloud 源码剖析》"></a>《Spring Cloud 源码剖析》</h4><p><em>适用人群：有 Spring Cloud基础的童鞋</em></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNzkwNDMwMQ==">一.SpringCloud源码剖析-Eureka核心API</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNzk4MjkyMA==">二.SpringCloud源码剖析-Eureka Client 初始化过程</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwNjkwNzkxMQ==">三.SpringCloud源码剖析-Eureka服务注册</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODIxNzY1Ng==">四.SpringCloud源码剖析-Eureka服务发现</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODMxNTQwNQ==">五.SpringCloud源码剖析-Eureka Client服务续约</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODMxOTgxNQ==">六.SpringCloud源码剖析-Eureka Client取消注册</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODM1MTgyNw==">七.SpringCloud源码剖析-Eureka Server的自动配置</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODQ2OTIzMQ==">八.SpringCloud源码剖析-Eureka Server初始化流程</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODg2MTQwOQ==">九.SpringCloud源码剖析-Eureka Server服务注册流程</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODg4NDIxMA==">十.SpringCloud源码剖析-Eureka Server服务续约</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODg5NTU1Nw==">十一.SpringCloud源码剖析-Eureka Server服务注册表拉取</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODkwMDg4NA==">十二.SpringCloud源码剖析-Eureka Server服务剔除</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODkwNTcyNw==">十三.SpringCloud源码剖析-Eureka Server服务下线</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODkxNTA1Mw==">十四.SpringCloud源码剖析-Ribbon的初始化配置</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwODkwNjUyOA==">十五.SpringCloud源码剖析-Ribbon工作流程分析</span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDgvYXJ0aWNsZS9kZXRhaWxzLzEwOTY0MTU0Nw==">十六.SpringCloud源码剖析-Feign的注册流程</span></p>
-<p>—————————————–持续更新————————————————-</p>
-<h4 id="《Spring-Cloud-Alibaba-源码剖析》"><a href="#《Spring-Cloud-Alibaba-源码剖析》" class="headerlink" title="《Spring Cloud Alibaba 源码剖析》"></a>《Spring Cloud Alibaba 源码剖析》</h4><p><em>适用人群：有 Spring Cloud Alibaba 基础的童鞋</em></p>
-<p>—————————————–持续更新————————————————-</p>
 ]]></content>
       <categories>
         <category>Java后端</category>
@@ -317,89 +317,6 @@
         <tag>SpringCloud</tag>
         <tag>微服务开发</tag>
         <tag>SpringCloudAlibaba</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>六.Redis极简入门-Redis实现分布式锁原理</title>
-    <url>/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/redis/%E5%85%AD.Redis%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-Redis%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<p>老鸟飞过，学习使用，欢迎交流</p>
-<h2 id="理解分布式锁"><a href="#理解分布式锁" class="headerlink" title="理解分布式锁"></a>理解分布式锁</h2><h3 id="为什么要分布式锁"><a href="#为什么要分布式锁" class="headerlink" title="为什么要分布式锁"></a>为什么要分布式锁</h3><p>在并发场景中，我们可以使用加锁的手段来保证业务方法或代码的原子性操作，从而防止数据被并发修改引发安全问题，在单体应用中我们可以使用互斥锁如： <code>synchronized</code> 同步代码块 或者 <code>Lock</code>锁来实现，如图:</p>
-<p><img data-src="https://img-blog.csdnimg.cn/20201119065726132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7lCrzyXy-1605714910565)(分布式锁.assets/1605692967171.png)]"></p>
-<p>但是在<code>集群/分布式</code>应用中单纯的互斥锁是不能保证多个节点中对同一个数据的原性操作的，如图：</p>
-<p><img data-src="https://img-blog.csdnimg.cn/20201119065801491.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rGJm7d9A-1605714910569)(分布式锁.assets/1605695422135.png)]"></p>
-<p>集群模式中，每个服务都加了锁但是只能锁住自己，每个服务做库存做扣减操作，当库存都剩1的时候，三个服务并发减库存可能会导致库存减到 -2 出现线程不安全问题。</p>
-<p>那应该如何解决上述问题呢？我们需要使用<code>分布式事务</code>保证三个服务对库存的<code>原子性操作</code></p>
-<h3 id="什么是分布式锁"><a href="#什么是分布式锁" class="headerlink" title="什么是分布式锁"></a>什么是分布式锁</h3><p>分布式锁的目的就是在<code>分布式/集群</code>环境中使用加锁手段保证<code>多个服务节点对同一个数据的原子性操作</code>，保证数据的安全性，如上图，三个服务都在同时扣减库存，我们需要<code>对减库存进行原子性操作</code>，如：</p>
-<p><img data-src="https://img-blog.csdnimg.cn/20201119065835586.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ITVue2Th-1605714910572)(分布式锁.assets/1605709890367.png)]"></p>
-<p>实现分布式锁的原理也很简单，就是需要得有一把唯一且共享的锁，多个服务同时去获取锁，但是只有一个服务才能获取到锁，其他没有获取到锁的服务需要等待或者自旋，等获取到锁的服务业务执行完成释放锁，其他的服务就可以再次尝试获取锁。</p>
-<h2 id="Redis分布式锁的原理"><a href="#Redis分布式锁的原理" class="headerlink" title="Redis分布式锁的原理"></a>Redis分布式锁的原理</h2><p>实现分布式锁的方案有很多，比如基于数据库实现分布式锁，使用<code>ZooKeeper</code>实现分布式锁，本文采用的是使用<code>Redis实现分布式</code>锁方案。</p>
-<h3 id="加锁和释放锁"><a href="#加锁和释放锁" class="headerlink" title="加锁和释放锁"></a>加锁和释放锁</h3><p>Redis提供了一个命令<code>setnx</code> 可以来实现分布式锁，该命令只在键 <code>key</code> 不存在的情况下 将键 <code>key</code> 的值设置为 <code>value</code> ，若键 <code>key</code> 已经存在， 则 <code>SETNX</code> 命令不做任何动作。根据这一特性我们就可以制定Redis实现分布式锁的方案了。</p>
-<p>简单理解就是 ：如果三个服务同时抢锁，服务A抢先一步执行<code>setnx(lock_stock,1)</code>加上锁，那么当服务B在执行<code>setnx(lock_stock,1)</code>加锁的时候就会失败，服务C也一样，服务A抢到锁执行完业务逻辑后就会释放锁，可以使用<code>del(lock_stock)</code>删除锁，其他服务就可以执行<code>setnx(lock_stock,1)</code>加锁了，如图：</p>
-<p><img data-src="https://img-blog.csdnimg.cn/20201119065912813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7U0ig190-1605714910578)(分布式锁.assets/1605709864403.png)]"></p>
-<h3 id="锁超时问题"><a href="#锁超时问题" class="headerlink" title="锁超时问题"></a>锁超时问题</h3><p>这里有一个问题，如果获取到锁的服务在<code>释放锁的时候宕机</code>了，那么Redis中<code>lock-stock</code>不就永远存在，那<code>锁不就释放不了</code>么，别的服务也就没办法获取到锁，就造成了<code>死锁</code>，为了解决这个问题，我们需要设置<code>锁的自动超时</code>也就是Key的超时自动删除，即使服务宕机没有调用del释放锁，那么锁本身也有超时时间，可以自动删除锁，别的服务就可以获取锁了，Redis中Key的过期时间可以使用Redis的 <code>expire（lock_stock，30）</code>命令实现，这里给出伪代码如下</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>（jedis.setnx（lock_stock，<span class="number">1</span>） == <span class="number">1</span>）&#123;	<span class="comment">//获取锁</span></span><br><span class="line">    expire（lock_stock，<span class="number">5</span>）		 <span class="comment">//设置锁超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        jedis.del（lock_stock）			 <span class="comment">//释放锁</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="原子性问题"><a href="#原子性问题" class="headerlink" title="原子性问题"></a>原子性问题</h3><p>上面的代码依然有问题，就是<code>setnx</code>获取锁和<code>expire</code>不是原子性操作，假设有一极端情况，当线程通过<code>setnx（lock_stock，1）</code>获取到锁，还没来得及执行<code>expire（lock_stock，30）</code>设置锁的过期时间，服务就宕机了，那是不是锁也永远得不到释放呢？？？又变成了死锁，这个问题可以使用<code>set</code>命令解决，我们先来看一下这个命令的语法</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SET key value [EX seconds] [PX milliseconds] [NX|XX]</span><br></pre></td></tr></table></figure>
-
-<p>从 Redis 2.6.12 版本开始， <code>SET</code> 命令的行为可以通过一系列参数来修改：</p>
-<ul>
-<li><code>EX seconds</code> ： 将键的过期时间设置为 <code>seconds</code> 秒。 执行 <code>SET key value EX seconds</code> 的效果等同于执行 <code>SETEX key seconds value</code> 。</li>
-<li><code>PX milliseconds</code> ： 将键的过期时间设置为 <code>milliseconds</code> 毫秒。 执行 <code>SET key value PX milliseconds</code> 的效果等同于执行 <code>PSETEX key milliseconds value</code> 。</li>
-<li><code>NX</code> ： 只在键不存在时， 才对键进行设置操作。 执行 <code>SET key value NX</code> 的效果等同于执行 <code>SETNX key value</code> 。</li>
-<li><code>XX</code> ： 只在键已经存在时， 才对键进行设置操作。</li>
-</ul>
-<p>也就是说该命令可以当做<code>setnx</code>和<code>expire</code>的组合命令来使用，而且是原子性的，改造代码如</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>（set(lock_stock,<span class="number">1</span>,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        del（lock_stock）			 		<span class="comment">//释放锁</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="锁的误删除问题"><a href="#锁的误删除问题" class="headerlink" title="锁的误删除问题"></a>锁的误删除问题</h3><p>上面的方案依然有问题，就是在<code>del</code>释放锁的时候可能会误删除别人加的锁，例如服务A获取到锁<code>lock_stock</code>，过期时间为 5s，如果在服务A执行业务逻辑的这一段时间内，锁到期自动删除，且别的服务获取到了锁<code>lock_stock</code>，那么服务A业务执行完成执行<code>del(lock_stock)</code>是不是会把别人的锁给删除掉呢？？？如图：</p>
-<p><img data-src="https://img-blog.csdnimg.cn/20201119065939549.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rSEN6vhr-1605714910581)(分布式锁.assets/1605712581554.png)]"></p>
-<p>那么这个问题怎么解决呢？我们可以在删除锁的时候先判断一下要删除的锁是不是自己上的锁，比如可以把锁的值使用一个UUID，在释放锁的时候先获取一下锁的值和当前业务中创建的UUID是不是同一个，如果是才执行·<code>del</code>删除锁，当然也可以使用线程的ID替代UUID，代码如：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String uuid = UUID.randomUUID().toString();</span><br><span class="line"><span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        String lockValue = jedis.get(lock_stock);	<span class="comment">//获取锁的值</span></span><br><span class="line">        <span class="keyword">if</span>(lockValue.equals(uuid))&#123;			<span class="comment">//判断是不是自己的锁</span></span><br><span class="line">            jedis.del（lock_stock）			 	  <span class="comment">//释放锁</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Lua脚本保证原子性"><a href="#Lua脚本保证原子性" class="headerlink" title="Lua脚本保证原子性"></a>Lua脚本保证原子性</h3><p>但是上面的代码依然有问题，就是判断锁的代码和删除锁的代码也不是原子性的，依然可能会导致锁的误删除问题，比如服务A在判断锁成功准备删除锁时，锁自动过期，别的服务B获取到了锁，然后服务A执行<code>DEL</code>就可能会把服务B的锁给删除掉，所以，我们必须保证  获取锁 -&gt; 判断锁 -&gt; 删除锁 的操作是原子性的才可以，解决方案可以使用Redis+Lua脚本来解决一致性问题</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">String script = &quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] </span><br><span class="line">	then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;;</span><br></pre></td></tr></table></figure>
-
-<p>这是一段Lua脚本，可以保证多个命令的原子性</p>
-<ul>
-<li>redis.call(‘get’, KEYS[1])  ：是调用redis的get命令，key可以通过参数传入</li>
-<li>== ARGV[1] ：意思是是否和 某个值相等，这里的值也可以参数传入</li>
-<li>then return redis.call(‘del’, KEYS[1])  ：如果相等就执行 <code>redis.call(&#39;del&#39;, KEYS[1])  </code>删除操作</li>
-<li>else return 0 end ：否则就返回 0</li>
-</ul>
-<p>如果我们把数据带入<code>KEYS[1]</code>的值为“lock_stock”,<code>ARGV[1]</code>的值为UUID如“xoxoxo”，所以大概的含义是如果调用get(“lock_stock”)获取到的值  等于 “xoxoxo” ,那就调用 del(“lock_stock”)，否则就返回 0 。 说白了就是把我们上面的判断锁和删除锁的动作使用Lua脚本去执行而已，现在代码可以这样写了</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String uuid = UUID.randomUUID().toString();</span><br><span class="line"><span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="comment">//lua脚本</span></span><br><span class="line">        String script = <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">        <span class="comment">//执行脚本</span></span><br><span class="line">        jedis.eval(script, Collections.singletonList(<span class="string">&quot;lock_stock&quot;</span>),Collections.singletonList(uuid));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Arrays.asList(“lock_stock”) 转给 KEYS[1]</li>
-<li>Arrays.asList(uuid)转给 ARGV[1]</li>
-</ul>
-<h3 id="可重入锁"><a href="#可重入锁" class="headerlink" title="可重入锁"></a>可重入锁</h3><p>上面的代码是不完整的，如果某个线程没有获取到锁是不是就不会进入 IF 呢？如果是这样的话未获取到锁的线程就执行失败了，啥也没做，这是不可行的，我们是不是需要让未获取到锁的线程等待片刻之后再次尝试获取锁呢？如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">	String uuid = UUID.randomUUID().toString();</span><br><span class="line">	<span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">	    <span class="keyword">try</span> &#123;</span><br><span class="line">	        业务代码</span><br><span class="line">	    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">	        <span class="comment">//lua脚本</span></span><br><span class="line">	        String script = <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">	        <span class="comment">//执行脚本</span></span><br><span class="line">	        jedis.eval(script, Collections.singletonList(<span class="string">&quot;lock_stock&quot;</span>),Collections.singletonList(uuid));</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="comment">//休眠一会儿，重入方法，尝试获取锁</span></span><br><span class="line">		Thread.sleep(<span class="number">100</span>);</span><br><span class="line">		method();	<span class="comment">//自旋，重新进入方法</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>上面的代码增加了else获取锁失败的逻辑，休眠一会儿后<code>重入方法尝试重新获取锁</code>，休眠时间结合业务逻辑的执行时间设定</p>
-<h2 id="分布式锁的特点"><a href="#分布式锁的特点" class="headerlink" title="分布式锁的特点"></a>分布式锁的特点</h2><p>当然要实现一个分布式锁还需要考虑一些东西，比如Redis的健壮性，它不能随便挂掉，这里总结一下分布式锁的一些要素<br>首先，为了确保分布式锁可用，我们至少要确保锁的实现同时满足以下四个条件：</p>
-<ul>
-<li><p>互斥性：同一时间只能一个节点获取到锁，其他节点需要等待获取到锁的节点释放了锁才可以获取到锁，而这里的等待一般是通过阻塞，和自旋两种方式</p>
-</li>
-<li><p>安全性：解铃还须系铃人，只能释放自己的锁不能误删别人的锁</p>
-</li>
-<li><p>死锁：比如在节点宕机时最容易出现锁没被释放的问题，然后出现死锁，所以做锁的过期</p>
-</li>
-<li><p>容错：当Redis宕机，客户端仍然可以释放锁</p>
-</li>
-<li><p>可重入：获取锁失败可以重新尝试获取锁</p>
-</li>
-</ul>
-<h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>文章结束，这里主要探讨了一下Redis实现分布式锁的核心原理，以及过程中的一些问题，当然我们如果真的要在项目中实现分布式锁其实也没这么麻烦，请期待下一章Redisson实现分布式锁</p>
-]]></content>
-      <categories>
-        <category>Java后端</category>
-        <category>缓存服务器</category>
-        <category>redis</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
-        <tag>缓存</tag>
       </tags>
   </entry>
   <entry>
@@ -683,6 +600,117 @@
         <tag>SpringCloud</tag>
         <tag>微服务开发</tag>
         <tag>Eureka</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>六.Redis极简入门-Redis实现分布式锁原理</title>
+    <url>/2020/11/17/Java%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/redis/%E5%85%AD.Redis%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8-Redis%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<p>老鸟飞过，学习使用，欢迎交流</p>
+<h2 id="理解分布式锁"><a href="#理解分布式锁" class="headerlink" title="理解分布式锁"></a>理解分布式锁</h2><h3 id="为什么要分布式锁"><a href="#为什么要分布式锁" class="headerlink" title="为什么要分布式锁"></a>为什么要分布式锁</h3><p>在并发场景中，我们可以使用加锁的手段来保证业务方法或代码的原子性操作，从而防止数据被并发修改引发安全问题，在单体应用中我们可以使用互斥锁如： <code>synchronized</code> 同步代码块 或者 <code>Lock</code>锁来实现，如图:</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065726132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7lCrzyXy-1605714910565)(分布式锁.assets/1605692967171.png)]"></p>
+<p>但是在<code>集群/分布式</code>应用中单纯的互斥锁是不能保证多个节点中对同一个数据的原性操作的，如图：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065801491.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rGJm7d9A-1605714910569)(分布式锁.assets/1605695422135.png)]"></p>
+<p>集群模式中，每个服务都加了锁但是只能锁住自己，每个服务做库存做扣减操作，当库存都剩1的时候，三个服务并发减库存可能会导致库存减到 -2 出现线程不安全问题。</p>
+<p>那应该如何解决上述问题呢？我们需要使用<code>分布式事务</code>保证三个服务对库存的<code>原子性操作</code></p>
+<h3 id="什么是分布式锁"><a href="#什么是分布式锁" class="headerlink" title="什么是分布式锁"></a>什么是分布式锁</h3><p>分布式锁的目的就是在<code>分布式/集群</code>环境中使用加锁手段保证<code>多个服务节点对同一个数据的原子性操作</code>，保证数据的安全性，如上图，三个服务都在同时扣减库存，我们需要<code>对减库存进行原子性操作</code>，如：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065835586.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ITVue2Th-1605714910572)(分布式锁.assets/1605709890367.png)]"></p>
+<p>实现分布式锁的原理也很简单，就是需要得有一把唯一且共享的锁，多个服务同时去获取锁，但是只有一个服务才能获取到锁，其他没有获取到锁的服务需要等待或者自旋，等获取到锁的服务业务执行完成释放锁，其他的服务就可以再次尝试获取锁。</p>
+<h2 id="Redis分布式锁的原理"><a href="#Redis分布式锁的原理" class="headerlink" title="Redis分布式锁的原理"></a>Redis分布式锁的原理</h2><p>实现分布式锁的方案有很多，比如基于数据库实现分布式锁，使用<code>ZooKeeper</code>实现分布式锁，本文采用的是使用<code>Redis实现分布式</code>锁方案。</p>
+<h3 id="加锁和释放锁"><a href="#加锁和释放锁" class="headerlink" title="加锁和释放锁"></a>加锁和释放锁</h3><p>Redis提供了一个命令<code>setnx</code> 可以来实现分布式锁，该命令只在键 <code>key</code> 不存在的情况下 将键 <code>key</code> 的值设置为 <code>value</code> ，若键 <code>key</code> 已经存在， 则 <code>SETNX</code> 命令不做任何动作。根据这一特性我们就可以制定Redis实现分布式锁的方案了。</p>
+<p>简单理解就是 ：如果三个服务同时抢锁，服务A抢先一步执行<code>setnx(lock_stock,1)</code>加上锁，那么当服务B在执行<code>setnx(lock_stock,1)</code>加锁的时候就会失败，服务C也一样，服务A抢到锁执行完业务逻辑后就会释放锁，可以使用<code>del(lock_stock)</code>删除锁，其他服务就可以执行<code>setnx(lock_stock,1)</code>加锁了，如图：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065912813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7U0ig190-1605714910578)(分布式锁.assets/1605709864403.png)]"></p>
+<h3 id="锁超时问题"><a href="#锁超时问题" class="headerlink" title="锁超时问题"></a>锁超时问题</h3><p>这里有一个问题，如果获取到锁的服务在<code>释放锁的时候宕机</code>了，那么Redis中<code>lock-stock</code>不就永远存在，那<code>锁不就释放不了</code>么，别的服务也就没办法获取到锁，就造成了<code>死锁</code>，为了解决这个问题，我们需要设置<code>锁的自动超时</code>也就是Key的超时自动删除，即使服务宕机没有调用del释放锁，那么锁本身也有超时时间，可以自动删除锁，别的服务就可以获取锁了，Redis中Key的过期时间可以使用Redis的 <code>expire（lock_stock，30）</code>命令实现，这里给出伪代码如下</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>（jedis.setnx（lock_stock，<span class="number">1</span>） == <span class="number">1</span>）&#123;	<span class="comment">//获取锁</span></span><br><span class="line">    expire（lock_stock，<span class="number">5</span>）		 <span class="comment">//设置锁超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        jedis.del（lock_stock）			 <span class="comment">//释放锁</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="原子性问题"><a href="#原子性问题" class="headerlink" title="原子性问题"></a>原子性问题</h3><p>上面的代码依然有问题，就是<code>setnx</code>获取锁和<code>expire</code>不是原子性操作，假设有一极端情况，当线程通过<code>setnx（lock_stock，1）</code>获取到锁，还没来得及执行<code>expire（lock_stock，30）</code>设置锁的过期时间，服务就宕机了，那是不是锁也永远得不到释放呢？？？又变成了死锁，这个问题可以使用<code>set</code>命令解决，我们先来看一下这个命令的语法</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SET key value [EX seconds] [PX milliseconds] [NX|XX]</span><br></pre></td></tr></table></figure>
+
+<p>从 Redis 2.6.12 版本开始， <code>SET</code> 命令的行为可以通过一系列参数来修改：</p>
+<ul>
+<li><code>EX seconds</code> ： 将键的过期时间设置为 <code>seconds</code> 秒。 执行 <code>SET key value EX seconds</code> 的效果等同于执行 <code>SETEX key seconds value</code> 。</li>
+<li><code>PX milliseconds</code> ： 将键的过期时间设置为 <code>milliseconds</code> 毫秒。 执行 <code>SET key value PX milliseconds</code> 的效果等同于执行 <code>PSETEX key milliseconds value</code> 。</li>
+<li><code>NX</code> ： 只在键不存在时， 才对键进行设置操作。 执行 <code>SET key value NX</code> 的效果等同于执行 <code>SETNX key value</code> 。</li>
+<li><code>XX</code> ： 只在键已经存在时， 才对键进行设置操作。</li>
+</ul>
+<p>也就是说该命令可以当做<code>setnx</code>和<code>expire</code>的组合命令来使用，而且是原子性的，改造代码如</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>（set(lock_stock,<span class="number">1</span>,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        del（lock_stock）			 		<span class="comment">//释放锁</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="锁的误删除问题"><a href="#锁的误删除问题" class="headerlink" title="锁的误删除问题"></a>锁的误删除问题</h3><p>上面的方案依然有问题，就是在<code>del</code>释放锁的时候可能会误删除别人加的锁，例如服务A获取到锁<code>lock_stock</code>，过期时间为 5s，如果在服务A执行业务逻辑的这一段时间内，锁到期自动删除，且别的服务获取到了锁<code>lock_stock</code>，那么服务A业务执行完成执行<code>del(lock_stock)</code>是不是会把别人的锁给删除掉呢？？？如图：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20201119065939549.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0OTQxNDg=,size_16,color_FFFFFF,t_70#pic_center" alt="[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rSEN6vhr-1605714910581)(分布式锁.assets/1605712581554.png)]"></p>
+<p>那么这个问题怎么解决呢？我们可以在删除锁的时候先判断一下要删除的锁是不是自己上的锁，比如可以把锁的值使用一个UUID，在释放锁的时候先获取一下锁的值和当前业务中创建的UUID是不是同一个，如果是才执行·<code>del</code>删除锁，当然也可以使用线程的ID替代UUID，代码如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String uuid = UUID.randomUUID().toString();</span><br><span class="line"><span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        String lockValue = jedis.get(lock_stock);	<span class="comment">//获取锁的值</span></span><br><span class="line">        <span class="keyword">if</span>(lockValue.equals(uuid))&#123;			<span class="comment">//判断是不是自己的锁</span></span><br><span class="line">            jedis.del（lock_stock）			 	  <span class="comment">//释放锁</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Lua脚本保证原子性"><a href="#Lua脚本保证原子性" class="headerlink" title="Lua脚本保证原子性"></a>Lua脚本保证原子性</h3><p>但是上面的代码依然有问题，就是判断锁的代码和删除锁的代码也不是原子性的，依然可能会导致锁的误删除问题，比如服务A在判断锁成功准备删除锁时，锁自动过期，别的服务B获取到了锁，然后服务A执行<code>DEL</code>就可能会把服务B的锁给删除掉，所以，我们必须保证  获取锁 -&gt; 判断锁 -&gt; 删除锁 的操作是原子性的才可以，解决方案可以使用Redis+Lua脚本来解决一致性问题</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">String script = &quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] </span><br><span class="line">	then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>这是一段Lua脚本，可以保证多个命令的原子性</p>
+<ul>
+<li>redis.call(‘get’, KEYS[1])  ：是调用redis的get命令，key可以通过参数传入</li>
+<li>== ARGV[1] ：意思是是否和 某个值相等，这里的值也可以参数传入</li>
+<li>then return redis.call(‘del’, KEYS[1])  ：如果相等就执行 <code>redis.call(&#39;del&#39;, KEYS[1])  </code>删除操作</li>
+<li>else return 0 end ：否则就返回 0</li>
+</ul>
+<p>如果我们把数据带入<code>KEYS[1]</code>的值为“lock_stock”,<code>ARGV[1]</code>的值为UUID如“xoxoxo”，所以大概的含义是如果调用get(“lock_stock”)获取到的值  等于 “xoxoxo” ,那就调用 del(“lock_stock”)，否则就返回 0 。 说白了就是把我们上面的判断锁和删除锁的动作使用Lua脚本去执行而已，现在代码可以这样写了</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String uuid = UUID.randomUUID().toString();</span><br><span class="line"><span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        业务代码</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="comment">//lua脚本</span></span><br><span class="line">        String script = <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">        <span class="comment">//执行脚本</span></span><br><span class="line">        jedis.eval(script, Collections.singletonList(<span class="string">&quot;lock_stock&quot;</span>),Collections.singletonList(uuid));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Arrays.asList(“lock_stock”) 转给 KEYS[1]</li>
+<li>Arrays.asList(uuid)转给 ARGV[1]</li>
+</ul>
+<h3 id="可重入锁"><a href="#可重入锁" class="headerlink" title="可重入锁"></a>可重入锁</h3><p>上面的代码是不完整的，如果某个线程没有获取到锁是不是就不会进入 IF 呢？如果是这样的话未获取到锁的线程就执行失败了，啥也没做，这是不可行的，我们是不是需要让未获取到锁的线程等待片刻之后再次尝试获取锁呢？如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">	String uuid = UUID.randomUUID().toString();</span><br><span class="line">	<span class="keyword">if</span>（jedis.set(lock_stock,uuid,<span class="string">&quot;NX&quot;</span>,<span class="string">&quot;EX&quot;</span>,<span class="number">5</span>) == <span class="number">1</span>）&#123;	<span class="comment">//获取锁并设置超时</span></span><br><span class="line">	    <span class="keyword">try</span> &#123;</span><br><span class="line">	        业务代码</span><br><span class="line">	    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">	        <span class="comment">//lua脚本</span></span><br><span class="line">	        String script = <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">	        <span class="comment">//执行脚本</span></span><br><span class="line">	        jedis.eval(script, Collections.singletonList(<span class="string">&quot;lock_stock&quot;</span>),Collections.singletonList(uuid));</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="comment">//休眠一会儿，重入方法，尝试获取锁</span></span><br><span class="line">		Thread.sleep(<span class="number">100</span>);</span><br><span class="line">		method();	<span class="comment">//自旋，重新进入方法</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>上面的代码增加了else获取锁失败的逻辑，休眠一会儿后<code>重入方法尝试重新获取锁</code>，休眠时间结合业务逻辑的执行时间设定</p>
+<h3 id="分布式锁的特点"><a href="#分布式锁的特点" class="headerlink" title="分布式锁的特点"></a>分布式锁的特点</h3><p>当然要实现一个分布式锁还需要考虑一些东西，比如Redis的健壮性，它不能随便挂掉，这里总结一下分布式锁的一些要素<br>首先，为了确保分布式锁可用，我们至少要确保锁的实现同时满足以下四个条件：</p>
+<ul>
+<li><p>互斥性：同一时间只能一个节点获取到锁，其他节点需要等待获取到锁的节点释放了锁才可以获取到锁，而这里的等待一般是通过阻塞，和自旋两种方式</p>
+</li>
+<li><p>安全性：解铃还须系铃人，只能释放自己的锁不能误删别人的锁</p>
+</li>
+<li><p>死锁：比如在节点宕机时最容易出现锁没被释放的问题，然后出现死锁，所以做锁的过期</p>
+</li>
+<li><p>容错：当Redis宕机，客户端仍然可以释放锁</p>
+</li>
+<li><p>可重入：获取锁失败可以重新尝试获取锁</p>
+</li>
+</ul>
+<p>要实现一个分布式锁是不是要考虑很多细节呢，其实不用做什么麻烦，我们有更专业的工具已经帮我们封装好上面的所有细节</p>
+<h2 id="Redisson的实现分布式锁"><a href="#Redisson的实现分布式锁" class="headerlink" title="Redisson的实现分布式锁"></a>Redisson的实现分布式锁</h2><h3 id="Redisson是什么"><a href="#Redisson是什么" class="headerlink" title="Redisson是什么"></a>Redisson是什么</h3><p>我们操作Redis的手段有很多，在Java中可以使用Jedis或者Redisson，本文章在于讨论Redisson是如何操作Java的，下面是对Redisson的概述，<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JlZGlzc29uL3JlZGlzc29uL3dpa2kvVGFibGUtb2YtQ29udGVudA==">官方文档</span></p>
+<blockquote>
+<p>Redisson是一个实现的Java操作Redis的工具包，它不仅提供了一系列常用的操作Redis的API，还提供了许多分布式服务。其中包括(BitSet, Set, Multimap, SortedSet, Map, List, Queue, BlockingQueue, Deque, BlockingDeque, Semaphore, Lock, AtomicLong, CountDownLatch, Publish / Subscribe, Bloom filter, Remote service, Spring cache, Executor service, Live Object service, Scheduler service) Redisson提供了使用Redis的最简单和最便捷的方法，Redisson的宗旨是促进使用者对Redis的关注分离，从而让使用者能够将精力更集中地放在处理业务逻辑上。</p>
+</blockquote>
+<h3 id="Redisson的集成"><a href="#Redisson的集成" class="headerlink" title="Redisson的集成"></a>Redisson的集成</h3><p>导入依赖</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.redisson/redisson --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.redisson<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>redisson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.13.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>配置一个单机Redis</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedissonConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建客户端</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> RedissonClient <span class="title">redissonClient</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Config config = <span class="keyword">new</span> Config();</span><br><span class="line">        config.useSingleServer().setAddress(<span class="string">&quot;redis://127.0.0.1:6379&quot;</span>);<span class="comment">//.setPassword(&quot;123456&quot;);</span></span><br><span class="line">        <span class="keyword">return</span> Redisson.create(config);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="可重入锁（Reentrant-Lock）"><a href="#可重入锁（Reentrant-Lock）" class="headerlink" title="可重入锁（Reentrant Lock）"></a>可重入锁（Reentrant Lock）</h3><blockquote>
+<p>大家都知道，如果负责储存这个分布式锁的Redisson节点宕机以后，而且这个锁正好处于锁住的状态时，这个锁会出现锁死的状态。为了避免这种情况的发生，Redisson内部提供了一个监控锁的看门狗，它的作用是在Redisson实例被关闭前，不断的延长锁的有效期。默认情况下，看门狗的检查锁的超时时间是30秒钟，也可以通过修改Config.lockWatchdogTimeout来另行指定。<br>另外Redisson还通过加锁的方法提供了leaseTime的参数来指定加锁的时间。超过这个时间后锁便自动解开了。</p>
+</blockquote>
+<p>以上是Redisson官方文档对分布式锁的解释总结下来有两点</p>
+<ul>
+<li>Redisson加锁自动有过期时间30s，监控锁的看门狗发现业务没执行完，会自动进行锁的续期(重回30s)，这样做的好处是防止在程序执行期间锁自动过期被删除问题</li>
+<li>当业务执行完成不再给锁续期，即使没有手动释放锁，锁的过期时间到了也会自动释放锁</li>
+</ul>
+<p>一个简单的锁分布式锁案例如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line">  <span class="keyword">private</span> RedissonClient redissonClient;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Test</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testLock</span><span class="params">()</span></span>&#123;</span><br><span class="line">      RLock rLock = redissonClient.getLock(<span class="string">&quot;lock_stock&quot;</span>);</span><br><span class="line">      rLock.lock();	<span class="comment">//阻塞式等待，过期时间30s</span></span><br><span class="line">      <span class="keyword">try</span>&#123;</span><br><span class="line">          System.out.println(<span class="string">&quot;加锁成功....&quot;</span>);</span><br><span class="line">          System.out.println(<span class="string">&quot;执行业务....&quot;</span>);</span><br><span class="line">      &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">          rLock.unlock();</span><br><span class="line">          System.out.println(<span class="string">&quot;释放锁....&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>我们可以手动指定锁的过期时间,但是手动指定了过期时间就不会再进行时间的自动续期了，如下</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testLock</span><span class="params">()</span></span>&#123;</span><br><span class="line">  </span><br><span class="line">      RLock rLock = redissonClient.getLock(<span class="string">&quot;lock_stock&quot;</span>);</span><br><span class="line">  	<span class="comment">// 加锁以后10秒钟自动解锁</span></span><br><span class="line"><span class="comment">// 无需调用unlock方法手动解锁</span></span><br><span class="line">rLock.lock(<span class="number">10</span>, TimeUnit.SECONDS);</span><br><span class="line">      <span class="keyword">try</span>&#123;</span><br><span class="line">          System.out.println(<span class="string">&quot;加锁成功....&quot;</span>);</span><br><span class="line">          System.out.println(<span class="string">&quot;执行业务....&quot;</span>);</span><br><span class="line">      &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">          rLock.unlock();</span><br><span class="line">          System.out.println(<span class="string">&quot;释放锁....&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>这里有一个问题，手动指定了过期时间就不会再自动续期，那么如果在线程A业务还没执行完时锁自动过期，这时候线程B获取到锁，那么等线程A业务执行完释放锁，就会把线程B的锁删除，当然这种情况Redisson会报异常，所以如果要手动设定过期时间需要让过期时间比业务逻辑执行的时间长才对</p>
+<p>这里我们看到，其实Redisson底层帮我了处理了上述的一些列问题，那么Redisson是如何实现上面的功能的呢？</p>
+<ul>
+<li>如果没有设置过期时间，Redisson以 30s 作为锁的默认过期时间，获取锁成功后(底层也用到了Lua脚本)会开启一个定时任务定时进行锁过期时间续约，即每次都把过期时间设置成 30s，定时任务 10s执行一次</li>
+<li>如果设置了过期时间，直接把设定的过期时间作为锁的过期时间，然后使用Lua脚本获取锁，没获取到锁的线程会while自旋重入不停地尝试获取锁</li>
+</ul>
+<p>当然我们通常情况下还是使用手动指定过期时间的方式去获取锁，估算好业务的执行时长来决定锁的过期时间</p>
+<h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>文章结束，这里主要探讨了一下Redis实现分布式锁的核心原理，以及过程中的一些问题，最终采用Redisson实现分布式锁，希望文章对你有所帮助</p>
+]]></content>
+      <categories>
+        <category>Java后端</category>
+        <category>缓存服务器</category>
+        <category>redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+        <tag>缓存</tag>
       </tags>
   </entry>
 </search>
